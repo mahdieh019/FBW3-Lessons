@@ -1,0 +1,10 @@
+.mydiv{
+    width:  200px;
+    height: 150px;
+    background: -moz-linear-gradient(red, blue);
+    color: beige;
+
+}
+.mydiv:hover{
+    transform: translate(20px,30px);
+}
