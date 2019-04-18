@@ -3,8 +3,25 @@
     height: 150px;
     background: -moz-linear-gradient(red, blue);
     color: beige;
+    transition: 5s;
 
 }
 .mydiv:hover{
-    transform: translate(20px,30px);
+    /* transform: translate(20px,30px); */
+    /* transform:rotate(-45deg); */
+    /* transform: rotate(-07885rad); */
+    /* transform: translate(200px,300px) rotate(-07885rad); */
+    transform: 
+    /* translate(200px,200px)  */
+    /* rotate(-08rad) 
+    scale(2,4)  */
+    /* skewX(23deg) 
+    skewY(15deg); */
+    /* rotateY(60deg)
+    skew(23deg,-15deg) */
+    matrix(2,0,0,4,200,200)
+    rotate(25deg)
+    ;
+
+    
 }

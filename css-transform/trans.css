@@ -1,0 +1,43 @@
+#Foto1{
+    width: 400px;
+    height: 450px;
+    color: blue;
+    background-color: green;
+    border: 2px solid black;
+    margin: 300px auto;
+    transform: rotate(-45deg);
+    border-radius: 10px; 
+    transition: 5s;
+
+}
+img{
+    width: 350px;
+    height: 250px;
+    padding: 17px 23px;
+
+}
+.Foto1:hover,.Foto2:hover{
+    transform:
+    /* rotate(25deg)
+    translate(200px,200px) */
+    scale(2,4);
+
+    
+}
+.pp{
+    padding: 8px;
+    text-align: center;
+    
+}
+#Foto2{
+   
+    width: 400px;
+    height: 450px;
+    margin: 200px auto;
+    background-color: rgb(128, 119, 0);
+    border: 2px solid black;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    transition: 5s;
+  
+}
