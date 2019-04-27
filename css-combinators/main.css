@@ -1,0 +1,61 @@
+div{
+    background-color: aqua
+}
+/* the first p in the div */
+div > p:first-child{
+    display: none;
+}
+
+div:hover p{
+    display: block;
+}
+/* all the p inside the div */
+div > p{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+div + h1{
+    background-color: greenyellow;
+    color: white;
+}
+div ~ h2{
+    background-color: green;
+    color: white;
+}
+a:link{
+    color: red;
+    font-size: 2.1em;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    background-color: brown;
+    color: white;
+    font-size: 2.2em;
+    text-decoration: none;
+    cursor: move;
+}
+
+a:active{
+    color: blue;
+}
+a.first:hover,.secound:hover{
+    background-color: black;
+    color: white;
+    font-size: 2em; 
+}
+a.first{
+    transition: all 2s;
+}
+/* the first p child in the body */
+body>p:first-child{
+    color: blue;
+}
+body>p:nth-last-child(2){
+    background-color: blueviolet;
+}
+:not(a){
+    color: aqua;
+}

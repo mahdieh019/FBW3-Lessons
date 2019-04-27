@@ -1,0 +1,86 @@
+body{
+    background-color: rgba(125,214,110,0.8);
+}
+p::first-letter{
+    color: rgb(160,20,37);
+    font-size: 3em;
+}
+p::first-line{
+    font-size: 1.3em;
+    color: black;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.my-btn{
+    text-align:center;
+
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 15px;
+    border-radius: 45px;
+    color: #777;
+    position: relative;
+    animation: move 2s;
+}
+
+.my-btn h1>span:nth-child(1){
+    color: white;
+    display: block;
+    letter-spacing: 30px;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-bottom: 35px;
+    animation: moveright 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+
+}
+.my-btn h1>span:nth-child(2){
+   font-size: 0.5em;
+   display: block;
+   text-transform: uppercase;
+   letter-spacing: 0.5em;
+   color: white;
+   font-weight: 700;
+   margin-bottom: 35px;
+   animation: moveleft 3s;
+   /* animation-name: movelefte;
+   animation-duration: 1s; */
+   animation-delay: 0.5s;
+   animation-fill-mode: backwards,
+
+}
+
+
+
+.btn:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes move{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    };
+    to{
+        transform: translateY(0pX);
+        opacity: 1;
+    }
+}
+@keyframes moveright{
+    from{transform: translateX(-50px);
+    opacity: 0;}
+    to{transform: translateX(0);
+    opacity: 1;}
+}
+@keyframes moveleft{
+    from{transform: translateX(50px);
+    opacity: 0;}
+    to{transform: translateX(0);
+    opacity: 1;}
+}
