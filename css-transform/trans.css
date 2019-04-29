@@ -13,7 +13,7 @@
 img{
     width: 350px;
     height: 250px;
-    padding: 17px 23px;
+    padding: 18px 23px;
 
 }
 .Foto1:hover,.Foto2:hover{
@@ -21,7 +21,6 @@ img{
     /* rotate(25deg)
     translate(200px,200px) */
     scale(2,4);
-
     
 }
 .pp{

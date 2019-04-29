@@ -1,10 +1,15 @@
 body{
     background-color: aquamarine;
-    background-image: foto1.jpg;
+    background-image: url("foto1.jpg");
+    background-repeat: no-repeat;
+    background-position: right top; 
+    background-attachment:fixed;
+    margin-right: 500px;
+
 }
 p,h1{
-    color:white;
-     text-align: center; 
+    color:black;
+    text-align: center; 
 
 }    
 p.text2{
@@ -17,4 +22,25 @@ p.text2{
 div{
     background-color: lightcoral;
 }
+p.b1{border-style:dashed;
+    border-width: 20px;
+}
+p.b2{border-style:dotted dashed solid double;
+    border-width: 2px;}
+p.b3{border-style:double;
+    border-width: 20px;}
+p.b4{border-style:solid;
+    border-width: 20px;}
+p.b5{
+    border-style:groove;
+    border-color: hotpink;
+    border-width: 20px;
+}
+p.b6{border-style:ridge;
+background-color: gold;}
+p.b7{border-style:inherit;}
+p.b8{border-style:initial;}
+p.b9{border-style:inset;}
+p.b10{border-style:hidden}
+
 
