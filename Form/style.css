@@ -1,0 +1,26 @@
+.container{
+    /* background-color: aquamarine; */
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: 
+    linear-gradient(to top, rgba(174,36,179,0.8),
+    rgba(127,216,228,0.8));
+    padding: 25px;
+}
+.container label{
+    display: block;
+    border: 0px solid red;
+    width: 60%;
+    text-align: left;
+}
+.container input,textarea,select{
+    width: 40%;
+    border-radius: 20px;
+}
+@media only  screen and (max-width:600px){
+    .container,input,textarea,label,p{
+        width:100%;
+    }
+}
