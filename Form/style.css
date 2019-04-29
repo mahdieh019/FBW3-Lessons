@@ -2,7 +2,6 @@
     /* background-color: aquamarine; */
     text-align: center;
     width: 70%;
-    height: 100%;
     margin: 0 auto;
     background-image: 
     linear-gradient(to top, rgba(174,36,179,0.8),
@@ -10,11 +9,37 @@
     padding: 25px;
 }
 .container label{
-    display: block;
+    display: inline-block;
     border: 0px solid red;
     width: 60%;
     text-align: left;
+    font-size: 1.3em;
 }
+.container input[type="text"]{
+    background-color:white;
+    color:darkgoldenrod;
+    font-size:1.7em;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat:  no-repeat;
+    padding-left:45px;
+    transition: all linear 400ms;    
+
+}
+.container input[type="text"]:focus{
+    /* background: greenyellow; */
+    color:black;
+    font-weight: 300;
+    border: 2px solid darkblue;
+    width:60%;    
+}
+.container textarea{
+    padding: 20px 20px;
+    resize:none;
+    font-size:1.7em;
+    color:orange;   
+ }
+
 .container input,textarea,select{
     width: 40%;
     border-radius: 20px;
