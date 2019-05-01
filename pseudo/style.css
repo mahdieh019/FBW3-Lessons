@@ -24,16 +24,16 @@ p::first-line{
     border-radius: 45px;
     color: #777;
     position: relative;
-    animation: move 2s;
+    animation: move 3s;
 }
 
 .my-btn h1>span:nth-child(1){
-    color: white;
+    font-size: 1.2em;
     display: block;
     letter-spacing: 30px;
-    font-size: 1.2em;
+    color: white;
     font-family: sans-serif;
-    font-weight: 700;
+    font-weight:700;
     margin-bottom: 35px;
     animation: moveright 3s;
     animation-delay: 0.5s;
@@ -51,12 +51,10 @@ p::first-line{
    animation: moveleft 3s;
    /* animation-name: movelefte;
    animation-duration: 1s; */
-   animation-delay: 0.5s;
+   /* animation-delay: 0.5s; */
    animation-fill-mode: backwards,
 
 }
-
-
 
 .btn:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
