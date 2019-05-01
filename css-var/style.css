@@ -1,0 +1,84 @@
+:root{
+    --txtcolor:blue;
+    --bgcolor: linear-gradient(to right,lightblue,lightgreen,pink);
+    --div-height:500px;
+    --border-color:2px solid red;
+}
+body{
+    /* background: var(--bgcolor); */
+    background-image: var(--bgcolor);
+
+}
+.main h1{
+    color:var(--txtcolor);
+    
+}
+.main{
+    margin-top: 20px;
+    --div-height:200px;
+    background-color:#ccc;
+    height: var(--div-height);
+    border: var(--border-color);
+}
+.mydiv{
+    height: var(--div-height);
+    background-color: aqua;
+    margin-top: 50px;
+    font-size: 2.5em;
+
+}
+.new{
+    padding: 100px;
+    --txt-color:gold;
+    color: var(--txt-color);
+    border-radius: 25px;
+}
+#alert{
+    --txtcolor:red;
+    border: 1px solid gray;
+    font-size: 1.6em;
+}
+#ok{
+    /* --txtcolor:green; */
+    border: 1px solid darkgray;
+    margin-top: 50px;
+    font-size: 1.6em;
+}
+*{
+    color: var(--txtcolor);
+}
+.btn{
+    text-decoration: none;
+    background:transparent;
+    /* background: var(--color,black); */
+    border:2px solid black;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: 10px;
+    --txt-color:gold;
+    color: var(--txt-color);
+}
+
+.btn:hover{
+    background-color: var(--color,black);
+}
+.btn.red{
+    --color:lightpink;
+}
+.btn.blue{
+    --color:lightblue;
+}
+.btn.green{
+    --color:pink;
+}
+.red{
+    background: red;
+    filter:brightness(50%);
+    /* filter:blur(2px); */
+}
+.blue{
+    background: blue;
+}
+.green{
+    background: green;
+}
