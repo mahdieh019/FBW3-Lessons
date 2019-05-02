@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,41 +15,63 @@
             <p>Please fill the form</p>
 
             <form action="">
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required="required">
+    
+            </div>
 
-            <label for="fname">First Name</label>
-            <br>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            <br>
+            
+
+
+
+
+
 
             <label for="lname">Last Name</label>
-            <br>
-            <input type="text" id="lname" name="lastname" placeholder="your last name..">
-            <br>
+            <input type="text" id="lname" name="lastname" placeholder="your last name.." required="required">
 
             <label for="password">Password</label>
-            <br>
             <input type="password" id="password" name="pass" placeholder="password">
-            <br>
 
             <label for="email">Email-Address</label>
-            <br>
             <input type="email" id="email" name="E-mail" placeholder="E-mail Address"> 
-            <br>
 
+            <label for="date">Date of Birth</label>
+            <input type="date"name="date"id="">
+
+            <!-- Country -->
             <label for="country">Country</label>
-            <br>
             <select name="" id="country" name="Country">
                 <option value="Iran">Iran</option>
                 <option value="Canada">Canada</option>
                 <option value="USA">USA</option>
             </select>
-            <br>
 
-            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter your text">
-            </textarea>
-            <br>
+            <!-- Transport -->
+            <div class="trans">
+                    <label for="">Transport facility</label>
+                    <input type="checkbox" checked="checked" name="transport" id=""><span>Car</span>
+                    <input type="checkbox" checked="checked" name="transport" id=""><span>Bike</span>
+            </div>
 
-            <input type="submit" value="Submit">
+            <!-- Gender -->
+            <div>
+                <label for="gender">Gender</label>
+                <div>
+                    <input type="radio" name="gender" id="" value="m"><span>Male</span>
+                    <input type="radio" name="gender" id="" value="f"><span>Female</span>
+                    <input type="radio" name="gender" id="" value="o"><span>Other</span>
+
+                </div>
+            </div>
+                
+            <!-- Textarea -->
+            <label for="textarea">Message</label>
+            <textarea name="textarea" id="" cols="20" rows="10"></textarea>
+     
+
+            <input type="submit" value="Send">
             
         </form>
     </div>

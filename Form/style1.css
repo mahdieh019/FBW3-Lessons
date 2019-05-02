@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .container{
     /* background-color: aquamarine; */
     text-align: center;
@@ -12,6 +15,7 @@
     display: inline-block;
     border: 0px solid red;
     width: 60%;
+    height: 20px;
     text-align: left;
     font-size: 1.3em;
 }
@@ -27,18 +31,59 @@
 
 }
 .container input[type="text"]:focus{
-    /* background: greenyellow; */
     color:black;
     font-weight: 300;
     border: 2px solid darkblue;
     width:60%;    
 }
 .container textarea{
-    padding: 20px 20px;
+    padding: 15px 10px;
     resize:none;
-    font-size:1.7em;
+    font-size:1.4em;
     color:orange;   
  }
+
+
+.coutainer input:not([type='checkbox']),textarea,select{
+    font-size: 1.6em;
+    background-color: beige;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.container input[type="submit"]{
+    font-size: 1.5em;
+    background-color: aqua;
+    padding:10px 10px;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.container input[type="submit"]:hover{
+    background:aqua;
+    outline:none;
+    box-shadow: 0 4px black;
+ 
+    color: darkgray;
+
+}
+.container input[type="radio"]{
+    width: 10px;
+    height: 10px;
+ 
+}
+.radio{
+    border: 0px solid green;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.container input[type="checkbox"]{
+    width: 10px;
+    height: 10px;
+}
 
 .container input,textarea,select{
     width: 40%;
