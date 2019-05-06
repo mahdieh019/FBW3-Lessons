@@ -1,0 +1,72 @@
+body{
+    background-color: lightblue;
+    animation: an1 6s infinite;
+}
+/* @keyframes an1{
+    form{background-color:lightblue;}
+    to{background-color: red;}
+} */
+
+div.circle{
+    width: 350px;
+    height: 350px;
+    border-radius: 250px;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    border: 1px solid green; 
+    background-color: blueviolet;
+
+}
+div.gallery{
+    border-radius: 75px;
+    /* border: 1px solid gray;  */
+    transition: width 2s, height 2s, border-radius s ,background-color 2s,border 2s , float 2s;
+}
+
+div.gallery:hover{
+    width: 350px;   
+    height: 350px;
+    /* margin: 50px;  */
+    /* border-radius: 750px; */
+    /* float: center;  */
+     } 
+
+div.gallery img{
+    width: 100px;
+    height: 100px;
+    border-radius: 80px;
+    opacity: 0.5;
+    /* margin: auto; */
+    /* transition: width 2s, height 2s, background 3s, opacity 2s, border-radius 2s , margin 3s; */
+    transition: all 2s;
+}
+ div.gallery img:hover{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    opacity: 1.0;
+    border: 3px solid blue;
+   
+}  
+#img1{
+    position: absolute;
+    top: 72px;
+    left:610px;
+}
+#img2{
+    position: absolute;
+    top: 300px;
+    left:390px;
+}
+#img3{
+    position: absolute;
+    top:522px;
+    left:610px;
+}
+#img4{
+    position: absolute;
+    top: 300px;
+    left: 610px;
+}
+

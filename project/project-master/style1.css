@@ -1,0 +1,61 @@
+
+body{
+    background-color: lightblue;
+}
+
+header{
+    padding-right: 100px;
+    text-align: left;
+    font-size: 15px;
+    color: greenyellow;
+   
+}
+header h2{
+    padding-left: 10px;
+    color: darkblue;
+    font-style: italic;
+
+}
+.img1{
+    widows: 300px;
+    height: 200px;
+    padding: 10px;
+
+}
+#DCI{
+    width: 80px;
+    height: 50px;
+ 
+    
+}
+.person{
+  
+    font-size: 15px;
+    font-style: italic;
+    color: brown;
+    /* vertical-align: top; */
+    width: 300px;    
+
+}
+#h3{
+    padding-left: 10px;
+    color: darkblue;
+    font-style: oblique;
+    
+
+}
+.education{
+    font-size: 18px;
+    font-style: italic;
+    color: brown;
+    /* vertical-align: top; */
+    width: 300px;  
+    padding-left: 10px;
+}
+li{
+    list-style: none;
+    display: inline;
+}
+.hello{
+    color: blue;
+}
