@@ -1,0 +1,35 @@
+body{
+    font-size: 2em;
+}
+.my-font{
+     /* font-family: sans-serif,Times, 'Times New Roman';  */
+     font-family: 'Exo 2', sans-serif;
+}
+.font-italic{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+}
+.google-font{
+    font-family: 'Dancing Script', cursive;
+}
+@font-face{
+    /* in case that we downloaded the font-file (without internet)*/
+    /* ctrl  space */
+    src: url(RobotoCondensed-Bold.ttf);
+    font-family:myfont;
+}
+.new-font{
+    font-family: myfont;
+}
+
+
+
+
+
+
+
+
+
+
+
