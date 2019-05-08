@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    margin-top: 60px;
+}
+ul{
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+nav ul li{
+    color: blueviolet;
+    padding: 30px;
+    display: inline-block;
+    padding-top: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.cards card{
+    max-width:300;;
+}
+.card h4{
+    color: black;
+    font-size: 20px;
+
+}

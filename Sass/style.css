@@ -1,0 +1,14 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+a:visited {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */

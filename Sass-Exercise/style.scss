@@ -1,0 +1,84 @@
+//var
+$box:border-box;
+$hei:10rem;
+$b-col: rgba(255, 255, 0, 0.39);
+$txt:center;
+$pad-top:2rem;
+$font-family:Arial, Helvetica, sans-serif;
+$font-fam:'Times New Roman', Times, serif;
+$font-f: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+$fo-f:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$mar:.5rem;
+$font-s:10rem;
+$f-size:8rem;
+$f-s:3rem;
+$color:blue;
+$col:purple;
+$co:green;
+
+
+html,body{
+        margin: 0;
+        border: 0;
+        padding: 0;
+        box-sizing:$box;
+        }       
+            header{
+                    height: $hei; 
+                    background-color:$b-col;
+                    text-align: $txt;
+                    padding-top:$pad-top;
+                    font-family:$font-family ;
+            
+                    h1 {
+                    font-family: $font-family;
+                    }
+                }
+            main {
+                margin:$mar; 
+
+                    .huge {
+                        font-family: $font-fam;
+                        font-size:$font-s ;
+                        color:$color;
+                    }
+
+                    .big {
+                        font-family: $font-fam;
+                        font-size: $f-size;
+                        color: $color;
+                    }
+
+                    .medium {
+                        font-family:$font-f;
+                        font-size: $f-s;
+                        color: $col;
+                    }
+                    .middle {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-size: $f-s;
+                        color: $col;
+                    }
+                    .small {
+                        font-family:$fo-f ;
+                        font-size: 2rem;
+                        color:$co;
+                    }
+                    .tiny {
+                        font-family: $fo-f;
+                        font-size: $mar;
+                        color: $co;
+                        margin-bottom: 2rem;
+                    }
+               }    
+
+            footer {
+                height: $font-s;
+                background-color:$b-col;
+                text-align: center;
+                font-family: $font-family;
+                padding-top: 1rem;
+             
+            }
+              
+

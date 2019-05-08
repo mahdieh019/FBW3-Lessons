@@ -1,0 +1,21 @@
+h1{
+    font-family: 'Akronim', cursive;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.my-table{
+    font-size: 10px;
+    background: lightgray;
+}
+.success{
+    font-size: 10px;
+
+}
+.strip{
+    font-size: 10px;
+}
+.w3-akronim{
+    font-family: 'Akronim', cursive;
+    font-size: 2em;
+}

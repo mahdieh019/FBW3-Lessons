@@ -1,0 +1,22 @@
+//vars
+$font-stack:    Helvetica, sans-serif;
+$primary-color: blue;
+$link-color:green;
+
+//nesting
+nav{
+    ul {
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li{
+        display: inline-block;
+    }
+}
+
+a:visited{
+    color: $link-color;
+}
+
