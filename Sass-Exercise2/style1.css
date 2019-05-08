@@ -1,9 +1,13 @@
+*{
+    box-sizing: border-box;
+ 
+}
 h1{
     text-align: center;
     margin-top: 60px;
 }
 ul{
-   
+ 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -13,18 +17,48 @@ nav ul li{
     color: blueviolet;
     padding: 30px;
     display: inline-block;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 a{
     text-decoration: none;
 }
 
-.cards card{
-    max-width:300;;
+.cards {
+    column-count: 3;
+    column-width: 50px;
+    text-align: center;
 }
+.card p{
+    padding-left: 30px;
+}
+
 .card h4{
     color: black;
     font-size: 20px;
+    text-align: center;
+}
 
+article{
+    height: 300px;
+    padding-top: 90px;
+}
+
+img{
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    float: left;
+}
+aside{
+    padding-left: 52px;;
+}
+section{
+    padding-left: 52px;
+}
+footer ul li{
+    color: blueviolet;
+    padding: 25px;
+    display: inline-block;
+    padding-bottom: 50px;
 }
