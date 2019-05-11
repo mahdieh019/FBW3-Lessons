@@ -1,0 +1,32 @@
+$background-color:red;
+$border:1 solid black;
+body{
+    background: lightcoral;
+}
+.Table{
+    width: 450px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+
+    .normal ,.light, .dark{ 
+        flex: 33.3%;
+        height: 300px;
+        border :1px solid black;
+    }
+    .normal{
+        background:$background-color
+    }
+    .dark{
+        background:darken($background-color,10%);
+    }
+    .light{
+        background:lighten($background-color, 10%);
+    }
+    .code{
+       border:1px solid red;
+       
+
+    }
+
+}

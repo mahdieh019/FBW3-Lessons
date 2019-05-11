@@ -26,8 +26,9 @@ a{
 
 .cards {
     column-count: 3;
-    column-width: 50px;
+    column-width: 100px;
     text-align: center;
+    border: 2px solid red;
 }
 .card p{
     padding-left: 30px;

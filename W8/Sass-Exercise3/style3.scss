@@ -1,0 +1,47 @@
+$background-color:lightblue;
+$font-family:'Dancing Script', cursive;
+
+*{
+    box-sizing: border-box;
+}
+
+// we could use flex or table
+.box {
+    flex: 33.3%;
+    // width: 33.3%; 
+    height: 300px;
+    background-color:$background-color;
+    float: left;
+    border: 1px solid white;
+    text-align: center;
+    font-family:$font-family;
+}
+.font{
+    width: 430px;
+    height: 150px;
+    background-color:$background-color;
+    color: black;
+    border: 1px solid white;
+    text-align: center;
+    font-family:$font-family;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    // display:table;
+    display: flex;
+    width: 200px;
+   }
+.t2:hover{
+    background: lighten($background-color, 10%);
+    color:violet;
+}
+
+.t3:hover{
+    background: darken($background-color,10%);
+    color:lightgreen;
+}
+.font:hover{
+    background: lighten($background-color,15%);
+    color:grey;
+}

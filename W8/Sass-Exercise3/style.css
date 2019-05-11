@@ -1,0 +1,37 @@
+body {
+  background: lightcoral;
+}
+
+.Table {
+  width: 450px;
+  height: 500px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Table .normal, .Table .light, .Table .dark {
+  -webkit-box-flex: 33.3%;
+      -ms-flex: 33.3%;
+          flex: 33.3%;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.Table .normal {
+  background: red;
+}
+
+.Table .dark {
+  background: #cc0000;
+}
+
+.Table .light {
+  background: #ff3333;
+}
+
+.Table .code {
+  border: 1px solid red;
+}
+/*# sourceMappingURL=style.css.map */

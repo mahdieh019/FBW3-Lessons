@@ -1,0 +1,51 @@
+.cards{
+    margin-top:
+    40px;
+    text-align: $text-center;
+    display: flex;
+
+    .card{
+        border: 1px solid #444;
+        border-radius: 25px;
+        flex:33.3%;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: $box-shadow;
+    
+    p{
+        text-align: $text-center;
+        font-size: $font-text;
+
+    }
+    p:hover{
+        color:green;
+    }
+    button{
+        cursor:pointer;
+        padding: 5px;
+        font-size: $font-links;
+        background: $background2;
+
+    }
+    h4{
+        font-size:1.5em;
+    }
+    button:hover{
+
+    }
+}
+.portion{
+    display: flex;
+    align-items: $text-center;
+
+    img{
+        width: 20vw;
+        opacity: 0.5;
+    }
+    article{
+        text-align: $text-justify;
+        font-size: $font-text;
+        @include effect;
+    }
+
+}

@@ -1,0 +1,122 @@
+body {
+  background: -moz-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff7cd8 100%);
+  background: #666666;
+  font-family: "Sofia", cursive;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #990000;
+}
+
+nav ul, footer ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+nav ul li, footer ul li {
+  display: inline-block;
+}
+
+nav ul li a, footer ul li a {
+  text-decoration: none;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 27px;
+  font-family: "Akronim", cursive;
+  color: #e6ffdc;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+nav ul li a:hover, footer ul li a:hover {
+  font-size: 1, 8em;
+  color: #00cccc;
+  color: green;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 25px;
+  background: white;
+}
+
+main .cards {
+  margin-top: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .cards .card {
+  border: 1px solid #444;
+  border-radius: 25px;
+  -webkit-box-flex: 33.3%;
+      -ms-flex: 33.3%;
+          flex: 33.3%;
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 9px 6px 19px 7px #444;
+          box-shadow: 9px 6px 19px 7px #444;
+  button: hover;
+}
+
+main .cards .card p {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+main .cards .card p:hover {
+  color: green;
+}
+
+main .cards .card button {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1, 8em;
+  background: -moz-linear-gradient(top, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 51%, #c1bfea 100%);
+}
+
+main .cards .card h4 {
+  font-size: 1.5em;
+}
+
+main .portion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .portion img {
+  width: 20vw;
+}
+
+main .portion article {
+  text-align: justify;
+  font-size: 1.6em;
+  color: green;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 25px;
+  background: white;
+}
+
+aside, section {
+  padding-left: 35px;
+  font-size: 1.6em;
+  text-align: justify;
+  color: green;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 25px;
+  background: white;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/*# sourceMappingURL=style.css.map */
