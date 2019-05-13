@@ -2,14 +2,7 @@
     box-sizing: border-box;
  
 }
-body{
-    background-image: -moz-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff7cd8 100%);
-    background-image: -moz-linear-gradient(top, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 51%, #c1bfea 100%);
-    font-family: 'Akronim', cursive;
-    font-family: 'Sofia', cursive;
 
-
-}
 header{
     text-align: center;
     padding: 20px;

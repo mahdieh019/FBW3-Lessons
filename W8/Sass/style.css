@@ -1,6 +1,10 @@
+nav {
+  border: 1px solid red;
+}
+
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   list-style: none;
 }
 

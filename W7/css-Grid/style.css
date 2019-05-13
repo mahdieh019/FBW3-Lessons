@@ -1,10 +1,9 @@
-.item
-{
-background-color: blue;
-color: white;
-border: 3px solid white;
-padding: 20px;
-text-align: center;
+.item{
+    background-color: blue;
+    color: white;
+    border: 3px solid white;
+    padding: 20px;
+    text-align: center;
 }
 .header{grid-area: header;}
 .left{grid-area: left;}
@@ -14,8 +13,8 @@ text-align: center;
 
 .grid{
     /* display: inline-grid; */
-    /* grid-column-gap:1px;
-    grid-row-gap: 1px; */
+    /* grid-column-gap:1px; */
+    /* grid-row-gap: 1px;  */
     display:grid;
     grid-template-areas:
     'header header right'
@@ -23,12 +22,10 @@ text-align: center;
     'left footer footer';
 }
 
-
-
 @media all and (max-width:400px){
     .grid{
         grid-template-areas: 
-        'header header h'
+        'header header'
         'left left '
         'center center'
         'right right'

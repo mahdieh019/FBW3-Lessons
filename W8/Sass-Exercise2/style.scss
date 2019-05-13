@@ -9,10 +9,10 @@ $mainfont-family:'Sofia', cursive;
 $secondfont-family:'Akronim', cursive;
 
 $background1:-moz-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff7cd8 100%);
-$background2:-moz-linear-gradient(top, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 51%, #c1bfea 100%);
+$background2:-moz-linear-gradient(top, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); 
 
 $font-h1:2em;
-$font-links:1,8em;
+$font-links:1.1.8em;
 $font-text:1.6em;
 
 $box-shadow:9px 6px 19px 7px #444;
@@ -31,14 +31,15 @@ $text-justify:justify;
 
 body{
     background: $background1;
-    background: lighten(black,40%);
+    // background: lighten(black,40%);
     font-family: $mainfont-family;
 }
 // @import "_header";
 header{
     text-align: $text-center;
     padding: 20px;
-    background: darken(red,20%); //a function lighten() & darken()
+    // background: darken(red,20%); //a function lighten() & darken()
+    background: $background2;
 }
 
 nav,footer{
@@ -65,8 +66,8 @@ nav,footer{
             }
         }
     }
-}
 
+}
 
 main{
     @import "_cards";

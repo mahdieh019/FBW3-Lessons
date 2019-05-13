@@ -1,6 +1,5 @@
 .cards{
-    margin-top:
-    40px;
+    margin-top:40px;
     text-align: $text-center;
     display: flex;
 
@@ -11,6 +10,7 @@
         padding: 20px;
         margin: 20px;
         box-shadow: $box-shadow;
+    }
     
     p{
         text-align: $text-center;
@@ -25,14 +25,17 @@
         padding: 5px;
         font-size: $font-links;
         background: $background2;
+        transition: ease-in-out 300ms;
 
+    }
+    button:hover{
+        background: lightblue;
+        border-radius: 25px;
     }
     h4{
         font-size:1.5em;
     }
-    button:hover{
-
-    }
+   
 }
 .portion{
     display: flex;

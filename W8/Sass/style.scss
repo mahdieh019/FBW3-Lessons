@@ -5,9 +5,11 @@ $link-color:green;
 
 //nesting
 nav{
+    border: 1px solid red;
+    // padding:30px;
     ul {
         margin:0;
-        padding: 0;
+        padding: 10px;
         list-style: none;
     }
 

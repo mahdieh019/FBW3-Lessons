@@ -1,13 +1,12 @@
 body {
   background: -moz-linear-gradient(top, #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff7cd8 100%);
-  background: #666666;
   font-family: "Sofia", cursive;
 }
 
 header {
   text-align: center;
   padding: 20px;
-  background: #990000;
+  background: -moz-linear-gradient(top, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%);
 }
 
 nav ul, footer ul {
@@ -31,7 +30,7 @@ nav ul li a, footer ul li a {
 }
 
 nav ul li a:hover, footer ul li a:hover {
-  font-size: 1, 8em;
+  font-size: 1.1 0.8em;
   color: #00cccc;
   color: green;
   padding: 10px;
@@ -58,26 +57,32 @@ main .cards .card {
   margin: 20px;
   -webkit-box-shadow: 9px 6px 19px 7px #444;
           box-shadow: 9px 6px 19px 7px #444;
-  button: hover;
 }
 
-main .cards .card p {
+main .cards p {
   text-align: center;
   font-size: 1.6em;
 }
 
-main .cards .card p:hover {
+main .cards p:hover {
   color: green;
 }
 
-main .cards .card button {
+main .cards button {
   cursor: pointer;
   padding: 5px;
-  font-size: 1, 8em;
-  background: -moz-linear-gradient(top, #ebe9f9 0%, #d8d0ef 50%, #cec7ec 51%, #c1bfea 100%);
+  font-size: 1.1 0.8em;
+  background: -moz-linear-gradient(top, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%);
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
 }
 
-main .cards .card h4 {
+main .cards button:hover {
+  background: lightblue;
+  border-radius: 25px;
+}
+
+main .cards h4 {
   font-size: 1.5em;
 }
 
@@ -92,6 +97,7 @@ main .portion {
 
 main .portion img {
   width: 20vw;
+  opacity: 0.5;
 }
 
 main .portion article {
