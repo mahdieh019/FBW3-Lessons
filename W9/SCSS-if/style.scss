@@ -1,0 +1,19 @@
+@mixin text-styler($fsize){
+    font-size:$fsize;
+    @if $fsize> 2em {
+        color:red;
+        text-transform: uppercase;
+        font-weight: bold;
+    }@else if $fsize == 2em{
+             color:blue;
+           }
+        @else {
+        color:green;
+            }
+    }
+ 
+
+.main{
+    @include text-styler(1.3em);
+   
+}

@@ -1,0 +1,47 @@
+.title {
+  text-align: center;
+  font-size: 2em;
+  color: red;
+  text-transform: uppercase;
+}
+
+.text {
+  text-align: center;
+  font-size: 2em;
+  color: blue;
+}
+
+.htext {
+  text-transform: uppercase;
+  color: green;
+  font-size: 2em;
+  border-radius: 25px;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(yellow), to(green));
+  background-image: linear-gradient(to right, yellow, green);
+}
+
+.content {
+  text-transform: uppercase;
+  color: orange;
+  font-size: 1.8em;
+  border-radius: 20px;
+  text-align: left;
+  background-image: -webkit-gradient(linear, left top, right top, from(red), to(green));
+  background-image: linear-gradient(to right, red, green);
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right top, from(blue), to(pink));
+  background-image: linear-gradient(to right, blue, pink);
+}
+
+.light-text {
+  background-color: lightblue;
+  font-size: 2.2em;
+}
+
+.light-text:hover {
+  background-color: #86c5da;
+}
+/*# sourceMappingURL=main.css.map */

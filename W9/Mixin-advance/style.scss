@@ -1,0 +1,52 @@
+// a:link {
+//   color: black;
+// }
+// a:visited {
+//   color: blue;
+// }
+// a:hover {
+//   color: green;
+// }
+// a:active {
+//   color: red;
+// }
+
+@mixin link($link, $visited, $hover, $activ) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visited;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active {
+      color: $activ;
+    }
+  }
+}
+.container {
+  @include link(black, blue, green, red);
+}
+
+// the initiallized variable should be the last parameter
+@mixin headline($size,$color:blue) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin pad($pad-var...){
+  padding:$pad-var;
+}
+
+
+// if we have already initiallized the variable, we could use the function without its parameter
+// h1 {
+//   @include headline(16p);
+// }
+
+h1 {
+  background-color: orange;
+  @include headline(16p,green);
+  @include pad(20px 30px 50px 50px);
+}

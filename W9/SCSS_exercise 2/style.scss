@@ -1,0 +1,60 @@
+body {
+  background: rgba(255, 255, 0, 0.616);
+}
+@mixin balls($width, $height, $border, $border-radius) {
+  width: $width;
+  height: $height;
+  border: $border;
+  border-radius: $border-radius;
+}
+
+@mixin ani($ani-duration, $ani-delay, $ani-time-func, $ani-iter) {
+  animation-name: move;
+  animation-duration: $ani-duration;
+  animation-delay: $ani-delay;
+  animation-timing-function: $ani-time-func;
+  animation-iteration-count: $ani-iter;
+}
+@keyframes move {
+  // 0%  {background: red;top: 0px; left: 0px; }
+  // 25%  {background: blue; }
+  // 50%  { background: pink;top: 100px; left: 100px;}
+  // 100%  {background: green; }
+
+  from {
+    background: red;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  to {
+    background: pink;
+    margin-top: 10px;
+    margin-left: 100px;
+  }
+
+  //    from { transform: translateX(0) }
+  //     to   { transform: translateX(800%) }
+}
+
+.container {
+  display: inline-block;
+}
+.ball1 {
+  // background: green;
+  text-align: center;
+  @include balls(100px, 100px, 1px solid black, 50%);
+  @include ani(1s, 6s, linear, infinite);
+}
+.ball2 {
+  // background: red;
+  @include balls(100px, 100px, 1px solid black, 50%);
+  text-align: center;
+  @include ani(2s, 3s, ease-out, infinite);
+}
+.ball3 {
+  // background:blue;
+  text-align: center;
+  @include balls(100px, 100px, 1px solid black, 50%);
+  @include ani(3s, 4s, ease-in-out, infinite);
+}
