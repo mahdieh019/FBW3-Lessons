@@ -1,0 +1,21 @@
+
+@media screen and(max-width:575px) and (min-width:576px){
+    .div-responsive{
+        width:100%;
+        color:white;
+    }
+}
+//medium device
+@media screen and (min-width:768px){
+    .div-responsive{
+        width:50%;
+        color:white;
+    }
+}
+//large device
+@media screen and (min-width:992px){
+    .div-responsive{
+        width:25%;
+        color:white;
+    }
+}

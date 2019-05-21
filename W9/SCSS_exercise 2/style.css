@@ -3,28 +3,56 @@ body {
 }
 
 @-webkit-keyframes move {
-  from {
+  0% {
     background: red;
-    margin-top: 0px;
-    margin-left: 0px;
+    top: 0px;
+    left: 0px;
+  }
+  25% {
+    background: blue;
+  }
+  50% {
+    background: pink;
+    top: 100px;
+    left: 100px;
+  }
+  100% {
+    background: green;
+  }
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    background: pink;
-    margin-top: 10px;
-    margin-left: 100px;
+    -webkit-transform: translateX(800%);
+            transform: translateX(800%);
   }
 }
 
 @keyframes move {
-  from {
+  0% {
     background: red;
-    margin-top: 0px;
-    margin-left: 0px;
+    top: 0px;
+    left: 0px;
+  }
+  25% {
+    background: blue;
+  }
+  50% {
+    background: pink;
+    top: 100px;
+    left: 100px;
+  }
+  100% {
+    background: green;
+  }
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    background: pink;
-    margin-top: 10px;
-    margin-left: 100px;
+    -webkit-transform: translateX(800%);
+            transform: translateX(800%);
   }
 }
 
@@ -51,11 +79,11 @@ body {
 }
 
 .ball2 {
+  text-align: center;
   width: 100px;
   height: 100px;
   border: 1px solid black;
   border-radius: 50%;
-  text-align: center;
   -webkit-animation-name: move;
           animation-name: move;
   -webkit-animation-duration: 2s;

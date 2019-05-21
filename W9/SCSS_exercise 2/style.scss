@@ -16,25 +16,13 @@ body {
   animation-iteration-count: $ani-iter;
 }
 @keyframes move {
-  // 0%  {background: red;top: 0px; left: 0px; }
-  // 25%  {background: blue; }
-  // 50%  { background: pink;top: 100px; left: 100px;}
-  // 100%  {background: green; }
-
-  from {
-    background: red;
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-
-  to {
-    background: pink;
-    margin-top: 10px;
-    margin-left: 100px;
-  }
-
-  //    from { transform: translateX(0) }
-  //     to   { transform: translateX(800%) }
+  0%  {background: red;top: 0px; left: 0px; }
+  25% {background: blue; }
+  50% {background: pink;top: 100px; left: 100px;}
+  100%{background: green; }
+  
+  from { transform: translateX(0) }
+  to   { transform: translateX(800%) }
 }
 
 .container {
@@ -48,8 +36,8 @@ body {
 }
 .ball2 {
   // background: red;
-  @include balls(100px, 100px, 1px solid black, 50%);
   text-align: center;
+  @include balls(100px, 100px, 1px solid black, 50%);
   @include ani(2s, 3s, ease-out, infinite);
 }
 .ball3 {
@@ -58,3 +46,4 @@ body {
   @include balls(100px, 100px, 1px solid black, 50%);
   @include ani(3s, 4s, ease-in-out, infinite);
 }
+

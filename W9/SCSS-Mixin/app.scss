@@ -1,198 +1,180 @@
+* {
+    box-sizing: border-box;
+  }
 
-
-@mixin text-format($text-color,$align,$font-family,$font-size,$font-weight){
-    color:$text-color;
-    text-align: $align;
-    font-family:$font-family;
-    font-size: $font-size;
-    font-weight: $font-weight;
+@mixin text-format(
+  $text-color,
+  $align,
+  $font-family,
+  $font-size,
+  $font-weight
+) {
+  color: $text-color;
+  text-align: $align;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
 }
 @mixin link-format {
-    transition: ease-in-out 400ms;
-    text-transform: uppercase;
-    &:hover{
-
-        background-color: burlywood;
-        font-weight: bold;
-        border-radius: 100%;
-        // transform: scale(1,1) rotate(360deg);
-        transform: scale(1,1) ;
-    }
-    &:active{
-        background-color: rgb(255, 217, 0);
-    }
-    &:visited{
-        background-color: lightcoral;
-    }
-  
+  transition: ease-in-out 400ms;
+  text-transform: uppercase;
+  &:hover {
+    background-color: burlywood;
+    font-weight: bold;
+    border-radius: 100%;
+    // transform: scale(1,1) rotate(360deg);
+    transform: scale(1, 1);
+  }
+  &:active {
+    background-color: rgb(255, 217, 0);
+  }
+  &:visited {
+    background-color: lightcoral;
+  }
 }
-@mixin header-format{
-
-    &:hover{
-        color: red;
-        font-family: Pacifico;
-    }
+@mixin header-format {
+  &:hover {
+    color: red;
+    font-family: Pacifico;
+  }
 }
 
 @mixin move-image {
-animation-name: movetop;
-    animation-duration: 3s;  
-    animation-delay: 2s;
-
+  animation-name: movetop;
+  animation-duration: 3s;
+  animation-delay: 2s;
 }
-@keyframes movetop{
-    from{transform: translateY(30px); opacity: 0;   }
-    to{transform: translateY(0); opacity: 1; }
+@keyframes movetop {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
-*{
-    box-sizing: border-box;
-}
 
 //inheritance
-%light-text{
-    border:1px solid yellow;
-    background: linear-gradient(to left,red,green,blue);
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.7em;
-    text-align: center;
-
+%light-text {
+  border: 1px solid yellow;
+  background: linear-gradient(to left, red, green, blue);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-align: center;
 }
-.light{
-    @extend %light-text;
+.light {
+  @extend %light-text;
 }
-.text{
-    @extend %light-text;
-    border: 3px solid #333;
-    border-radius: 25px;
-    padding: 20px;
+.text {
+  @extend %light-text;
+  border: 3px solid #333;
+  border-radius: 25px;
+  padding: 20px;
 }
-header{
+header {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  text-transform: uppercase;
+  // @include header-format;
 
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding:20px;
-    text-transform: uppercase;
-    // @include header-format;   
-
-    h1{
-
-        color:lighten(darkblue,40%);
-        @include header-format;
-
-   
+  h1 {
+    color: lighten(darkblue, 40%);
+    @include header-format;
+  }
+  h2 {
+    color: darken(lightgray, 30%);
+  }
+}
+.nav {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 255, 0.5);
+    li {
+      padding: 10px;
+      list-style-type: none;
+      @include link-format();
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-family: "Pacifico";
+        font-size: 1.5em;
+      }
     }
-    h2{
-        color:darken(lightgray, 30%);
-       
-    }
-}
-.nav{
-  
-    .nav-links{
-        display: flex;
-        justify-content: center;
-        background-color: rgba(0,0,255,0.5);
-        li{
-            padding: 10px;
-            list-style-type: none;
-            @include link-format();
-            a{
-                text-decoration: none;
-                color:#fff;
-                font-family:  'Pacifico';
-                font-size: 1.5em;
-               
-            }
-        }
-    }
-
+  }
 }
 
 .text-section {
-
-    h3{
-        text-align: center;
-        font-size: 1.7em;
-    }
-    p{
-        @include text-format(black,justify,"Pacifico",1.7em, bold);
-       
-    }
+  h3 {
+    text-align: center;
+    font-size: 1.7em;
+  }
+  p {
+    @include text-format(black, justify, "Pacifico", 1.7em, bold);
+  }
 }
-.section-images{
- 
+.section-images {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 200px;
+    width: 250px;
+    margin: 0 5px 50px 5px;
+
+    // animation-fill-mode: both;
+    @include move-image;
+  }
+  // #img1{
+  //     @include move-image;
+  // }
+}
+
+footer {
+  background-color: rgba(0, 0, 255, 0.5);
+  .footer-links {
     display: flex;
-    flex-flow: row;
     justify-content: center;
-    align-items:center ;
-   
-  
-
-    
-    img{
-        height: 200px;
-        width: 250px;
-        margin:0 5px 50px 5px;
-        
-        // animation-fill-mode: both;
-        @include move-image;
-
+    padding: 20px;
+    li {
+      list-style: none;
+      // margin-top:40px;       to be in the center
+      @include link-format;
     }
-    // #img1{
-    //     @include move-image;
-    // }
+    a {
+      padding: 20px;
+      font-size: 1.7em;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
 }
-
-footer{
-    
-
-    background-color: rgba(0,0,255,0.5);
-    .footer-links{
-
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        li{
-            list-style: none;
-            // margin-top:40px;       to be in the center
-            @include link-format;
-        }
-        a{
-            
-            padding: 20px;
-            font-size: 1.7em;
-            text-decoration: none;
-            color:
-            #fff;
-
-        }
+//responsive
+@media screen and(max-width:600px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    li {
+      text-align: center;
     }
-}
-@media screen and(max-width:600px){
-    .nav-links{
-        display: flex;
-        flex-direction: column;
-        li{
-            text-align: center;
-        }
-      
-    }
-    .section-images{
-        display: flex;
-        flex-direction: column;
-       
-    }
-    .footer-links{
-        display: flex;
-        flex-direction: column;
-
-    }
-    li{
-        // text-align: center;
-        padding: 10px;
-        text-align: none;    
-    }
+  }
+  .section-images {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    padding: 10px;
+    text-align: none;
+  }
 }
