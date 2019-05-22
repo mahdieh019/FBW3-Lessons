@@ -76,11 +76,12 @@ p {
   top: 8px;
 }
 
-.navigation-icon::after,
-.navigation-icon::before {
-  content: "";
+.navigation-icon::after, .navigation-icon::before {
+  content: '';
   position: absolute;
   left: 0;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 .navigation-button:hover .navigation-icon::before {
@@ -94,6 +95,22 @@ p {
 .navigation-checkbox:checked ~ .navigation-background {
   -webkit-transform: scale(80);
           transform: scale(80);
+}
+
+.navigation-checkbox:checked ~ .navigation-button .navigation-icon {
+  background-color: transparent;
+}
+
+.navigation-checkbox:checked ~ .navigation-button .navigation-icon::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.navigation-checkbox:checked ~ .navigation-button .navigation-icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 .navigation-checkbox {
@@ -123,8 +140,65 @@ p {
   border-radius: 50%;
   top: 60px;
   right: 60px;
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
+}
+
+.navigation-nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation-list {
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  opacity: 1;
+  z-index: 1;
+  width: 100%;
+}
+
+.navigation-item {
+  margin: 3px;
+}
+
+.navigation-link {
+  text-decoration: none;
+}
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 220%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.navigation-link:active, .navigation-link:hover {
+  background-position: 100%;
+  color: #333;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 .header {
