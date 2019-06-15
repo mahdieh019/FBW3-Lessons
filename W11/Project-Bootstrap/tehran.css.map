@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,UAAU,EAAE,iCAAiC,CAAA,SAAS,CAAC,MAAM,CAAC,MAAM;EACpE,eAAe,EAAC,KAAK;CACxB;;AACD,AAAA,IAAI;AACJ,IAAI;AACJ,MAAM;AACN,KAAK,CAAC;EACF,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "tehran.scss"
+    ],
+    "names": [],
+    "file": "tehran.css"
+}

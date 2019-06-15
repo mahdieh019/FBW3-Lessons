@@ -1,0 +1,293 @@
+.my-text h2 {
+  display: block;
+  margin-bottom: 35px;
+  -webkit-animation: move-up 3s;
+          animation: move-up 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.my-text h5 {
+  display: block;
+  margin-bottom: 35px;
+  -webkit-animation: move-up 3s;
+          animation: move-up 3s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes move-up {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0pX);
+            transform: translateY(0pX);
+    opacity: 1;
+  }
+}
+
+@keyframes move-up {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0pX);
+            transform: translateY(0pX);
+    opacity: 1;
+  }
+}
+
+#odd {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  border-radius: 3px 25px;
+  position: absolute;
+  right: 10%;
+  -webkit-animation-name: img-right;
+          animation-name: img-right;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes img-right {
+  0% {
+    left: 55%;
+    z-index: 1;
+  }
+  100% {
+    left: 14%;
+    z-index: 1;
+  }
+}
+
+@keyframes img-right {
+  0% {
+    left: 55%;
+    z-index: 1;
+  }
+  100% {
+    left: 14%;
+    z-index: 1;
+  }
+}
+
+#even {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  border-radius: 25px 3px;
+  position: absolute;
+  left: 10%;
+  -webkit-animation-name: img-left;
+          animation-name: img-left;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes img-left {
+  0% {
+    left: 14%;
+    z-index: 1;
+  }
+  100% {
+    left: 67%;
+    z-index: 1;
+  }
+}
+
+@keyframes img-left {
+  0% {
+    left: 14%;
+    z-index: 1;
+  }
+  100% {
+    left: 67%;
+    z-index: 1;
+  }
+}
+
+.my-container, .my-container1 {
+  height: 250px;
+  border: 0px solid black;
+}
+
+.my-container h4 > span:nth-child(1) {
+  font-size: 1.6em;
+  opacity: 0;
+  display: block;
+  margin-bottom: 10px;
+  color: darkslateblue;
+  padding-top: 20px;
+  margin-left: 14%;
+  border: 0px solid red;
+  font-family: sans-serif;
+  font-weight: 700;
+  -webkit-animation: moveright 3s;
+          animation: moveright 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: 'Arizonia', cursive;
+}
+
+.my-container h4 > span:nth-child(2) {
+  font-size: 1.2em;
+  opacity: 0;
+  display: block;
+  margin-left: 14%;
+  margin-bottom: 10px;
+  border: 0px solid red;
+  color: green;
+  font-weight: 700;
+  -webkit-animation: moveright 3s;
+          animation: moveright 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: 'Arizonia', cursive;
+}
+
+.my-container h4 > span:nth-child(3) {
+  font-size: 1.2em;
+  opacity: 0;
+  display: block;
+  margin-left: 14%;
+  border: 0px solid red;
+  color: green;
+  font-weight: 700;
+  -webkit-animation: moveright 3s;
+          animation: moveright 3s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: 'Arizonia', cursive;
+}
+
+.my-container1 h4 > span:nth-child(1) {
+  font-size: 1.6em;
+  opacity: 0;
+  display: block;
+  margin-bottom: 10px;
+  color: brown;
+  padding-top: 10px;
+  margin-left: 14%;
+  border: 0px solid red;
+  font-family: sans-serif;
+  font-weight: 700;
+  -webkit-animation: moveleft 3s;
+          animation: moveleft 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: 'Arizonia', cursive;
+}
+
+.my-container1 h4 > span:nth-child(2) {
+  font-size: 1.2em;
+  opacity: 0;
+  display: block;
+  margin-left: 14%;
+  margin-bottom: 10px;
+  border: 0px solid red;
+  color: green;
+  font-weight: 700;
+  -webkit-animation: moveleft 3s;
+          animation: moveleft 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: 'Arizonia', cursive;
+}
+
+.my-container1 h4 > span:nth-child(3) {
+  font-size: 1.2em;
+  opacity: 0;
+  display: block;
+  margin-left: 14%;
+  border: 0px solid red;
+  color: green;
+  font-weight: 700;
+  -webkit-animation: moveleft 3s;
+          animation: moveleft 3s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: 'Arizonia', cursive;
+}
+
+@-webkit-keyframes moveright {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+    opacity: 1;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveleft {
+  0% {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+    opacity: 1;
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=foods.css.map */
