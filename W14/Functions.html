@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function simple(){
+            console.log("hi there");
+        }
+        simple();
+/////////////////////////////////////////////////////////////////////////////////
+        // function myName(name,lastname){
+        //     console.log(typeof(lastname));
+        //     if(typeof(name)!="undifined" && typeof(lastname)!="undifined"  ){
+        //     console.log("name");
+        // }
+        // else{
+        //     console.log("lastname");
+        //     }   
+        // }
+        /////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+        // var sum=function(number){
+        //     return number + 10;
+        // }
+
+
+        function whichDayIsIt(number){
+            var weekday;
+            switch(number){
+                case 0:
+                weekday="Sunday";
+                break;
+
+                case 1:
+                weekday="Monday";
+                break;
+
+                case 2:
+                weekday="Tuesday";
+                break;
+
+                case 3:
+                weekday="Wendsday";
+                break;
+
+                case 4:
+                weekday="Thursday";
+                break;
+
+                case 5:
+                weekday="Friday";
+                break;
+
+                case 6:
+                weekday="Saturday";
+                break;
+
+                default:
+                    alert("Please give a right number");
+            }
+            return(weekday);
+        }
+
+
+
+        for(let i=0;i<7;i++){
+            whichDayIsIt(i);
+        }
+        for(let i=0;i<7;i++){
+        console.log (whichDayIsIt(i));
+        }
+////////////////////////////////////////////////////////////////////////
+
+        // let weekday=["Sunday","Monday","tuesday","Wendsday","Thursday","Friday","Saturday"];
+        // let weekNumber=prompt("Enter smth");
+        // for(let i=0;i<=6;i++){
+        //     if(weekNumber==i){
+        //         console.log(weekday[i]); 
+        //     }
+        // }
+
+
+
+////////////////////////////////////////////////////////
+        let car1={name:"bmw",year:"2018",color:"black", country:"Germany"};
+        let car2={name:"AUDI",year:"2010",color:"white",country:"Germany"};
+        let car3={name:"FIAT",year:"2010",color:"white",country:"ITALY"};
+
+        let cars=[car1,car2,car3];
+        function findCarCountry(name){
+            let country;
+            for(let i=0;i<3;i++){
+                if(cars[i].name==name){
+                    country = cars[i].country;
+                }
+            }
+            return country;
+        }
+
+///////////////////////////////////////////////////////////////////////////////
+        function f(x){
+            let s=x*x;
+            return(s);
+        }
+        let arr=[12,13,14];
+
+        function map(fun,array){
+            let y=[];
+            for(let i=0;i<array.length;i++){
+                y[i]=fun(array[i]);
+                console.log(y[i]);
+            }
+            
+        }
+
+//////////////////////////////////////////////
+        let newCars=["bmw","ford","ferrari"];
+        function findYourCar(car){
+            let found=false;
+            for(let i=0;i<newCars.length;i++){
+                if(newCars[i]==car){
+                    console.log("found");
+                }else{
+                console.log("not found");
+            }
+            }
+            if(found){
+                console.log("found");
+            }else{
+                console.log("not found");
+            }
+        }
+
+/////////////////////////////////////
+document.write('<br>');
+for(let i=0;i<4;i++){
+    for(let j=i;j<4;j++){
+        document.write('0');
+    }
+    document.write('<br>');
+}
+
+///////////////////// run in html
+document.write('<br>');
+function draw(line, star){
+    for(let i=0;i<line;i++){
+        for(let j=i;j<star;j++){
+            
+          console.log('*');
+        }
+    console.log('<br>');
+    }
+}
+
+//////////////////// run in console
+// function draw(line, star){
+//     let str;
+//     for(let i=0;i<line;i++){
+//         str="";
+//         for(let j=i;j<star;j++){
+
+//           str+='*';
+//         }
+//         console.log(str);
+    
+//     }
+// }
+
+
+function drawTriangle(size){
+    let char=prompt("please ");
+    document.write('<br>');
+    for(let i=0;i<size;i++){
+        for(let k=0;k<=i;k++){document.write('&nbsp;')}
+        for(let j=i;j<size;j++){
+        document.write(char);
+    }
+    document.write('<br>');
+    }
+}
+
+
+
+        //let weekNumber = promt();
+        //console.log(weekday[parseInt(weekNumber)]);
+
+
+
+    </script>
+</body>
+</html>
