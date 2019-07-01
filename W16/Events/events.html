@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- <button onclick="alert('Hi !!!')">click me</button> -->
+    <!-- <button onclick="console.log('Hi !!!')">click me</button> -->
+    <button onclick="sayHi()">click me</button>
+
+    <div>
+      <button onclick=" chBGColor()">change background</button>
+      <button onclick="chBg('red')">red</button>
+      <button onclick="chBg('green')">green</button>
+      <button onclick="chBg('blue')">blue</button>
+    </div>
+
+    <div id="logo">
+        <img onmouseover="chImg()" id="logoImg" src="https://picsum.photos/id/193/300/300" alt="">
+        <button onclick="chImg()" >Change image</button>
+        <!-- <button onclick="setInterval(start)" >change automatic</button>
+        <button onclick="clearInterval()">stop changes</button> -->
+        <button  onclick="changeColor()">col</button>
+        <button id="colors" onclick="changeColor1()">change text & body</button>
+        <input type="text" id="name" onblur="showValu()">
+        <p id="paragraph" onmouseover="over()" onmouseout="out()">
+        javascript  javascript   javascript   javascript   javascript    javascript
+        </p>
+
+    </div>
+    <script src="event.js"></script>
+  </body>
+</html>
