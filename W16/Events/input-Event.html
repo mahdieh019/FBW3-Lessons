@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input-Event</title>
+</head>
+<body>
+
+    <!-- GET is not secure  post is secure -->
+    <form onsubmit="formSubmit()" method="GET" action="https://www.w3schools.com/"> 
+        <label for="fullname">Enter your name</label>
+        <input type="text" name="fullname" onblur="inputBlur()" onfocus="myFunction(0)"  onkeydown="inputKeyDown()" onkeyup="inputKeyUp()" >
+
+        <!-- <label for="email">Enter your email</label>
+        <input type="email" name="email" onchange="inputChange()"> -->  
+
+
+        <label for="email">Enter your email</label>
+        <input type="email" name="email"  onchange="inputChange()" onselect="inputSelect()"  onblur="inputBlur()"  onfocus="myFunction(1)" onkeypress="inputKeyPress()">
+        
+        <label for="userPass">write your pass</label>
+        <input type="password" name="userPass">
+
+        
+        <input type="submit" value="Submit the data" >
+
+    </form>
+    <script src="input-Event.js"> </script>
+</body>
+</html>
