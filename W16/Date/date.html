@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Hi there!
+    <script>
+    //standard call 
+    let d=new Date();
+     document.write(d); // Wed Jul 03 2019 09:49:31 GMT+0200
+    document.write("<br>");
+    //using miliseconds     
+    let d_mil=new Date(0);
+    document.write(d_mil); //Thu Jan 01 1970 01:00:00 GMT+0100 
+    document.write("<br>");
+
+    d_mil=new Date(100000000);
+    document.write(d_mil);//Fri Jan 02 1970 04:46:40 GMT+0100
+    document.write("<br>");
+
+    d_mil=new Date(1562139232000);
+    document.write(d_mil);//Wed Jul 03 2019 09:33:52 GMT+0200
+    document.write("<br>");
+
+    // using year, month and so on
+    // pay attention that month counts from 0 to 11
+    let d_norm=new Date(2019,0,23, 11,20);
+    document.write(d_norm); //Wed Jan 23 2019 11:20:00 GMT+0100
+    document.write("<br>");
+
+    </script>
+</body>
+</html>

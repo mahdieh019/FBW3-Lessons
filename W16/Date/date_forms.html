@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getCurrentDate()">Get Current Date</button>
+    <button onclick="getUnixTime()">Get Unix Time</button>
+    <button onclick="getTimeStamp()">Get Time Stamp</button>
+    <button onclick="getOnlyDate()">Get Only Date</button>
+    <button onclick="startAuto()" >change Time</button>
+
+    <!-- <p id="out"></p> only we need to call "out" id . we have 4 buttons with one result each time. -->
+    <p class="result"></p>
+    <p class="result"></p>
+    <p class="result"></p>
+    <p class="result"></p>
+    <p class="result"></p>
+    <script>
+        function getCurrentDate(){
+        let d=new Date();
+        // document.write(d); // Wed Jul 03 2019 09:49:31 GMT+0200
+        document.getElementsByClassName("result")[0].innerHTML=d;
+        }
+
+        function getUnixTime(){
+        let uni=new Date();
+        document.getElementsByClassName("result")[1].innerHTML=uni.getTime();
+        }
+        //// Time
+        function getTimeStamp(){
+        let date=new Date();
+        document.getElementsByClassName("result")[2].innerHTML=date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+        }
+
+        function getOnlyDate(){
+        let d=new Date();
+        let m=d.getMonth()+1;
+        document.getElementsByClassName("result")[3].innerHTML=d.getFullYear()+"."+m+"."+ d.getDay();
+        }
+
+        function watch(){
+        let date=new Date();
+        document.getElementsByClassName("result")[4].innerHTML=date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()+" "+date.getMilliseconds();
+        }
+        function startAuto(){
+        setInterval(watch,1); // 1 is for miliseconds, 1000 is for seconds
+    }
+
+    </script>
+
+</body>
+</html>
