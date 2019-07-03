@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Math</title>
-</head>
-<body>
-    <p>Value in Degrees <input id="input" type="text"></p>
+  </head>
+  <body>
+
+    <p>Value in Degrees <input id="input" type="text" /></p>
     <button onclick="ConvertDegToRadians()">Result</button>
     <button onclick="circleLength()">Result</button>
     <p id="output"></p>
-<!-- --------------------Generator -->
-    <div id="col" style="width: 300px; height:300px;
-    border: 1px solid black"></div>
+    <!-- ------------- Random Generator Color ------------------->
+    <div id="col" style="width: 300px; height:300px; border: 1px solid black"></div>
     <button onclick="changeColor()">Generator</button>
-<!-- -----------generate Password------------ -->
-<p>Length <input id="length" type="text"></p>
-<button onclick="generatePass()">Generate Pass</button>
-<p id="pass"></p>
 
-
-
-<h1>choose any number to let JS generate your password depending on your request</h1>
-<h4>For Ex if you choose 20 then your password will wbe from 20 characters</h4>
-<input type="text" id="input">
-<button onclick="generatepass1()">Random password</button>
-<p id="output"> </p>
-
-<!-- ---------- -->
+    <!-- -----------generate Password------------ -->
+    <p>Length <input id="length" type="text" /></p>
+    <button onclick="generatePass()">Generate Random Password</button>
+    <p id="pass"></p>third way
+third way
+    <!--------------new generate Password third way-----third way--->
+    <p>LengthPass<input id="in"/></p>
+    <button onclick="generatePass1()">Genethird waye</button>
+    <p id="out"></p>
+   
+    <!-- ---------------------------------------------------------------------------------------- -->
     <script>
-        function ConvertDegToRadians(){
-            let deg=document.getElementById("input").value;
-            let rad=deg*Math.PI/180;
-            document.getElementById("output").innerHTML=rad;
-        }
-        function circleLength(){
-            let r=document.getElementById("input").value;
-            let d=r*2*Math.PI;
-            document.getElementById("output").innerHTML=d;
-        }
+        //       convert Degree To Radians
+      function ConvertDegToRadians() {
+        let deg = document.getElementById("input").value;
+        let rad = (deg * Math.PI) / 180;
+        document.getElementById("output").innerHTML = rad;
+      }
 
-        //  Generator
-        function changeColor(){
-            let r=Math.floor(Math.random()*255);
-            let g=Math.floor(Math.random()*255);
-            let b=Math.floor(Math.random()*255);
-            document.getElementById("col").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-        }
-        // new Generator
-        let p=document.getElementById('colorCode');
-        let div=document.getElementById('myColor');
-        function getRandomColor(){
-        let letters="0123456789ABCDEF";
-        let color="#";
-            for(let i=0;i<6;i++){
-                color +=letters[Math.floor(Math.random()*16)];
-            }
-            p.innerHTML=color;
-            div.style.background=color;
-        }
+      function circleLength() {
+        let r = document.getElementById("input").value;
+        let d = r * 2 * Math.PI;
+        document.getElementById("output").innerHTML = d;
+      }
 
-        /// second way
-        function generatePass(){
-            let l=document.getElementById("length").value;
-            console.log(l);
-            let pass="";
-            for(let i=0;i<l;i++){
-               let r= Math.floor(Math.random()*127);
-                pass+=String.fromCharCode(r);
+      //         Random Generator Color
+      function changeColor() {
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        document.getElementById("col").style.backgroundColor =
+          "rgb(" + r + "," + g + "," + b + ")";
+      }
+
+      //    Second Way to Random Generator Color
+      let p = document.getElementById("colorCode");
+      let div = document.getElementById("myColor");
+      function getRandomColor() {
+        let letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        p.innerHTML = color;
+        div.style.background = color;
+      }
+
+      /// Generate random Password
+      function generatePass() {
+        let l = document.getElementById("length").value;
+        console.log(l);
+        let pass = "";
+        for (let i = 0; i < l; i++) {
+          let r = Math.floor(Math.random() * 127);
+          pass += String.fromCharCode(r);
+          console.log(pass);
+        }
+        document.getElementById("pass").innerHTML = pass;
+      }
+
+      // -------Second Way to Generate random Password ---------------
+
+      function generatePass1() {
+            let abc = "abcdefghijklmnopqrstuvwxyz";
+            let nums = "0123456789";
+            let specs = "§$%&()=?!";
+            let base = abc + nums + specs;
+            console.log(base);
+            let length = document.getElementById("in").value; 
+            console.log(length);
+            let pass = '';
+            
+            for (let i = 0; i < length; i++) {
+                index = Math.floor(Math.random()*base.length)
+                console.log(index);
+                pass += base[index];
                 console.log(pass);
             }
-            document.getElementById("pass").innerHTML=pass;
+            document.getElementById("out").innerHTML = pass;
         }
-
-        // -----------third way ---------------
-        let p = document.getElementById('output');
-let div = document.getElementById('mycolor');
-function generatepass1() {
-   let symbols="ABCDEFGHIJKLOMNOPQRSTUVWXYZ";
-   let nums="0123456789";
-   let spec="@#$%^&*()_+?><";
-   let base=symbols+nums+spec;
-    let length = document.getElementById("input").value;
-   let pass='';
-
-   for (let i = 0; i < length ; i++) {
-        index=(Math.floor(Math.random() * base.length));
-         console.log(index);
-         pass+=base[index];
-         console.log(pass);
-   }
-   document.getElementById("output").innerHTML=pass;
-}
-
     </script>
-</body>
+  </body>
 </html>
