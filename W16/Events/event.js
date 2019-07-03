@@ -26,9 +26,6 @@ function startAuto(){
 }
 
 
-
-
-
 ////////////////////////////////////////
 function chImg2(){
     let img=document.getElementById("logoImg");
