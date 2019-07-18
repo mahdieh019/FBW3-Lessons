@@ -9,21 +9,87 @@
  
 </head>
 <body>
+   
+    <form>
+        <input type="button" onclick="sayHello()" value="Say Hello">
+    </form> 
 
-    <h2>
-        hallo world!
-    </h2>
-    <!-- <button type="button" onclick="myFunction()">Try it</button>
-    <p id="demo1"></p>
-    <p id="demo2"></p>
-   -->
-   <p id="demo"></p>
-  <!-- <button type="button" onclick="this.innerHTML=Date()">this is time</button>
-  <button type="button" onclick="this.innerHTML=Date()"></button>
-  <button type="button" onclick="this.innerHTML=Date()">time</button> -->
-  <!-- <button onclick="displayDate()">get time</button> -->
+    <form method="Post" onsubmit="validate()">
+        <input type="submit" value="Submit">
+    </form>
 
-  <p id="demo2"></p>
+ <!-- 
+ <div onmouseover="over()" onmouseout="out()">
+    <h2>this is </h2>
+</div> -->
+
+    <form>
+        <input type="button" value="Click me " onclick="getValue()">
+    </form>
+
+    <p>click the following</p> 
+    <a href="javascript:void(alert('warning'))">Click me</a>
+
+    <a href="javascript:void(0)">Click me</a>
+
+    <form>
+      <input type="button" onclick="getValue()" value="click me">
+    </form>
+
+    <input type="button" onclick="hi()" value="click me">
+
+    <form> 
+        <input type="button" onclick="myFunc()" value="Hi" >
+        <input type="button" onclick="myfan()" value="myfan" >
+        <input type="button" onclick="fan()" value="fan" >
+        <input type="button" onclick="my()" value="my" >
+    </form>
+
+
+
+
+
+
+<form name="myForm" onsubmit="return(validate());">
+    <table cellspacing="2" cellpadding="2" border="1">
+        <tr>
+            <td align="right">Name</td>
+            <td><input type="text" name="Name"></td>
+        </tr>
+        <tr>
+            <td align="right">EMail</td>
+            <td><input type="text" name="EMail"></td>
+        </tr>
+        <tr>
+            <td align="right">Zip Code</td>
+            <td><input type="text" name="Zip"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Country</td>
+            <td>
+                <select name="Country">
+                    <option value="-1" selected>[choose yours]</option>
+                    <option value="1">USA</option>
+                    <option value="2">UK</option>
+                    <option value="3">INDIA</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+                <td align="right"></td>
+                <td><input type="submit" value="Submit"></td>
+
+        </tr>
+
+    </table>
+
+
+
+</form>
+
+<p id="demo"></p>
 
    <script src="test.js"></script>
 </body>

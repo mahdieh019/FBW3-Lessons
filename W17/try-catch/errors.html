@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Errors-Handling</title>
+</head>
+<body>
+    <script>
+        try{
+            console.log(myvar);
+        }catch (err){
+            console.error("something went wrong...");
+            console.error("Error name:..."+err.name); //ReferenceError
+            console.log("Error message: "+err.message);//myvar is not defined
+        }
+//-------------------------------------------------------------------------------------------
+
+        try{
+            let myvar=10;
+            let myvar=20;
+            console.log(myvar);
+        }catch (err){
+            console.error("something went wrong...");
+            console.error("Error name:..."+err.name); //SyntaxError: redeclaration of let myva
+            console.log("Error message: "+err.message);
+        }
+
+//---------------------------------------------------------------------------------------------
+
+
+        try{
+           let x=document.getElementById("my-id").value;
+           console.log(x);
+        }catch (err){
+            console.error("something went wrong...");
+            console.error("Error name:..."+err.name);   //TypeError
+            console.log("Error message: "+err.message); //document.getElementById(...) is null
+        }
+
+ //-------------------------------------------------------------------------------------
+        try{
+           let x=document.getElementById("my-id").value;
+           console.log(x);
+        }catch (err){
+            console.error("something went wrong...");
+            console.error("Error name:..."+err.name);   //TypeError
+            console.log("Error message: "+err.message); //document.getElementById(...) is null
+        }finally{
+            alert("I still alive");  // in any case it runs the alert 
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
