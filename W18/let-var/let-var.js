@@ -1,5 +1,5 @@
 function start(){
-    for(var i=0;i<5;i++){  //let is for block scopes  ............var is for function scope
+    for(var i=0;i<5;i++){  //let is for block scopes  ....var is for function scope
         console.log(i);
     }
     console.log(i);
@@ -9,7 +9,7 @@ start();
 function start2(){
     for(let i=0; i<5;i++){
         if(true){
-            var color="blue"; // var is global  ------ let is lokal
+            var color="blue"; // var is global  ------ let is local
         }
     }
     console.log(color); //if var , it prints the color-----if let, it shows an error 
@@ -31,11 +31,11 @@ console.log(window.age); //  undifined
 const car={
     name:"mercedes", 
     color:"black",
-     model:"amg",
-      year:2019,
-      age:9,
-      carinfo:function(){
-          console.log(this.name+"made in"+this.year);
+    model:"amg",
+    year:2019,
+    age:9,
+    carinfo:function(){
+        console.log(this.name+"made in"+this.year);
       }
     };
 console.log(car.carinfo());

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="scratch.css">
+    <title>scratchpad</title>
+
+</head>
+<body onload="myMessage()">
+    <h2>finding Html</h2>
+    <form id="frm">
+        first name: <input type="text" name="fname" value="Donald"><br>
+        last name: <input type="text" name="lname" value="Duck"><br>
+    </form>
+
+    <p>click"Try it"</p>
+    <button onclick="myFunction()">Try it</button>
+    <p class="intro">the Dom is very useful.</p>
+    <p class="intro">This example</p>
+    <p id="demo"></p>
+    <img  id="image" src="img.jpeg"  alt="" width="160" height="120"><br>
+    <button type="button" onclick="document.getElementById('demo1').style.color='green'">change color text</button>
+    
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <button type="button" onclick="move()">Click me</button>
+    <h1 onclick="this.innerHTML='Ooops!'">Click on this text! </h1>
+    <h1 onclick="changeText(this)">Click on this text! </h1><br>
+
+    <!-- first Way -->
+    <button onclick="displayDate()">The time is...</button> 
+
+    <!-- second way -->
+    <button id="myBTN">Try it again</button> 
+
+    <p id="demo1">demo 1</p>
+    <p id="demo2">demo 2</p>
+
+
+    Enter your name: <input type="text" id="fname" onchange="fun()">
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+         Mouse over me
+    </div>
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)">
+        Don't touch me
+   </div>
+
+   <img id="myImage" src="off.jpeg" alt="" onmousedown="on()" onmouseup="off()" >
+
+   Enter yor lastname: <input type="text" onfocus="focusMe(this)">
+
+
+   <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Hi Mahsa</h1>
+
+    <script src="scratchpad.js"></script>
+</body>
+</html>

@@ -11,7 +11,6 @@ class User{
         document.write(`the current time is : ${current}`);
     }
 
-
     getUsername(){
         document.write(`Welcome back to ${this.username}!`);
         // return this.username;

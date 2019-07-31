@@ -7,10 +7,6 @@ var myRect = document.getElementById("myrect");
      d.create();
  });
 
-
-
-
-
 class Rectangle{
     constructor( height,width,color){
         this.height=height;

@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#first{
+    background: url("https://picsum.photos/id/237/200/300");
+    height: 528px;
+    width: 100%;
+    padding: 10px;
+}
+
+h1{
+    color: white;
+    font-family: sans-serif;
+}
+
+#third{
+    color: green;
+    font-family: inherit;
+}
+
+
+.main-header{
+    background: lightgreen;
+    padding: 8px 16px;
+    width: 100%;
+  
+}
+.main-header > div{
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.main-header__brand{
+    text-decoration: none;
+    color:darkgreen;
+    font-weight: bold;
+    font-size: 22px;
+    
+}
+
+.main-nav{
+    display: inline-block;
+    text-align: right;
+    width: calc(100%-50px);
+    vertical-align: middle;
+
+
+}
+.main-nav__items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+.main-nav__item{
+    display: inline-block;
+    padding: 0 16px;
+
+ }
+
+ .main-nav__item a{
+     text-decoration: none;
+     color: darkgreen;
+     font-weight: bold;
+     padding:3px 0; 
+
+ }
+ .main-nav__item a:hover,
+ .main-nav__item a:active{
+     color:white;
+     border-bottom: 5px solid white;
+ }
+ .main-nav__item--cta a{
+    color: white;
+    background: palevioletred;
+    padding: 8px 16px;
+    border-radius: 8px;
+ }
+ .main-nav__item--cta a:hover,
+.main-nav__item--cta a:active{
+ 
+    color: palevioletred;
+    background: white;
+    border: none;
+}

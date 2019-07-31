@@ -1,0 +1,23 @@
+#container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: blue;
+}
+#animate{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+}
+div{
+    margin: 20px;
+    background: #D94A38;
+    width:120px;
+    height:20px;
+    padding: 40px;
+}
+img{
+    width:"160";
+    height:"120";
+}

@@ -1,154 +1,115 @@
-// let person = {
-    //     firstName:"jack",
-    //     lastName:"Doe",
-    //     age: 50,
-    //     hairColor:"Black",
-    //     personInfo:function(){
-    //         return this.firstName +" "+ this.lastName+" " + this.age;
-    //     }
-    // };
-    function Person(first, last, age, hair) {  // constructor function
-       this.firstName = first;
-       this.lastName = last;
-       this.age = age;
-       this.hairColor = hair;
-       this.personInfo = function () {
-           return this.firstName + " " + this.lastName + " " + this.age;
-       }
+//------------------------Object---------------------------
+
+let person={
+    fname:"Mahsa",
+    lname:"Mani",
+    age:25,
+    hairColor:"black",
+    personInfo(){
+       return this.fname+" "+this.lname+" "+this.age;
     }
+    // personInfo1:function(){
+    //             return this.firstName +" "+ this.lastName+" " + this.age;
+    //  }
+};
+console.log(person);
+//-------------------------Constructor-------------------------
 
-
-
-
-    let person = new Person("jack", "Doe", 50, "Black");
-    let person2 = new Person("john", "Smith", 60, "braun");
-    console.log(person);
-    console.log(person2.personInfo());
-    let colors = new Array("red", "green", "blue");
-    colors = ["red", "green", "blue"]; // the same  [] = new Array
-    console.log(colors);
-    let car = new Object();
-    car.name = "bmw";
-    car.year = "2019";
-    console.log(car);
-    car = {};   // the same with  new Object();
-    // employee
-    // name
-    // salary
-    // job
-    // info()
-
-    function Employee(name, salary, job) {
-       this.name = name;
-       this.salary = salary;
-       this.job = job;
-       this.age = 30;
-       this.info = function () {
-           return this.name + "  " + this.age + " years old  " + "  earn " + this.salary + "$ " +
-               "and work as " + this.job + " and live in " + this.city;
-       }
+function User(name,sname,age,hair){
+    this.name=name;
+    this.sname=sname;
+    this.age=age;
+    this.hair=hair;
+    this.personInfos=function(){
+        return this.name+" "+this.sname+" "+this.age;
     }
+}
+
+let p = new User("john", "Smith", 60, "braun");
+console.log(p.personInfos());
+
+//-------------------------------------------------------------
+let Arr=["red","green","blue"];
+let arr=new Array("red","green","blue");
+console.log(arr);
+
+//-------------------------------------------------------
+let car= new Object();
+car.name="BMW";
+car.color="black";
+car.year=1995;
+console.log(car.year); //1995
+console.log(car); //Object { name: "BMW", color: "black", year: 1995 }
+
+//----------------------------Constructor---------------------------------
+function Employee(name,salary,job){
+    this.name=name;
+    this.salary=salary;
+    this.job=job
+    this.age=35;
+    this.city="hamburg";
+    this.info=function(){
+        return this.name + " is " + this.age + " years old " + " ,earns " + this.salary + "$ " +
+               "and works as " + this.job + " and lives in " + this.city;
+    }
+}
+let e=new Employee("Rania","2000","Web developer");
+console.log(e);//Object { name: "Rania", salary: "2000", job: "Web developer", age: 35, city: "hamburg"
+console.log(e.info());// Rania is 35 years old  ,earns 2000$ and works as Web developer and lives in hamburg
 
 
+let emp1 = new Employee("Jack", 5000, "javascript developer");
+let emp2 = new Employee("Ralf", 8000, "senior JS Developer");
+emp1.job="software developer";
+console.log(emp1); //Object { name: "Jack", salary: 5000, job: "software developer", age: 35, city: "hamburg",
 
 
+let emp3 = new Employee("Steven", 5000, "node js developer");
+emp3.city = "Berlin";
+console.log(emp3.info());
+//Steven is 35 years old  ,earns 5000$ and works as node js developer and lives in Berlin
 
-    let emp1 = new Employee("Jack", 5000, "javascript developer");
-    let emp2 = new Employee("Ralf", 8000, "senior JS Developer");
-    emp1.city = "Hamburg";
-    emp2.city = "New York";
-    console.log(emp1.city);
-    console.log(emp2.city);
-    console.log(emp1.info());
-    console.log(emp2.info());
-    let emp3 = new Employee("Steven", 5000, "node js  developer");
-    emp3.city = "Berlin";
-    console.log(emp3.info());
-    ///////////////////////////////////////////////////////////////////////////////////
-    let student = {
-       name: "Mara",
-       age: "22",
-       city: "Berlin",
-       university: "T U  Berlin ",
-       language: "EN",
-       get lang() { // to get the value of a property
-           return this.language;
-       },
-       set lang(value) { // to change the vslue of a property
-           this.language = value;
-       }
+//------------------------getter && setter---------------------------------------
+
+let student={
+    name:"Maria",
+    sname:"smith",
+    age:23,
+    language:"En",
+    get lang(){
+        return this.language;
+    },
+    set lang(value){
+        this.language=value;
+    }
+}
+console.log(student);//Object { name: "Maria", sname: "smith", age: 23, language: "En", lang: Getter & Setter }
+console.log(student.lang);//En
+console.log(student.lang="De");//De
+
+//------------------------------------------------------------
+
+class Students{
+    constructor(name, age, city, university, language, usd, changeRate){
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.university = university;
+        this.language = language;
+        this.bankAccount = usd;
+        this.changeMoney = function () {
+            return this.bankAccount * changeRate;
+        };
+        this.studentInfo = function () {
+            return this.name + " " + this.age + " live in "+this.city + " and study in "
+        + this.university+" and speak "+ this.language+ " and have "+ this.changeMoney()+ " Euro";
+        }
     };
-
-
-
-
-    console.log(student.lang);
-    student.lang = "DE";
-    console.log(student.lang);
-    // student.language="English";
-    // console.log(student.lang);
-
-
-
-
-    function Student(name, age, city, university, language, usd, changeRate) {
-       this.name = name;
-       this.age = age;
-       this.city = city;
-       this.university = university;
-       this.language = language;
-       this.bankAccount = usd;
-
-
-
-       this.changeMoney = function () {
-           return this.bankAccount * changeRate;
-       };
-
-           this.studentInfo = function () {
-               return this.name + " " + this.age + " live in "+this.city + " and study in "
-           + this.university+" and speak "+ this.language+ " and have "+ this.changeMoney()+ " Euro";   };
-    };
-
-
-
-
-
-    let student1 = new Student("Lara", "23", "Hamburg", "Uni Hamburg", "German", 1000, 0.8);
-    let student2 = new Student("Leo", "22", "Berlin", "Uni Berlin", "English", 5500, 1.2);
-    console.log(student1.studentInfo());
-    console.log(student2.studentInfo());
-
-
-    class Students{
-       constructor(name, age, city, university, language, usd, changeRate){
-           this.name = name;
-           this.age = age;
-           this.city = city;
-           this.university = university;
-           this.language = language;
-           this.bankAccount = usd;
-           this.changeMoney = function () {
-               return this.bankAccount * changeRate;
-           };
-               this.studentInfo = function () {
-                   return this.name + " " + this.age + " live in "+this.city + " and study in "
-               + this.university+" and speak "+ this.language+ " and have "+ this.changeMoney()+ " Euro";
-             };
-       }
-       hello(){
-           return "hello "+this.name;
-       }
-
-
+    hello(){
+        return "hello "+this.name;
     }
-
-
-
-
-
-    let manuel=new Students("Manuel",27,"Köln","Köln University","German",1000,1.1);
-    alert(manuel.hello());
-    console.log(manuel.studentInfo());
-    document.getElementById("info").innerHTML=manuel.studentInfo();
-    
+ }
+ let m=new Students("Manuel",27,"Köln","Köln University","German",1000,1.1);
+ alert(m.hello());
+ console.log(m.studentInfo());
+ document.getElementById("info").innerHTML=m.studentInfo();

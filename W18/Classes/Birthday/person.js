@@ -1,7 +1,6 @@
 class Person {
 
     constructor(firstName, lastName, birthday, address) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday; // 18.07.2000
@@ -13,7 +12,6 @@ class Person {
     }
 
     getBirthDay() {
-        
         let today = new Date();
         let day = today.getDate();
         let month = today.getMonth();
@@ -26,8 +24,6 @@ class Person {
         else {
             alert("Sorry today is not your birthday");
         }
-
-
     }
 }
 
@@ -46,8 +42,6 @@ class Student extends Person {
     studentInfo() {
         // all info about the student 
     }
-
-
 }
 
 let s = new Student("john", "smith", "2000-05-20", "New York", 255, "New York university");

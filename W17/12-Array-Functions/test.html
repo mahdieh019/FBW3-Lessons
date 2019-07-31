@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            
+        let a1=["a","b","c","d"];
+        let a2=["e","f","g"];
+        let a=a1.concat(a2);
+        document.write(a); 
+        document.write("<br>");
+        document.write(a.slice(1,3)) ;
+        document.write("<br>");
+        document.write(a.splice(2,3));
+        document.write("<br>");
+
+//----------------------------------------------------------------------
+        document.write(a.find(check));
+
+        function check(p){
+         return p=="b";
+        }
+        document.write("<br>");
+//----------------------------------find()--------------------------------------
+
+        let person=[
+            {name:"maria",age:"25"},
+            {name:"ali",age:"23"},
+            {name:"mina",age:"32"}
+        ];
+        function agePerson(p){
+            return p.age=="25";
+        }
+
+        document.write(person.find(agePerson).name); //maria
+        document.write("<br>");
+        console.log(person.find(agePerson));//Object { name: "maria", age: "25" }
+        document.write(a.findIndex(check));
+        document.write("<br>");
+
+//---------------------------------findIndex()---------------------------------------
+let A1=["A","B","C","D","E","F"]
+function exists(p){
+    return p=="B";
+}
+document.write(A1.reverse().findIndex(exists));// 4
+document.write("<br>");
+//----------------------------------filter()----------------------------------------
+ let Num=[12,13,11,15,32,6,14];
+document.write(Num.filter(el))
+
+function el(p){
+    return (p>5 && p<=14);
+}
+document.write("<br>");
+
+//-----------------------------------------------------------------------------
+let N=Num.filter(el);
+document.write(N.sort());
+document.write("<br>");
+//--------------------------------reduce()------------------------------
+
+let cities=[
+    {city:"hamburg",pop:1000},
+    {city:"berlin",pop:2000},
+    {city:"Köln",pop:3000}]
+
+    function sumPop(sum,num){
+        return sum+num.pop;
+    }
+    document.write(cities.reduce(sumPop,0));
+    document.write("<br>");
+
+//--------------------------------map()------------------------------------------
+
+arr=[2,3,4,5];
+function multi(r){
+    return r*2;
+}
+document.write(arr.map(multi));
+document.write("<br>");
+//-----------------------------------Arrow function()----------------------------------
+document.write(arr.map(r=>r*2));
+document.write("<br>");
+
+//------
+let name=["oxygen","helium","nitrogen","ozon"];
+function setLength(p){
+    return p.length;
+}
+document.write(name.map(p=>p.length));
+document.write("<br>");
+    </script>
+</body>
+</html>

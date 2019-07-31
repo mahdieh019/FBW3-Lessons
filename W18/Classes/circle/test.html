@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>H: <input type="text" id="H"></p>
+    <p>W: <input type="text" id="W"></p>
+    <p>C: <input type="text" id="C"></p>
+    <p>R: <input type="text" id="R"></p>
+    <button id="rec">click</button>
+    <button id="cir">click</button>
+    <div id="newDiv"></div>
+</body>
+<script>
+class Rectangle{
+    constructor(height,width,color){
+        this.height=height;
+        this.width=width;
+        this.color=color;
+        this.newDiv=document.createElement("div");
+    };
+    create(){
+        let d=document.getElementById("newDiv");
+        let p=d.appendChild(this.newDiv);
+        p.style.height=this.height;
+        p.style.width=this.width;
+        p.style.background=this.color;
+        p.style.margin=10+"px";
+    }
+}
+
+
+class Circle extends Rectangle{
+    constructor(height,width,color,radius){
+        super(height,width,color);
+        this.radius=radius;
+    }
+    createCircle(){
+        this.create();
+        p.style.borderRadius=this.radius;
+    }
+
+}
+let height=document.getElementById("H").value;
+let width=document.getElementById("W").value;
+let color=document.getElementById("C").value;
+let g=new Rectangle(height,width,color);
+
+let myRec=document.getElementById("rec");
+myRec.addEventListener("click",function(){
+    let g=new Rectangle(height,width,color);
+    g.create();
+});
+
+/////////////////////////////////////////////////////////
+
+let radius=document.getElementById("R").value;
+
+let s=document.getElementById("cir");
+s.addEventListener("click",function(){
+    let circle=new Circle(height,width,color,radius);
+    circle.createCircle();
+});
+
+
+
+</script>
+</html>

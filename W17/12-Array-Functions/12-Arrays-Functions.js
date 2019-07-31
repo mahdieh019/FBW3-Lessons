@@ -104,19 +104,19 @@ console.log(newArr);  //Array(4) [ 4, 8, 16, 20 ]
 
 // 12. Arrow Functions
 
-// 
-//let multi=function(number){return number*2;}
-//let multi=(number)=>{ return number*2; }  // with parameter
-//let multi=number=>{ return number*2; }    // only one parameter
-//let multi=number=>number *2;              // only one parameter
+
+// let multi=function(number){return number*2;}
+// let multi=(number)=>{ return number*2; }  // with parameter
+// let multi=number=>{ return number*2; }    // only one parameter
+// let multi=number=>number *2;              // only one parameter
 
 
 // let callMe=()=> {console.log("Hello");}  //no parameter
-//let newArr=arr.map(number=>number*2); // the shortest way
+// let newArr=arr.map(number=>number*2); // the shortest way
 
 
 var materials=['Hydrogen','Helium','Lithium','Beryllium'];
-function matlength(material){
+function matLength(material){
     return material.length;
 }
-console.log(materials.map(matlength)); // Array(4) [ 8, 6, 7, 9 ]
+console.log(materials.map(matLength)); // Array(4) [ 8, 6, 7, 9 ]
