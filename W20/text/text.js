@@ -52,7 +52,7 @@ class Rectangle {
  item1.draw();
  item1.content = "new content for item1";
  item1.draw();
- let item2 = new StyleItem("this is the item 2","color:violet; border:5px dotted yellowgreen; background:lightgray; font-family:arial;padding:15px");
+ let item2 = new StyleItem("this is the item 2","color:violet; border:5px dotted green; background:lightgray; font-family:arial;padding:15px");
  item2.draw();
  console.log(item2.itemStyle);
  item2.restyle="color:orange; background:lightgreen;margin: 20px 0";

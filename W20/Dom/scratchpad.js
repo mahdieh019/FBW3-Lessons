@@ -10,6 +10,7 @@ function myFunction(){
     }
     document.getElementById("demo").innerHTML=text;
 }
+
 document.getElementById("image").srs="img.jpeg";
 document.getElementById("demo").style.color="red";
 document.getElementById("demo").style.fontStyle="italic";
