@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+#head{
+    text-align: center;
+    padding: 20px;
+    color: #3399ff;
+
+}
+.in{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 0px 20px;
+}
+
+#button{
+    display: block;
+    background:darkcyan;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding:10px;
+    margin: 10px 20px;
+    font-size: 1.3em;
+    color: white;
+}
+
+
+.product{
+    display: inline-block;
+    padding: 40px;
+    font-weight: bold;
+}

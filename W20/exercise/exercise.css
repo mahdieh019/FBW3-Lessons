@@ -1,0 +1,12 @@
+.first{
+    background:green;
+    color:black;
+    width: 400px;
+    height: 200px;
+    margin: auto ;
+    padding: 10px 40px;
+  
+}
+p{
+  color: white;
+}
