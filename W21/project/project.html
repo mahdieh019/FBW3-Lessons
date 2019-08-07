@@ -10,16 +10,16 @@
 </head>
 <body>
     <h1 id="head">Shopping List</h1>
-    <form id="frm">
-        Product Name <input type="text" name="pname" class="in"><br>
-        Product description <input type="text" name="pdes" class="in"><br>
-        Product code <input type="text" name="pcode" class="in"><br>
+     <form id="frm">
+        Product Name <input id="pn" type="text" name="pname" class="in">
+        Product description <input id="pd" type="text" name="pdes" class="in">
+        Product code <input id="pc" type="text" name="pcode" class="in">
    </form>
-   <button id="button" onclick="myFunction()">Add to List</button>
+   <button id="button">Add to List</button>
    <p class="product">Product Name</p>
    <p class="product">Product description</p>
    <p class="product">Product code</p>
-   <p id="demo"></p>
+   <div id="tasks"></div>
 
    <script src="project.js"></script>
 </body>

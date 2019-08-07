@@ -6,7 +6,7 @@ function addToDo(){
     if(text.value!==""){
         let element=document.createElement("h4");
         element.innerHTML=text.value;
-        document.getElementById("tasks").appendChild(element);
+        tasks.appendChild(element);
         text.value="";
         text.focus();
         let el=document.getElementsByTagName("h4");
@@ -16,7 +16,7 @@ function addToDo(){
                 });
             }
         }else{
-            console.log("add to th list");
+            console.log("add to the list");
     }
 }
 
