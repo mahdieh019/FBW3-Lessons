@@ -16,19 +16,16 @@
         function myName(name,lastname){
             console.log(typeof(lastname));
             if(typeof(name)!="undifined" && typeof(lastname)!="undifined"  ){
-            console.log("name");
+            console.log(name);
         }
         else{
-            console.log("lastname");
+            console.log(lastname);
             }   
         }
+
         ///
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // var sum=function(number){
-        //     return number + 10;
-        // }
-
-
+      
         function whichDayIsIt(number){
             var weekday;
             switch(number){
@@ -76,20 +73,20 @@
         }
 ////////////////////////////////////////////////////////////////////////
 
-        // let weekday=["Sunday","Monday","tuesday","Wendsday","Thursday","Friday","Saturday"];
-        // let weekNumber=prompt("Enter smth");
-        // for(let i=0;i<=6;i++){
-        //     if(weekNumber==i){
-        //         console.log(weekday[i]); 
-        //     }
-        // }
+        let weekday=["Sunday","Monday","tuesday","Wendsday","Thursday","Friday","Saturday"];
+        let weekNumber=prompt("Enter smth");
+        for(let i=0;i<=6;i++){
+            if(weekNumber==i){
+                console.log(weekday[i]); 
+            }
+        }
 
 
 
 ////////////////////////////////////////////////////////
-        let car1={name:"bmw",year:"2018",color:"black", country:"Germany"};
-        let car2={name:"AUDI",year:"2010",color:"white",country:"Germany"};
-        let car3={name:"FIAT",year:"2010",color:"white",country:"ITALY"};
+        let car1={name:"bmw",year:2018,color:"black", country:"Germany"};
+        let car2={name:"AUDI",year:2010,color:"white",country:"Germany"};
+        let car3={name:"FIAT",year:2010,color:"white",country:"ITALY"};
 
         let cars=[car1,car2,car3];
         function findCarCountry(name){
@@ -113,26 +110,22 @@
             let y=[];
             for(let i=0;i<array.length;i++){
                 y[i]=fun(array[i]);
-                console.log(y[i]);
+              
             }
-            
-        }
+            return y;
+        }//map(f,arr)
 
 //////////////////////////////////////////////
         let newCars=["bmw","ford","ferrari"];
+
         function findYourCar(car){
-            let found=false;
             for(let i=0;i<newCars.length;i++){
                 if(newCars[i]==car){
                     console.log("found");
+                    break;
                 }else{
                 console.log("not found");
-            }
-            }
-            if(found){
-                console.log("found");
-            }else{
-                console.log("not found");
+                }
             }
         }
 
@@ -150,26 +143,25 @@ document.write('<br>');
 function draw(line, star){
     for(let i=0;i<line;i++){
         for(let j=i;j<star;j++){
-            
-          console.log('*');
+          document.write('*');
         }
-    console.log('<br>');
+   document.write('<br>');
     }
 }
 
 //////////////////// run in console
-// function draw(line, star){
-//     let str;
-//     for(let i=0;i<line;i++){
-//         str="";
-//         for(let j=i;j<star;j++){
-
-//           str+='*';
-//         }
-//         console.log(str);
+function draw(line, star){
+    let str;
+    for(let i=0;i<line;i++){
+        str="";
+        
+        for(let j=i;j<star;j++){
+          str+='*';
+        }
+        console.log(str);
     
-//     }
-// }
+    }
+}
 
 
 function drawTriangle(size){

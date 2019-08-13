@@ -7,7 +7,7 @@ console.log(link.getAttribute("href"));
 
 function fun(){
     let image=document.querySelector("img");
-    image.setAttribute("src","logo.png")
+    image.setAttribute("src","logo.png");
   
 
 }

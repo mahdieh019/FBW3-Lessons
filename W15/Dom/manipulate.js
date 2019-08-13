@@ -1,5 +1,5 @@
 let htag=document.getElementsByTagName("h1");
-// htag[0].style.color="red";
+//htag[0].style.color="red";
 htag[1].style.color="green";
 // htag[0].style.border="5px solid lightblue";
 
@@ -11,10 +11,10 @@ para[0].classList.add('bg');
 para[1].classList.add('bg');
 
     ///////////////advance/////////////////
-// let button =document.createElement("button");
-// button.innerHTML="click me";
-// let body=document.getElementsByTagName("body")[0];
-// body.appendChild(button);
+let button =document.createElement("button");
+button.innerHTML="click me";
+let body=document.getElementsByTagName("body")[0];
+body.appendChild(button);
 
 
 //getting the text content
@@ -22,7 +22,7 @@ let p=document.querySelector("p");
 console.log(p.textContent);
 p.innerHTML="I love <strong> javascript </strong> ."
 
-//we add h2 in the paragraph
+//we add h4 in the paragraph
 p.innerHTML="<h4> Javascript</h4>  I love <strong> javascript </strong>. ";
 
 para[0].classList.remove('bg');

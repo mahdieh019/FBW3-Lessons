@@ -12,8 +12,8 @@ function changeColor(){
     isBlue=!isBlue;
 }
 
-changeColor();
+ changeColor();
 h1.style.color="red";
 h1.style.margin="50px";
 
-setInterval(changeColor,1000);//make something after 1000ms
+ setInterval(changeColor,1000);//make something after 1000ms

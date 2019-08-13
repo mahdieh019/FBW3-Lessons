@@ -2,7 +2,7 @@ let myList=document.getElementById("list");
 
 // alert(myList.firstElementChild.innerHTML); // Water
 // alert(myList.lastElementChild.innerHTML); // Tee
-// alert(myList.children[0].innerHTML); //Water
+ //alert(myList.children[1].innerHTML); //Coffee
 
 let btn=document.getElementById("myBtn");
 let btn2=document.getElementById("myBtn2");
@@ -12,14 +12,16 @@ let text="";
 
 
 btn.onclick=function(){
-    // document.getElementById("content").innerHTML=list.children[2].innerHTML;
-    // document.getElementById("content").innerHTML=document.body.childNodes[0].nodeName;
+     //document.getElementById("content").innerHTML=list.children[2].innerHTML;
+     //document.querySelector('p').innerHTML=list.children[2].innerHTML;
+
+     //document.getElementById("content").innerHTML=document.body.childNodes[0].nodeName;
 };
 ///////////////////////////////btn///////////////////////////////////
 btn.addEventListener("click",function(){ 
     let children=document.getElementById("list").children;
     for(let i=0;i<children.length;i++){
-       console.log(children[i].innerHTML);
+      // console.log(children[i].innerHTML);
         document.getElementById("content").innerHTML+=children[i].innerHTML+"<br>";
     }
  });  // the same as pre function code 

@@ -2,11 +2,13 @@
 // -----variable---
 let heading=document.createElement("h1");
 let text=document.createTextNode("this is h1 inside the main div");
+// heading.textContent="hi ";
+// heading.innerHTML="hi";
 
 heading.appendChild(text);
-// document.getElementById("main").appendChild(heading);
+ //document.getElementById("main").appendChild(heading);
+ 
 // document.querySelector("body").appendChild(heading);
-
 
 //------function
 function  addElement(){

@@ -41,19 +41,19 @@ let posts=[
     {title:"cats are nice",author:"Mansour"},
     {title:"Dogs are totaly awsome",author:"me"}
 ];
-console.log(posts[0].title);
-posts[0].title="hallo";
-console.log(posts[0].title);
-console.log(posts);
-posts[0].comment="nice post i like it";
-console.log(posts);
-posts[1].comment=["nice thank you","no, i hate you"];
-console.log(posts[1]);
-console.log(posts[1].comment[1]);
-posts[1].comment[1]="nice post";
-console.log(posts[1]);
-posts[1].comment[1]+=", thanks a lot";
-console.log(posts[1]);
+// console.log(posts[0].title);
+// posts[0].title="hallo";
+// console.log(posts[0].title);
+// //console.log(posts);
+// posts[0].comment="nice post i like it";
+// console.log(posts);
+// posts[1].comment=["nice thank you","no, i hate you"];
+// console.log(posts[1]);
+// console.log(posts[1].comment[1]);
+// posts[1].comment[1]="nice post";
+// console.log(posts[1]);
+// posts[1].comment[1]+=", thanks a lot";
+// console.log(posts[1]);
 
 // function inside the object
 
@@ -75,23 +75,23 @@ let p={
     job:"web developer",
     city:"Hamburg"
 };
-console.log(p.fname +" "+p.lname +" is a "+ p.age+" year old "+p.job+" living in "+p.city);
+console.log(p.fname +" "+p.lname +" is a "+ p.age+" years old "+p.job+" living in "+p.city);
 
 let movies=[
     {
-    title:"titanic",
-    rating: 5 ,
-    haswatched: true
+        title:"titanic",
+        rating: 5 ,
+        haswatched: true
     },
     {
-    title:"despicable me 3",
-    rating:4 ,
-    haswatched: true
+        title:"despicable me 3",
+        rating:4 ,
+        haswatched: true
     },
     {
-    title:" pretty woman",
-    rating:3 ,
-    haswatched: false
+        title:" pretty woman",
+        rating:3 ,
+        haswatched: false
     },
     {
         title:"passenger",
@@ -107,10 +107,10 @@ let movies=[
 
 function stars(num){
     let str="";
-    for(let i=0; i<num;i++){
-        str+="&#9733;";
+    for(let i=1; i<=num;i++){
+        str+="\u2B50";
     }
-    return(str);
+    return str;
 }
 
 movies.forEach(function(film){

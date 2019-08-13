@@ -1,16 +1,14 @@
 
 /////////Push()////////////
-let colors=["otange","pink",'green'];
+let colors=["orange","pink",'green'];
 console.log(colors);
-colors.push("blue"); //add an element to the end of an array
+colors.push("blue"); //[ "orange", "pink", "green", "blue" ]
 console.log(colors);
-
-
 //////////pop()/////////////
+
+colors.pop(); // [ "orange", "pink", "green" ]
 console.log(colors);
-colors.pop(); // delete the last element in the array
-console.log(colors);
-console.log(colors.pop());
+console.log(colors.pop());[ "orange", "pink" ]
 console.log(colors);
 
 
@@ -18,67 +16,68 @@ console.log(colors);
 let fruit=["apple","mango","banana","mango"];
 console.log(fruit);
 fruit.shift(); // remove an element from the first of an array
-console.log(fruit);
+console.log(fruit); //[ "mango", "banana", "mango" ]
 
 /////////////unshift()////////////////
 fruit.unshift("kiwi"); // add an element to the first of an array
-console.log(fruit);
+console.log(fruit); //[ "kiwi", "mango", "banana", "mango" ]
 
 ////////////////indexOf()/////////////////
 fruit.indexOf("mango");
 console.log(fruit.indexOf("mango")); //it returns back the index of an element
-console.log(fruit);
+console.log(fruit); //1
 
 ////////////////lastIndexOf()/////////////////
+//[ "kiwi", "mango", "banana", "mango" ]
 console.log(fruit.lastIndexOf("mango"));//it returns back the index of last element
-console.log(fruit);
+console.log(fruit); //3
 
 /////////////////slice()//////////////////
-console.log(fruit.slice(1,3)); //cuts a pices of fruit
-console.log(fruit);
+//[ "kiwi", "mango", "banana", "mango" ]
+console.log(fruit.slice(1,3)); // [ "mango", "banana" ]
 
 console.log(fruit.slice()); // it returns back whole of the array's elements
-
+//[ "kiwi", "mango", "banana", "mango" ]
 
 
 /////////////////splice()///////////////////////////
-console.log(fruit);
-console.log((fruit.splice(1,3)));
+
+console.log((fruit.splice(1,3)));// [ "mango", "banana", "mango" ]
 // console.log(fruit);
 
 /////////////////forEach loop ////////////////////////
-console.log('<br>');
+console.log(' ');
 let cars=["bmw","audi","bens","fiat"];
 for(let i=0;i<cars.length;i++){
     console.log(cars[i]);
 }
 console.log('');
-cars.forEach(  function(carname){ console.log(carname); }  );
+cars.forEach(  function(carName){ console.log(carName); }  );
 
 ////////////
 console.log('');
 let num=[1,2,3];
-num.forEach(  function(carname){ console.log(carname); }  );
+num.forEach(  function(n){ console.log(n); }  );
 
 ////////////
 console.log('');
 num.forEach(function(n){
-    n=n+10;
+    n+=10;
     console.log(n);
 });
 
 ////////////////
-// console.log('');
-// let food=["apple","kebab","donner"];
-// food.forEach( myfood);
-// function myfood(foodname){
-//     console.log(foodname);
-// }
+console.log('');
+let food=["apple","kebab","donner"];
+food.forEach( myFood);
+function myFood(foodName){
+    console.log(foodName);
+}
 
 console.log('');
 let weekday=["mo","tu","we","th","fr","sa","so"];
-weekday.forEach(printdays);
-function printdays(item,index){
+weekday.forEach(printDays);
+function printDays(item,index){
     console.log(item + " "+ index);
 }
 console.log('');
