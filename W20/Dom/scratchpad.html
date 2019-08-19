@@ -10,24 +10,28 @@
 </head>
 <body onload="myMessage()">
     <h2>finding Html</h2>
+
+    <p class="intro">the Dom is very useful.</p>
+    <p class="intro">This example</p>
+    <p id="demo"></p>
+
     <form id="frm">
         first name: <input type="text" name="fname" value="Donald"><br>
         last name: <input type="text" name="lname" value="Duck"><br>
     </form>
 
-    <p>click"Try it"</p>
     <button onclick="myFunction()">Try it</button>
 
-    <p class="intro">the Dom is very useful.</p>
-    <p class="intro">This example</p>
-    <p id="demo"></p>
+    <p id="demo1">demo1</p><br>
+    <button type="button" onclick="document.getElementById('demo1').style.color='green'">change color text</button> <br>
+  
     
     <img  id="image" src="img.jpeg"  alt="" width="160" height="120"><br>
-    <button type="button" onclick="document.getElementById('demo1').style.color='green'">change color text</button>
     
     <div id="container">
         <div id="animate"></div>
     </div>
+    
     <button type="button" onclick="move()">Click me</button>
     <h1 onclick="this.innerHTML='Ooops!'">Click on this text! </h1>
     <h1 onclick="changeText(this)">Click on this text! </h1><br>
@@ -56,7 +60,7 @@
    Enter your lastname: <input type="text" onfocus="focusMe(this)">
 
 
-   <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Hi Mahsa</h1>
+   <h1 onmouseover="style.color='red'" onmouseout="style.color='green'">Hi Mahsa</h1>
 
     <script src="scratchpad.js"></script>
 </body>

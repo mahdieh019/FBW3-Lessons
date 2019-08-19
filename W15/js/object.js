@@ -41,19 +41,19 @@ let posts=[
     {title:"cats are nice",author:"Mansour"},
     {title:"Dogs are totaly awsome",author:"me"}
 ];
-// console.log(posts[0].title);
-// posts[0].title="hallo";
-// console.log(posts[0].title);
-// //console.log(posts);
-// posts[0].comment="nice post i like it";
-// console.log(posts);
-// posts[1].comment=["nice thank you","no, i hate you"];
-// console.log(posts[1]);
-// console.log(posts[1].comment[1]);
-// posts[1].comment[1]="nice post";
-// console.log(posts[1]);
-// posts[1].comment[1]+=", thanks a lot";
-// console.log(posts[1]);
+console.log(posts[0].title);
+posts[0].title="hallo";
+console.log(posts[0].title);
+//console.log(posts);
+posts[0].comment="nice post i like it";
+console.log(posts);
+posts[1].comment=["nice thank you","no, i hate you"];
+console.log(posts[1]);
+console.log(posts[1].comment[1]);
+posts[1].comment[1]="nice post";
+console.log(posts[1]);
+posts[1].comment[1]+=", thanks a lot";
+console.log(posts[1]);
 
 // function inside the object
 

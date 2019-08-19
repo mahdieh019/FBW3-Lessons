@@ -12,10 +12,8 @@ let text="";
 
 
 btn.onclick=function(){
-     //document.getElementById("content").innerHTML=list.children[2].innerHTML;
-     //document.querySelector('p').innerHTML=list.children[2].innerHTML;
-
-     //document.getElementById("content").innerHTML=document.body.childNodes[0].nodeName;
+    // document.getElementById("content").innerHTML=list.children[1].innerHTML;
+    //document.querySelector('p').innerHTML=list.children[2].innerHTML;
 };
 ///////////////////////////////btn///////////////////////////////////
 btn.addEventListener("click",function(){ 
@@ -43,7 +41,6 @@ let counter=0;
      document.getElementById("content").innerHTML="";
  });
  btn4.addEventListener("click",function(){
-    //  let imgAttr=document.getElementById("myImg").attributes[2].name;
     let imgAttr=document.getElementById("myImg").attributes;
     for(i=0;i<imgAttr.length;i++){
         text+=imgAttr[i].name+"="+ imgAttr[i].value+"<br>";

@@ -5,35 +5,32 @@
   
 //   function sayHi()
 //   {
-//     alert ("Hi")
+//     alert ("Hi");
 //   }
-//   doSomething(sayHi)
-  
-  
-  // Hi in console
-  
+//   doSomething(sayHi);
+     
   /////////////////////////////////////////////////////////////////////////
-//   function createQuote(quote, callback){
-//     var myQuote="like I always say,"+quote;
-//     callback(myQuote);
-//   }
-//   function logQuote(quote){
-//     console.log(quote);
-//   }
-//   createQuote("eat your vegetables!",  logQuote);
+  function createQuote(quote, callback){
+    var myQuote="like I always say,"+quote;
+    callback(myQuote);
+  }
+  function logQuote(quote){
+    console.log(quote);
+  }
+  createQuote("eat your vegetables!",  logQuote);
   
-  //   answer:  like I always say,eat your vegetables! 
+   // answer:  like I always say,eat your vegetables! 
   
   //////////////////////////////////////////////////////////////////////////
-//   function doHomework(subject, callback){
-//     console.log("Starting my"+ subject);
-//     callback();
-//   }
+  function doHomework(subject, callback){
+    console.log("Starting my"+ subject);
+    callback();
+  }
   
-//   doHomework("Math", function(){
+  doHomework("Math", function(){
     
-//       console.log("Finishing my Homework");
-//   });
+      console.log("Finishing my Homework");
+  });
   
   // answer: 
   // Starting myMath

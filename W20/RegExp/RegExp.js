@@ -115,6 +115,8 @@ patt=/\w+\.(com|it)/g;//Array(4) [ "google.com", "facebook.com", "romal.com", "r
 str="google.com google.it google123$@!.com googleIsNotThaSuper.com";
 patt=/\W+\.com/g; //Array [ "$@!.com" ]
 
+
+
 //\d==[0-9]
 
 //Quantifiers
@@ -126,8 +128,8 @@ str="n l nn ll nnn LLL nnn";
 patt=/l+/gi //Array(3) [ "l", "ll", "LLL" ]
 
 //n? Matches any string that contains zero or one occurrences of n
-str="3 July, 3rd August"
-patt=/3(rd)?/g;//Array [ "3", "3rd" ]
+str="3 July, 3rd August, 3r"
+patt=/3(rd)?/g;//Array [ "3", "3rd" ,"3"]
 
 //n{2,3} Matches any string that contains a sequence of 2 to 3 n's
 
@@ -152,37 +154,3 @@ patt=/google\.\w+$/g; //Array [ "google.de" ]
 
 var arr=str.match(patt);
 console.log(arr);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

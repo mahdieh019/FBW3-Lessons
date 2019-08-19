@@ -14,7 +14,7 @@ console.log(book.bookInfo());
 
 //console.log(book);
 
-for (let i  in book){
+for (let i in book){
     console.log(book[i]);
 }
 
@@ -28,30 +28,21 @@ greet = "hi there!";
 
 console.log(message);  // Hello world
 console.log(greet);  // hi there!
-
+console.log(typeof greet);
 ///////////////////////
-
-
 let person = {
 
     name: "john",
-
     age:28,
-
     gender:"Male"
 };
+
 let user = person;
-
 console.log(user.name);  // john
-
 user.name="Mansour";
-
 console.log(user.name); //Mansour
-console.log(person.name);
-
-
-
-console.log(typeof greet);
+console.log(person.name);//Mansour
+console.log(typeof person);//object
 
 
 ///////////////////////////////////

@@ -8,7 +8,7 @@ function myFunction(){
     for(i=0;i<x1.length;i++){
         text+=x1.elements[i].value+"<br>";
     }
-    document.getElementById("demo").innerHTML=text;
+    document.getElementById("demo1").innerHTML=text;
 }
 
 document.getElementById("image").srs="img.jpeg";

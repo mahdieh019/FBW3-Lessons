@@ -1,9 +1,13 @@
-let htag=document.getElementsByTagName("h1");
-//htag[0].style.color="red";
-htag[1].style.color="green";
-// htag[0].style.border="5px solid lightblue";
 
-htag[0].classList.add("light");
+//----------- h1--------------------
+let hTag=document.getElementsByTagName("h1");
+//hTag[0].style.color="red";
+hTag[1].style.color="green";
+// hTag[0].style.border="5px solid lightblue";
+hTag[0].classList.add("light");
+
+
+//---------------p---------------
 let para=document.getElementsByTagName("p");
 para[0].classList.add('light');
 // para[0].classList.remove('light'); to remove the class add

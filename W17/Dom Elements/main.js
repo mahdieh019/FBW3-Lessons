@@ -1,8 +1,8 @@
 //accesskey
 
 document.getElementById("link").accessKey="g"; // using Alt+shift+g (in firefox) we could open the link 
-let akey=document.getElementById("link").accessKey;
-console.log(akey); //g
+let aKey=document.getElementById("link").accessKey;
+console.log(aKey); //g
 
 //--------------------------------------addEventListener()--------------------------------------  
 // Hide Image
@@ -29,16 +29,14 @@ let hideShow=document.querySelectorAll("button")[2].addEventListener("click",fun
     }
 });
 
-
-
 //change the background color randomly
-let btn=document.getElementById("myBtn");
-btn.addEventListener("click",function(){
-    document.querySelector("body").style.background=getRandomColor();
-});
-
+let btn=document.getElementById("myBtn");                                   // btn.addEventListener("click",function(){ 
+btn.addEventListener("click",function(){                                    // let children=document.getElementById("list").children;
+    document.querySelector("body").style.background=getRandomColor();       // for(let i=0;i<children.length;i++){
+});                                                                         // document.getElementById("content").innerHTML+=children[i].innerHTML+"<br>";   }
+                                                                            
 function getRandomColor(){
-    let letters="0123456789ABCDEF";
+    let letters="0123456789ABCDEF";//  });  // the same as pre function code 
     let color="#";
     for(let i=0;i<6;i++){
         color+=letters[Math.floor(Math.random()*16)];
