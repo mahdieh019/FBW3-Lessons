@@ -11,16 +11,21 @@
 </head>
 <body>
     <h1 id="head">  <i class="fas fa-shopping-cart" style=""></i>&nbsp&nbsp  Shopping List</h1>
-     <form id="frm">
+     <form class="form-inline mb-3" id="frm">
         Product Name <input id="pn" type="text" name="pname" class="in">
         Product description <input id="pd" type="text" name="pdes" class="in">
         Product code <input id="pc" type="text" name="pcode" class="in">
    </form>
    <button id="button">Add to List</button>
-   <p class="product">Product Name</p>
-   <p class="product">Product description</p>
-   <p class="product">Product code</p>
-   <div id="tasks"></div>
+
+    <ul id="items" class="list-group">
+        <li class="list-group-item">Product Name</li>
+        <li class="list-group-item">Product description</li>
+        <li class="list-group-item">Product code</li>
+        
+    </ul>
+
+    <div id="tasks" class="p"></div>
 
    <script src="project.js"></script>
 </body>

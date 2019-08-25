@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <style>
+        .dragdrop {
+            width: 180px;
+            height: 180px;
+            float: left;
+            margin:10px;
+            padding: 10px;
+            border: 1px solid magenta;
+        }
+
+        .hovering{
+            background:green;
+            border-style:dashed;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag&drop2</title>
+</head>
+​
+<body>
+
+
+    <div class="dragdrop" ondrop="drop(event)" ondragover="over(event)" > 
+        <img ondragstart="start(event)" id="dragImg" src="https://source.unsplash.com/random/180x180" alt="" draggable="true">
+    </div>
+    
+    
+    <div class="dragdrop" ondrop="drop(event)" ondragover="over(event)" ondragenter="enter(event)" ondragleave="leave(event)"> </div> 
+    
+    <div class="dragdrop" ondrop="drop(event)" ondragover="over(event)" ondragenter="enter(event)" ondragleave="leave(event)"> </div> 
+       
+    <div class="dragdrop" ondrop="drop(event)" ondragover="over(event)" ondragenter="enter(event)" ondragleave="leave(event)"> </div> 
+
+
+         <!-- <div class="dragdrop"> 
+            <img  id="dragImg" src="https://source.unsplash.com/random/180x180" alt="" draggable="true">
+        </div>
+        
+        
+        <div class="dragdrop"> 
+    
+        </div> 
+     -->
+
+
+
+
+
+
+    <script src="drag&drop2.js"></script>
+</body>
+​
+</html>

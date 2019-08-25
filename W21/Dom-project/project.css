@@ -27,6 +27,19 @@
     color: white;
 }
 
+ul{
+    list-style: none;
+  
+}
+li{
+    display: inline-block;
+    padding-right: 300px;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+
 
 .product{
     display: inline-block;

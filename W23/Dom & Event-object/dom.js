@@ -1,12 +1,12 @@
-// console.log(document.URL);
-// console.log(document.title);
-// document.title="Welcome";
-// console.log(document.doctype);
-// console.log(document.head);
-//console.log(document.body);
-// console.log(document.all[10]);
-// document.all[10].textContent="Hello";
-// console.log(document.forms[0]);
+console.log(document.URL);
+console.log(document.title);
+document.title="Welcome";
+console.log(document.doctype);
+console.log(document.head);
+console.log(document.body);
+console.log(document.all[10]);
+document.all[10].textContent="Hello";
+console.log(document.forms[0]);
 console.log(document.links);
 console.log(document.images);
 document.links[0].href="https://facebook.com";
@@ -142,13 +142,28 @@ function addItem(e){
     delButton.innerHTML="X"; //delButton.textContent="X";
     delButton.className="btn btn-danger float-right delete";
     li.appendChild(delButton);
+
+    let newDiv=document.createElement("div");
+    newDiv.setAttribute("class","alert alert-success");// or newDiv.className="alert alert-success";
+    let txt=document.createTextNode("the item has been added");
+    newDiv.appendChild(txt);
+    let title=document.querySelector(".title");
+    let parent=document.getElementById("main");
+    parent.insertBefore(newDiv,title);
+    //setTimeout(function(){newDiv.remove()},2000); 
+    // newDiv.onclick=this.remove();
+
 }
-ul.addEventListener("click",removeItem)
+
+ul.addEventListener("click",removeItem);
 function removeItem(e){
     console.log(e.target);
+
     console.log(e.target.classList); // for delButton is DOMTokenList(4) [ "btn", "btn-danger", "float-right", "delete" ]
     if(e.target.classList.contains("delete")){ // ==== if(e.target.className("btn btn-danger float-right delete"))
-        ul.removeChild(e.target.parentElement);
+        if(confirm("are you sure")){
+            ul.removeChild(e.target.parentElement);
+        }
     }
 }
 

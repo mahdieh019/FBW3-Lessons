@@ -18,7 +18,7 @@ class product{
         document.getElementById("productInfo").innerHTML=localStorage.getItem("product");
     }
    
-}}
+}
 let productName=document.getElementById("pName").value;
 let productDescription=document.getElementById("pDes").value;
 let productNumber=document.getElementById("pCode").value;
