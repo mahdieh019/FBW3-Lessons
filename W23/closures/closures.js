@@ -5,48 +5,61 @@ function incr(){
   console.log(res);
   
   //////////////////////////////////////////////////
-//   var n=20;
-//   function makeCounter(n){
-//     var n=10;
-//     function incr(){
-//       return n+=1;
-//     }
-//     return incr();
-//   }
-//   var res=makeCounter(4);//5
-//   console.log(res);
-  ////////////////////////////////////////////////
-//   var n=20;
-//   function makeCounter(){
-//     //var n=10;
-//     function incr(){
-//       return n+=1;
-//     }
-//     return incr();
-//   }
+  var n=20;
+  function makeCounter(n){
+    //var n=10;
+    function incr(){
+      return n+=1;
+    }
+    return incr();
+  }
+  var res=makeCounter();//11 local variable, 5 parameter,21 global 
+  console.log(makeCounter(4));
+////////////////////////////////////////////////////
+ var n=20;
+  function makeCounter1(){
+   // var n=10;
+    function incr(){
+      return n+=1;
+    }
+    return incr();
+  }
   
-//   var res=makeCounter();//21
-//   console.log(res);
+  var res=makeCounter1();//21
+  console.log(res);
+
+/////////////////////////////////////////////////////////////
+  var x=10;
+  function y(x){
+    var x=3;
+    return function(){
+      return x++;
+    }
+  }
+  var a=y(2);
+  console.log(a());//3
+  console.log(a());//4
+  
   ////////////////////////////////////////////
-//   function makeCounter(n){
-//     function incr(m){
-//       return n+=m;
-//     }
-//     return incr;
-//   }
-//   var res=makeCounter(5)(3);//8
-//   console.log(res);
+  function makeCounter2(n){
+    function incr(m){
+      return n+=m;
+    }
+    return incr;
+  }
+  var res=makeCounter2(5)(3);//8
+  console.log(res);
   ///////////////////////////closures/////// ctrl+ /    ///////////////////////////////////////////
   
-//   function makeCounter(){
-//     var currentValue=1;
-//     return function (){ 
-//       return currentValue++;
-//     }
-//   }
-//   var counter=makeCounter();
-//   console.log(counter());//1
-//   console.log(counter());//2
+  function makeCounter3(){
+    var currentValue=1;
+    return function (){ 
+      return currentValue++;
+    }
+  }
+  var counter1=makeCounter3();
+  console.log(counter1());//1
+  console.log(counter1());//2
   
   /////////////////////////////////////////////////////
   function Mult(){
@@ -64,40 +77,41 @@ function incr(){
   
   ///////////////////////////////////////////////////////////
   
-//   function makeCounter(){
-//     var currentValue=1;
-//     return function (){ 
-//       return currentValue++;
-//     }
-//   }
-//   var counter=makeCounter();
-//   console.log(counter());//1
-//   console.log(counter());//2
-// counter.currentValue=5;
+  function makeCounter4(){
+    var currentValue=1;
+    return function (){ 
+      return currentValue++;
+    }
+  }
+  var counts=makeCounter4();
+  console.log(counts());//1
+  console.log(counts());//2
+  counts.currentValue=5;
   
-//   var counter2=makeCounter();
-//   console.log(counter2());//1
-//   console.log(counter());//3
+  var counts2=makeCounter4();
+  console.log(counts2());//1
+  console.log(counts());//3
   
   ///////////////////////////////////////////////////////////
-//   function makeCounter(){
+  function makeCounter5(){
   
-//     function incr(){
-//         return incr.currentValue++;
-//     }
-//     incr.currentValue=1;
-//     return incr;
+    function incr(){
+        return incr.currentValue++;
+    }
+    incr.currentValue=1;
+    return incr;
 
-//   }
-//   var counter=makeCounter();
-//   counter.currentValue=5;
-//   console.log(`counter #1:${counter()}` );//5
-//   console.log(`counter #1:${counter()}`);//6
+  }
+  var c=makeCounter5();
+  console.log(c.currentValue);//1
+  c.currentValue=5;
+  console.log(`counter #1:${c()}` );//5
+  console.log(`counter #1:${c()}`);//6
   
-  
-//   var counter2=makeCounter();
-//   console.log(`counter #1:${counter2()}`);//1
-//   console.log(`counter #1:${counter()}`);//7
+  var c2=makeCounter5();
+  console.log(`counter #1:${c2()}`);//1
+  console.log(`counter #1:${c2()}`);//2
+  console.log(`counter #1:${c()}`);//7
   
   ////////////////////////////////////////////////////////////
   function mult(){
@@ -113,6 +127,9 @@ function incr(){
   c.n=3;
   console.log(c());//3
   console.log(c());//4
+
+
+
 //////////////////////////////////////////////////////
 function main() {
   function func1() {
@@ -125,13 +142,12 @@ function main() {
   return out;
 }
 var res = main();
-console.log(res);
+console.log(res);//3
 
 
 
   ////////////////////////////Exe 1////////////////////////////
-
-  
+ 
 //   function makeCounter() {
 //     let count = 0;
 
@@ -139,7 +155,6 @@ console.log(res);
 //             return count++;
 //         };
 //     }
-
 //     let counter = makeCounter();
 //     let counter2 = makeCounter();
 
@@ -148,6 +163,18 @@ console.log(res);
 
 //     console.log( counter2() ); // 0
 //     console.log( counter2() ); // 1
+
+  ///////////////////
+  function z(){
+    let p=2;
+    return function(){
+      return p++;
+    };
+  }
+  console.log(z);
+ // console.log(x);
+  
+
     ///////////////////////////Exe 2////////////////////////////
     function Counter() {
         let count = 0;
@@ -159,9 +186,7 @@ console.log(res);
             return --count;
         };
     }
-        
         let counter = new Counter();
-        
         console.log( counter.up() ); // 1
         console.log( counter.up() ); // 2
         console.log( counter.down() ); //1
@@ -175,27 +200,12 @@ console.log(res);
         return inc;
     }
     var res=sum(5)(-1);
-    console.log(res);
+    console.log(res);//4
 
     /////////////////////////////////
-    function mult(){
+   
 
-        function inc(){
-          return inc.n++;
-        }
-        inc.n=2;
-        return inc;
-      }
-      
-      var c = mult();
-      c.n=3;
-      console.log(c());//3
-      console.log(c());//4
-  
-  
-  
-  
-  
+
   
   
   

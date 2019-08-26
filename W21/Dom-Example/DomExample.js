@@ -9,7 +9,7 @@
 // console.log(document.forms[0]);
 console.log(document.links);
 console.log(document.images);
-document.links[0].href="https://facebook.com";
+document.links[0].href="httpfdsafdss://facebook.com";
 document.images[0].src="images.jpeg";
 let items=document.getElementsByClassName("list-group-item");
 console.log(items);

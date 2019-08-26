@@ -14,7 +14,7 @@ document.images[0].src="images.jpeg";
 let items=document.getElementsByClassName("list-group-item");
 console.log(items);
 for(let i=0;i<items.length;i++){
-    items[i].style.color="yellowgreen";
+    items[i].style.color="brown";
 }
 // items[3].textContent="this is the last item.";
 //items[3].innerHTML="<h3>this is the last item.</h3>"; //this is the last item.
@@ -26,20 +26,25 @@ header.style.borderBottom="solid 7px #ccc";
 console.log(header);
 let input=document.querySelectorAll("input")[1];
 input.placeholder="welcome in DCI";
-input.value="Hello";
+input.value="Hi";
 
 let btn=document.querySelector('input[type="submit"]');
 btn.style.background="lightblue";
 
-let item=document.querySelector(".list-group-item");
+let item=document.querySelector(".list-group-item");// is same as firstItem
 item.style.color="yellow";
 
-let lastItem=document.querySelector(".list-group-item:last-child");
-lastItem.style.color="lightblue";
+// let firstItem=document.querySelector(".list-group-item:nth-child(1)");
+// firstItem.style.color="white";
+
 let secondItem=document.querySelector(".list-group-item:nth-child(2)");
-secondItem.style.color="green";
+secondItem.style.color="red";
+
+let lastItem=document.querySelector(".list-group-item:last-child");
+lastItem.style.color="blue";
+
 let titles=document.querySelectorAll(".title");
-titles[1].textContent="Hello";
+titles[1].textContent="Good Morning";
 
 let odd=document.querySelectorAll("li:nth-child(odd)");
 let even=document.querySelectorAll("li:nth-child(even)");
@@ -65,8 +70,9 @@ itemList.firstElementChild.style.background="green";
 itemList.firstElementChild.textContent="Hallooooooooo  ";
 
 itemList.lastElementChild.textContent="I am the last element child";
+itemList.nextSibling.textContent="maria";
 console.log(itemList.nextSibling);
-console.log(itemList.children[0].nextElementSibling);
+console.log(itemList.children[0].nextElementSibling.textContent);//item2
 itemList.children[0].nextElementSibling.textContent+=" next element sibling";
 itemList.children[1].previousElementSibling.textContent+="Previous Element Sibling";
 itemList.children[1].id="1";
@@ -75,30 +81,29 @@ itemList.children[1].id="1";
 let newDiv=document.createElement("div");
 //add class
 newDiv.className="card card-body";
-// add new attrquerySelector("form");
-newDiv.setAttribute("myAttr","Hello World");
+// add new attr querySelector("form");
+newDiv.setAttribute("myAttr1","Hello World");
 //create text node
 
-let textDiv=document.createTextNode("Hi im new text node for the div");
+let textDiv=document.createTextNode("Hi i am a new div before main div");
 newDiv.appendChild(textDiv);
 console.log(newDiv);
 
 //insert the newDiv before the div : main
 
 let container=document.querySelectorAll(".container")[1];
-
 let mainDiv=document.querySelector("#main");
 newDiv.style.fontSize="1.6em";
 container.insertBefore(newDiv,mainDiv);
 
 //create new li
-// let newLi=document.createElement("li");
-// liText=document.createTextNode("im the new li :)");
-// newLi.appendChild(liText);
-// newLi.className="list-group-item";
-// let itemParent=document.querySelector("#items");
-// let firstLi=document.querySelector(".list-group-item");
-// itemParent.insertBefore(newLi,firstLi);
+let newLi=document.createElement("li");
+liText=document.createTextNode("im the new Li :)");
+newLi.appendChild(liText);
+newLi.className="list-group-item";
+let itemParent=document.querySelector("#items");
+let firstLi=document.querySelector(".list-group-item");
+itemParent.insertBefore(newLi,firstLi);
 
 
 
@@ -116,11 +121,11 @@ btn1.addEventListener("dblclick",btnClick);
 
 function btnClick(e){
     document.getElementById("header-title").textContent="changed";
-    console.log(e);
-    console.log(e.target.id);
-    console.log(e.target.classList);
-    document.getElementById("output").innerHTML="<h3>"+e.target.className+"<h3>";
-    console.log(e.type);
+    //  console.log(e);
+    // console.log(e.target.id);
+    // console.log(e.target.classList);
+    // document.getElementById("output").innerHTML="<h3>"+e.target.className+"<h3>";
+    // console.log(e.type);
 }
 //----------------------------------new code---------------------------------------------
 let form=document.getElementById("formItems");
@@ -150,8 +155,8 @@ function addItem(e){
     let title=document.querySelector(".title");
     let parent=document.getElementById("main");
     parent.insertBefore(newDiv,title);
-    //setTimeout(function(){newDiv.remove()},2000); 
-    // newDiv.onclick=this.remove();
+    setTimeout(function(){newDiv.remove()},2000); 
+     //newDiv.onclick=this.remove();               ?????????????????????????????????????????????????????????????
 
 }
 
@@ -167,7 +172,7 @@ function removeItem(e){
     }
 }
 
-let inputFilter=document.getElementById("filter");
+let inputFilter=document.getElementById("filter"); //???????????????????????????????????????????????
 
 inputFilter.addEventListener("keyup",filterItems);
 function filterItems(e){
