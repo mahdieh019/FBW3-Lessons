@@ -12,18 +12,14 @@ let arr=["poster/memento.jpg",
 
 
 
-left.addEventListener("click",previous);
+//left.addEventListener("click",previous);
 
-//right.addEventListener("click",next);
+right.addEventListener("click",next);
 
 index=0
 
-function previous(){
-  
-    
-    if(index<arr.length){    
-     index=arr.length-1;
-     console.log(index);
-        return arr[arr.length-1];
+function next(){
+    if(index==arr.length){    
+     index=0;
     }
 }
