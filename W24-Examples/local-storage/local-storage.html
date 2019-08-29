@@ -7,40 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tasks</title>
 </head>
-<body class="bg-info">
+<body class="bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div id="main" class="card">
                     <div class="card card-body text-center mt-5">
-                            <h3 class="heading display-5 pb-3">Tasks List </h3>                       <div class="row">
-                            <form id="task-form">
-                                <div class="input-filed col-sm-12">
-                                    <label for="task">new task</label>
-                                    <input type="text" name="task" id="task">
-                                    <input type="submit" value="add task">
-                                </div>
-                            </form>
+                            <h3 class="heading display-5 pb-3">Tasks List </h3>
+                            <div class="row">
+                                <form id="task-form">
+                                    <div class="input-filed col-sm-12">
+                                        <label for="task">new task</label>
+                                        <input type="text" name="task" id="task">
+                                        <input type="submit" class="btn btn-info" value="add task">
+                                    </div>                                
+                                </form>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <div class="content card">
-                    <div class="card card-body text-center mt-5">
-                      <h5>new Task for js</h5>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+     </div>
+     <div class="row">
+         <div class="col-md-6 mx-auto">
+             <div class="content card">
+                    <div id="task-list" class="card card-body text-center mt-5">
+                        <h5> new task for js </h5>
+                    </div> 
+             </div>
+
+         </div>
 
 
-
+     </div>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
