@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- in cdnjs.com   ->  handlebars.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js" integrity="sha256-fIuSfP8oRbwWG9pRr+FaGfBU62kYY+7YqUsXSCgnYqM=" crossorigin="anonymous"></script>
+      <!-- in cdnjs.com   ->  jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Document</title>
+
+</head>
+<body>
+
+
+    <script id="hb-objects" type="text/x-handlebars-template">
+            <div class="card-deck col-6" >
+                    {{#each posts}}
+                        <div class="card m-5" >
+                            <div class="card-body bg-info " >
+                                <div class="card-header text-white"> {{this.author.name}}  {{this.author.lastName}}</div>
+                                <img  class="fluid p-3" src="https://i.pravatar.cc/150?img={{imageId}}" width="200"  alt="" class="img-thumbnail">
+                                <h5 class="card-title bg-warning text-white"> {{this.actor}}</h5>
+                                <div class="card-subtitle bg-success text-white  ">{{this.age}}</div>
+                            </div>
+                
+                        </div>
+                    {{/each}}
+                </div>
+    </script>
+
+
+
+
+    
+
+
+    <script>
+    
+    
+     //Now define your name and your occupation
+     var context={
+            "title":"vanilla Blog",
+            "posts":[
+                        {
+                            "author": {"name": "Boris","lastName":"Smith"},
+                            "imageId":"6",
+                            "actor": "john smith",
+                            "age":40
+                        },
+                            
+                        {
+                            "author": {"name":"John","lastName":"Simon"} ,
+                            "imageId":"7",
+                            "actor": "john smith",
+                            "age":45
+                        }
+                    ]
+    
+            };
+        //jQuery: retrieve the template data from  the HTML
+        var template=$('#hb-objects').html();
+      
+        //HB: Compile the template
+        var templateScript=Handlebars.compile(template);
+
+           //HB: html='My name is Bill Gates. I am  Ms CEO'
+        var html=templateScript(context);
+
+        //jQuery: insert th eHTML code into the page
+        $(document.body).append(html);
+    
+    
+    
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

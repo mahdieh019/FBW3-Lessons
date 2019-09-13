@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- in cdnjs.com   ->  handlebars.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js" integrity="sha256-fIuSfP8oRbwWG9pRr+FaGfBU62kYY+7YqUsXSCgnYqM=" crossorigin="anonymous"></script>
+    
+      <!-- in cdnjs.com   ->  jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   
+   <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <title>HB objects</title>
+</head>
+<body>
+   
+    <script id="hb-objects" type="text/x-handlebars-template">
+        <!-- <div class="entry">
+            <h1>{{title}}</h1>
+            <h2>{{author.name}}</h2>
+
+            <div class="body">
+                {{text1}}
+            </div>
+
+            <div class="body">
+                {{text1}}
+            </div>
+
+            {{#each posts}}
+                <div class="body">
+                    {{this.text}} &nbsp&nbsp&nbsp&nbsp {{this.date}}
+                </div>
+            {{/each}}
+        </div> -->
+
+        <!-- another example -->
+        <div class="container">
+                <h1>{{title}}</h1>
+                {{#each posts}}
+                <h2>{{this.author.name}}</h2>
+                <img src="https://i.pravatar.cc/150?img={{imageId}}" alt="..." class="img-thumbnail">
+                <div class="lead">
+                    {{this.text}}
+                </div>
+                {{/each}}
+            </div>
+
+
+
+    </script>
+        
+    <script>
+
+        //Now define your name and your occupation
+        var context={
+            "title":"vanilla Blog",
+             "posts":[
+                {
+                    "author": {"name": "Boris"},
+                    "text": "It's first post of Boris",
+                    "imageId":"2"},
+                    
+                {
+                    "author": {"name": "Sergey"},
+                    "text": "It's first post of Sergey",
+                    "imageId":"3"}
+                    ]
+
+    
+            };
+        //jQuery: retrieve the template data from  the HTML
+        var template=$('#hb-objects').html();
+      
+        //HB: Compile the template
+        var templateScript=Handlebars.compile(template);
+
+           //HB: html='My name is Bill Gates. I am  Ms CEO'
+        var html=templateScript(context);
+
+        //jQuery: insert th eHTML code into the page
+        $(document.body).append(html);
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
