@@ -1,2 +1,2 @@
-import dayHello from './hello.js';
+import sayHello from './hello.js';
 sayHello();
