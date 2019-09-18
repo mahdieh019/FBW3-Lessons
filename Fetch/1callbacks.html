@@ -8,31 +8,37 @@
 </head>
 <body>
     <script>
-        // f1();
-        // f2();
-        // f3();
-        function checkUser(){
+       
+        function checkUser(callback){ 
             setTimeout(function(){
                 console.log("Checking user ...");
+                callback();
             },3000);
         }
 
-        function downloadFile(){
+        function downloadFile(callback){
             setTimeout(function(){
                 console.log("Downloading file ...");
+                callback();
             },2000);
         }
 
-        function closeSession(){
+        function closeSession(callback){
             setTimeout(function(){
                 console.log("closing the session ...");
+                callback();
             },1000);
         }
 
         function run(){
-            checkUser();
-            downloadFile();
-            closeSession();
+            checkUser(function(){
+                downloadFile(function(){
+                    closeSession(function(){
+                        //all three functions at this point have completed
+                    });
+
+                });
+            });
         }
 
        
