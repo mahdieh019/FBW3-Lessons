@@ -15,10 +15,11 @@ div > p{
     color: white;
     text-align: center;
 }
-div + h1{
+ div + h1{ 
     background-color: greenyellow;
     color: white;
 }
+
 div ~ h2{
     background-color: green;
     color: white;
@@ -46,7 +47,7 @@ a.first:hover,.secound:hover{
     color: white;
     font-size: 2em; 
 }
-a.first{
+a.first,.second{
     transition: all 2s;
 }
 /* the first p child in the body */
@@ -58,4 +59,4 @@ body>p:nth-last-child(2){
 }
 :not(a){
     color: aqua;
-}
+} 

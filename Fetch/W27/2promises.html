@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+
+
+       
+        function checkUser(){
+            // return a promise with resolve and reject functions
+           return new Promise((resolve,reject)=>{
+               setTimeout(function(){
+                    console.log("Checking the user ...");
+                    resolve("success checkUser");
+               },3000);
+           });
+        }
+
+        function downloadFile(){
+            return new Promise((resolve,reject)=>{
+               setTimeout(function(){
+                    console.log("Downloading the file ...");
+                    resolve("success downloadFile");
+               },2000);
+           })
+        }
+
+        function closeSession(){
+            return new Promise((resolve,reject)=>{
+               setTimeout(function(){
+                    console.log("Closing the file ...");
+                    resolve("success closeSession");
+               },1000);
+           })
+        }
+
+        function run(){
+           const promise=checkUser()
+           .then(
+                function(value){
+                    console.log(value);
+                    return downloadFile();
+                })
+            .then(
+                function(value){
+                    console.log(value);
+                    return closeSession();
+                })
+        }
+
+      
+    </script>
+</body>
+</html>

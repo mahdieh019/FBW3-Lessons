@@ -1,8 +1,8 @@
 :root{
-    --txtcolor:blue;
-    --bgcolor: linear-gradient(to right,lightblue,lightgreen,pink);
+    --txtcolor:white;
+    --bgcolor: linear-gradient(to right,blue,green,pink);
     --div-height:500px;
-    --border-color:2px solid red;
+    --border-color:2px solid yellow;
 }
 body{
     /* background: var(--bgcolor); */
@@ -11,7 +11,6 @@ body{
 }
 .main h1{
     color:var(--txtcolor);
-    
 }
 .main{
     margin-top: 20px;
@@ -25,7 +24,6 @@ body{
     background-color: aqua;
     margin-top: 50px;
     font-size: 2.5em;
-
 }
 .new{
     padding: 100px;
@@ -73,8 +71,8 @@ body{
 }
 .red{
     background: red;
-    filter:brightness(50%);
-    /* filter:blur(2px); */
+    /* filter:brightness(30%); */
+    filter:blur(1px);
 }
 .blue{
     background: blue;

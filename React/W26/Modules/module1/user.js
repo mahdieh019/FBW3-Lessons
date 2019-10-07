@@ -14,7 +14,7 @@ function hi(user){
     //return 'hello world' +user;
 }
 //--------------------------------------------------------------------------
-//export import function doubleNumber(num){
+//export default function doubleNumber(num){
 //     return num*2;
 // }
 export function doubleNumber(num){

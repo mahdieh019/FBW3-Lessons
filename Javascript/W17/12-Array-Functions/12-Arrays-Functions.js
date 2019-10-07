@@ -14,7 +14,7 @@ console.log(allColors.slice(1,3));// Array [ "blue", "green" ]
 let cars=["bmw","ford","fiat"];
 console.log(cars);
 // cars.splice(0,2,"mercedes","audi",);  Array(3) [ "mercedes", "audi", "fiat" ]
-// cars.splice(1,1,"mercedes","audi",);  Array(4) [ "bmw", "mercedes", "audi", "fiat" ]
+// cars.splice(1,2,"mercedes","audi",);  Array(4) [ "bmw", "mercedes", "audi", "fiat" ]
 cars.splice(1,0,"mercedes","audi",); // Array(5) [ "bmw", "mercedes", "audi", "ford", "fiat" ]
 console.log(cars.push("white")); 
 console.log(cars);

@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+.header , .footer{
+    background: gray;
+    padding: 15px;
+    color: white;
+}
+
+.text{
+    padding: 15px;
+    float: left;
+}
+
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.menu{
+    width: 25%;
+}
+.content{
+    width: 75%;
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu li{
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: green;
+    color: white;
+}
+.menu  li:hover{
+    background: lightseagreen;
+}
+

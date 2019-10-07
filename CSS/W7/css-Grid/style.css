@@ -12,12 +12,12 @@
 .footer{grid-area: footer;}
 
 .grid{
-    /* display: inline-grid; */
-    /* grid-column-gap:1px; */
-    /* grid-row-gap: 1px;  */
+    /* display: inline-grid;
+    grid-column-gap:1px;
+    grid-row-gap: 1px;  */
     display:grid;
     grid-template-areas:
-    'header header right'
+    'header header header'
     'left center right'
     'left footer footer';
 }
