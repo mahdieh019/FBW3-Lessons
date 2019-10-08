@@ -127,7 +127,7 @@ visibility:hidden; still keeps its space
 ---------------------------------Align-------------------------------------
  transform: translate(-50%, -50%);
 
-----------------------------------pseudo
+----------------------------------pseudo---------------------------------
 p {
   display: none;
   background-color: yellow;
@@ -165,13 +165,13 @@ min-width: 160px;
   display: block;
 }
 
-------------------------------------form
+------------------------------------form------------------------
 input[type=text]:focus {
   background-color: lightblue;
 }
---------------------img
+--------------------img---------------------------
   background-image: url(img_flwr.gif), url(paper.gif);
   background-position: right bottom, left top;
   background-repeat: no-repeat, repeat;
 
-   background-size: contain;/ cover
+  background-size: contain;/ cover

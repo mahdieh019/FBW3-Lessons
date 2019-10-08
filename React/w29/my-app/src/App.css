@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  color:red;
+  font-style: italic;
+  background: orange;
+  padding: 10px;
+}
+
+
+body{
+  margin :0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.person{
+  border:1px solid #ccc;
+  padding:20px;
+  margin:10px;
+  width:150px;
+  box-shadow:0 2px 2px #ccc;
+  display:inline-block;
+  background:rgb(255, 187, 0);
+  color: ;
+  box-shadow: 8px 8px 10px #ccc;
+}
+.row{
+  border:3px solid gray;
+  
+}
+#todo{
+  border:1px solid #aaa;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px #bbb;
+  background: olivedrab;
+  margin: 0 auto;
+  width: 75%;
+  position: relative;
+  box-shadow: 20px 10px 30px #a1a1a1;
+}
+#todo ul{
+
+  list-style-type: none;
+}
+#todo ul li{
+ 
+  background: lightcoral;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 3px;
+  width: 50%;
+  box-shadow: 10px 20px 10px ;
+  font-style: italic;
+  text-align: center;
+  
+
+}

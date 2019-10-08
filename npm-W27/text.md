@@ -1,3 +1,5 @@
+`to uppdate system`
+sudo apt-get upgrade
 `install npm`
 sudo npm install npm@latest -g
 npm -v                          to know the version
