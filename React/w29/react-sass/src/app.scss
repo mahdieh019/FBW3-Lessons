@@ -1,0 +1,15 @@
+//$my-background:lightgreen;
+$my-background:url('./image/tree.jpeg');
+$my-color:darkblue;
+
+body{
+    background:$my-background;
+    color:$my-color;
+}
+div{
+    text-align: center;
+    h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:red;
+    }
+}
