@@ -33,14 +33,12 @@ class BootstrapAapp extends Component {
                                         <Dropdown.Item onClick={()=>this.addColumn(6)}>Show 6 column</Dropdown.Item>
                                         <Dropdown.Item onClick={()=>this.addColumn(7)}>Show 7 column</Dropdown.Item>
                                     </Dropdown.Menu>
-
                             </Dropdown>
                         </Col>
                         <Col md={10}>
                             <Row>
                                 <Columns number={this.state.numCols} themes={this.state.themes}/>
                             </Row>
-                            
                         </Col>
                     </Row>
                 </Container>

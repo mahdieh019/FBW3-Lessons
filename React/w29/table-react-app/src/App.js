@@ -18,8 +18,8 @@ class  App extends Component {
     return (
       <div className="App">
          <table>
-          <thead><tr><TableHeader list={this.state.List}/></tr></thead>
-          <tbody><TableBody list={this.state.List}/></tbody>
+            <thead><tr><TableHeader list={this.state.List}/></tr></thead>
+            <tbody><TableBody list={this.state.List}/></tbody>
          </table>
       </div>
     );

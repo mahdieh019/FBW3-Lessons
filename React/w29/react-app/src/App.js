@@ -47,7 +47,7 @@ class App extends Component {
 
         <Persons name={this.state.persons[0].name} job={this.state.persons[0].job} age={this.state.persons[0].age} class={this.state.persons[0].class}/>
         <Persons name={this.state.persons[1].name} job={this.state.persons[1].job} age={this.state.persons[1].age}/>
-        </div>
+      </div>
 
     );
     // return React.createElement('div',null,React.createElement('h1',null,'This is React App'));

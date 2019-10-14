@@ -6,7 +6,7 @@ import './App.css';
 let todoItems=[];
 todoItems.push({id:1,task:"Learn React",done:false});
 todoItems.push({id:2,task:"dinner with friends",done:false});
-todoItems.push({id:1,task:"Go to gym",done:false});
+todoItems.push({id:3,task:"Go to gym",done:false});
 
 
 class TodoList extends Component{
@@ -34,10 +34,10 @@ class TodoList extends Component{
               return <h1>{item.task}</h1>})
           }
           {/*the input*/}
-        <InputTodo todoValue={this.state.todoValue} changed={(e)=>this.changeTodoValue(e)}/>
-        <button onClick={()=>this.addToList()}>add</button>
-        <ListTodo list={this.state.todoList}/>
-     </div>
+          <InputTodo todoValue={this.state.todoValue} changed={(e)=>this.changeTodoValue(e)}/>
+          <button onClick={()=>this.addToList()}>add</button>
+          <ListTodo list={this.state.todoList}/>
+      </div>
      
       )
   }

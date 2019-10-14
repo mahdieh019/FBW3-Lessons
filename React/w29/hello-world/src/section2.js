@@ -21,7 +21,7 @@ function Section2(){
             storage, or graphics facilities. It relies upon the host environment in
             which it is embedded to provide these features.
             </article>
-      </section>
+        </section>
     ); 
 }
 export default Section2;
