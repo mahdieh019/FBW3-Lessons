@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Dropdown, Container, Row, Col, Alert} from 'react-bootstrap';
+import {Dropdown, Container, Row, Col} from 'react-bootstrap';
 import Columns from './Columns';
 import './App.css';
 

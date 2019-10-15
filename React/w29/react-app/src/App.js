@@ -36,6 +36,7 @@ class App extends Component {
       // React does not accept to seperate div, it is a part of jsx attribute
       // <div></div>
       <div className="App" onMouseDown={this.changeContent}>
+
         <Persons name="Maria" job="jQuery" age={28} />
         <Persons name="Mina" job="Java developer" age={25} />
         <Persons name="Rania" job="js developer" age={48} />
@@ -47,6 +48,7 @@ class App extends Component {
 
         <Persons name={this.state.persons[0].name} job={this.state.persons[0].job} age={this.state.persons[0].age} class={this.state.persons[0].class}/>
         <Persons name={this.state.persons[1].name} job={this.state.persons[1].job} age={this.state.persons[1].age}/>
+     
       </div>
 
     );
