@@ -26,6 +26,37 @@ class TodoList extends Component{
     this.setState({todoList: list, todoValue:'' })
     console.log(this.state.todoList);
   }
+
+  handleSubmit=(e)=>{
+    e.preventDefault();
+    alert(`This task is ${this.state.todoValue}`);
+  }
+
+  isValid=()=>{
+    if(this.state.todoValue===''){
+      return false;
+    }
+    return true;
+  }
+
+
+// removeElement=(name)=>{
+//   this.setState({
+//     this.state.todoList.filter(e=>e !==name)
+//     })
+
+//   }
+
+
+removeElement=(item)=>{
+  let myList=this.state.todoList;
+  myList.splice(item,1);
+  this.setState({
+    todoList:myList
+  })
+}
+
+
   render(){
     return(
       <div className='App'>
@@ -35,8 +66,9 @@ class TodoList extends Component{
           }
           {/*the input*/}
           <InputTodo todoValue={this.state.todoValue} changed={(e)=>this.changeTodoValue(e)}/>
-          <button onClick={()=>this.addToList()}>add</button>
-          <ListTodo list={this.state.todoList}/>
+          <button onClick={()=>this.addToList()} disabled={!this.isValid()}>add</button>
+          <ListTodo list={this.state.todoList} remove={item=>this.removeElement(item)}/>
+         
       </div>
      
       )
