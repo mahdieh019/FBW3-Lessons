@@ -10,3 +10,7 @@ https://github.com/facebook/create-react-app
 
 to run react code we have to add it inside the app.js
 and run npm start inside terminal my-app
+
+
+------------------install npx-------------------------
+npm install -g npx
