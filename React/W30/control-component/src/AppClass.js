@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Input from './input'
 import './App.css';
 
-export default class AppClass extends Component {
+class AppClass extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -27,9 +27,6 @@ export default class AppClass extends Component {
         }
         return true;
     }    
-
-
-
     render() {
         return (
             <div className="App">
@@ -45,3 +42,5 @@ export default class AppClass extends Component {
         )
     }
 }
+
+export default AppClass

@@ -3,8 +3,6 @@ import './app.scss';
 import img from './image/man.jpeg'
 //import './App.css';
 
-
-
 function App() {
   return (
     <div className="App">

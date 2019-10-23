@@ -1,9 +1,11 @@
+
 .App {
+  margin:0 auto;
   text-align: center;
   border:1px solid limegreen;
   border-radius: 5px;
   width:50%;
-  margin-top:5px;
+  /* margin-top:5px; */
   background-color:pink;
 }
 

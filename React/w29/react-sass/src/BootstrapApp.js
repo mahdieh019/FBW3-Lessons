@@ -5,13 +5,12 @@ import './App.css';
 
 class BootstrapAapp extends Component {
     state={
-        numCols: 2,
+        numCols: 1,
         themes:['primary','secondary','success','danger','warning','info','light','dark']
     }
 
     addColumn=(numCols)=>{
         this.setState({numCols:numCols})
-        console.log(numCols)
     }
     render() {
         return (

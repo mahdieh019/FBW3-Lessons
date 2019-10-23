@@ -1,0 +1,22 @@
+.App{
+  
+  background:lightgray;
+  border: 2px solid black;
+  padding:3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+  font-size: 1rem;
+  color:white;
+  border-bottom:2px solid black;
+  
+}
+.input{
+  background-color:lightblue;
+  color:white;
+}
+.btn{
+  background:rgba(255, 0, 85, 0.849);
+  color:white;
+}

@@ -3,7 +3,7 @@ import React from 'react'
 const TableHeader=props=>{
     let Titles=Object.keys(props.list[0]);
    // let Titles=Object.values(props.list[0]);
-   return(
+    return(
        <React.Fragment>
            <th>{Titles[0].toUpperCase()}</th>
            <th>{Titles[1].toUpperCase()}</th>

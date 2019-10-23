@@ -7,4 +7,5 @@ sudo npm start
 ---------------------------------------install react bootstrap-----------
 npm install react-bootstrap bootstrap
 
-rcc + tab  (with component) /rfc + tab (whitout component) creates react file
+---------------------------shortcut to create react file---------------
+rce + tab  (class) / rfc + tab (function)
