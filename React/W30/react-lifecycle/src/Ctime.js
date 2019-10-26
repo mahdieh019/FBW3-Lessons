@@ -22,8 +22,10 @@ export default class Ctime extends Component {
         return (
             <div className="App">
 
-                <h2><span>{this.state.timezone} </span>{this.state.time.toLocaleTimeString("de-DE",
-                {timeZone: this.state.timezone})}</h2>
+                <h2>
+                    <span>{this.state.timezone}</span>
+                    {this.state.time.toLocaleTimeString("de-DE",{timeZone: this.state.timezone})}
+                </h2>
             </div>
         )
     }

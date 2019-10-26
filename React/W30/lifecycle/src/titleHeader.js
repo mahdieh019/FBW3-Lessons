@@ -9,9 +9,10 @@ export default class TitleHeader extends Component {
        }
    }
    static getDerivedStateFromProps(props, state){
-       console.log('sync props to state');
-       console.log('new props', props.newTitle);
-       console.log('old state ', state.title);
+    //    console.log('sync props to state');
+    //    console.log('new props', props.newTitle);
+    //    console.log('old state ', state.title);
+    
        if(state.title !== props.newTitle){
            return {
                title : props.newTitle
@@ -20,16 +21,14 @@ export default class TitleHeader extends Component {
        else{ return null
 
         }
-
-
    }
+
    componentDidMount(){
-       console.log('component did mount ', this.state.title)
+       console.log('component did mount ', this.state.title);
        let header = document.querySelector('h1');
        header.style.background="lightgreen";
    }
-   // update of the component 
-
+ 
    shouldComponentUpdate(){
        
        console.log('updating ... shouldComponentUpdate');

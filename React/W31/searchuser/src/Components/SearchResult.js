@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import User from './User';
 
+
 class SearchResult extends Component {
 
     constructor(props) {
@@ -14,12 +15,13 @@ class SearchResult extends Component {
                 {id:3,name:"Maria",age:26,email:"Maria@dci.com"},
                 {id:4,name:"John",age:20,email:"John@dci.com"}
             ],
-            lastSearchTerm:''
+            lastSearchTerm:'',
+            url:"https//jsonplaceholder.typicode.com/users"
         }
     }
 
     shouldComponentUpdate(nextProps){
-        if(this.state.lastSearchTerm==nextProps.searchFor){
+        if(this.state.lastSearchTerm===nextProps.searchFor){
             return false
         }else{
             return true
@@ -32,6 +34,27 @@ class SearchResult extends Component {
             lastSearchTerm:this.props.searchFor
         })
     }
+
+
+    componentDidMount(){
+        // console.log("The SearchResult-component has mounted");
+        console.log(this.state.url)
+        fetch(this.state.url)
+        .then(response=>{
+            console.log(response);
+            return (response.json())})
+        .then(data=>{
+            console.log(data);
+            this.setState({
+                users:data
+            })
+        })
+    }
+
+    componentWillUnmount(){
+        console.log("The SearchResults-component will unmount");
+    }
+
  
     render() {
         const body=this.state.users.map(item=>{
@@ -53,12 +76,21 @@ class SearchResult extends Component {
 
         return (
             <div>
+
+
+            <div><input onChange={this.props.change} type="text" className="input" placeholder="Enter Searchterm"/>
+       
+            <button onClick={this.props.click} className="btn" >Search</button></div>
+       
+       
+
                 <table>
                     <thead><tr><th>id</th><th>name</th><th>age</th><th>email</th></tr></thead>
                     <tbody>
                         {/* <User users={this.state.users}/> */}
                         {/* {body} */}
                         {search}
+
                     </tbody>
                 </table>
             </div>

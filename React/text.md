@@ -14,3 +14,8 @@ and run npm start inside terminal my-app
 
 ------------------install npx-------------------------
 npm install -g npx
+----------------------extention---------------------------
+sublime babel  to show the code in colorfull
+
+---------------------------install router---------------------------------
+sudo npm install react-router-dom

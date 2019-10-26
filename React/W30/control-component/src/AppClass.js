@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import Input from './input'
+import Input from './Input'
 import './App.css';
 
 class AppClass extends Component {
+    
     constructor(props){
         super(props);
         this.state={
@@ -30,14 +31,20 @@ class AppClass extends Component {
     render() {
         return (
             <div className="App">
+
                 <h2>Controlled Component with React</h2>
                 <form onSubmit={this.handelSubmit}>
-                    <Input onChange={this.handelInputChange} id="todo" errorMessage={this.isValid() ? '':'This field is required'}
-
-                    type='text' placeholder="write some text" value={this.state.todo}/>
-
+                    <Input
+                        onChange={this.handelInputChange}
+                        id="todo"
+                        errorMessage={this.isValid() ? '':'This field is required'}
+                        type='text' 
+                        placeholder="write some text" 
+                        value={this.state.todo}
+                    />
                     <button class="btn btn-warning" disabled={!this.isValid()} type="submit">Submit</button>
                 </form>
+                
             </div>
         )
     }

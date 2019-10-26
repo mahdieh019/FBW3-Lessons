@@ -1,12 +1,11 @@
 import React from 'react';
+import Input from './Input'
 import './App.css';
-import Input from './input'
 
 const handleSubmit=e=>{
   e.preventDefault();
   alert('Submited');
-  console.log(e.target['todo']);
-  console.log(e.target['todo'].value);
+  console.log(e.target.value);
 
 }
 

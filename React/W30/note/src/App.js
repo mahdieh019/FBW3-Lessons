@@ -6,8 +6,8 @@ import Notelist from './Components/Notelist'
 export default class App extends Component {
   state={
     notesList:[
-      {id:0,name:"note 1", text:"this is the content of first note"},
-      {id:1, name:" note 2", text:"this is the content of the second note"}
+      {id:0, name:"note 1", text:"this is the content of first note"},
+      {id:1, name:"note 2", text:"this is the content of the second note"}
     ],
     nameValue:'',
     textValue:'',
