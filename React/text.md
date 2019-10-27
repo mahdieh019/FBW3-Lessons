@@ -19,3 +19,18 @@ sublime babel  to show the code in colorfull
 
 ---------------------------install router---------------------------------
 sudo npm install react-router-dom
+
+
+
+
+----------------------------bootstrap ------------------------------
+
+font auesome
+<script src="https://kit.fontawesome.com/8d9b86b358.js" crossorigin="anonymous"></script>
+
+
+------------------------to use grid in react-----------------------------------
+npm i react-css-grid
+
+
+

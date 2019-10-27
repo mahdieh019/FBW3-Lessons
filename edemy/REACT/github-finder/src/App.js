@@ -1,16 +1,20 @@
 import React ,{ Component } from 'react';
+import Navbar from './Components/Layout/Navbar';
+//import UserItem from './Components/Users/UserItem';
+import Users from './Components/Users/Users';
+
 import './App.css';
 
 class App extends Component {
   render(){
-    const name='John Doe';
-    const loading=false;
-    const showName=true;
-
     return (
       <div className="App">
-        {loading ?  <h1>Loading ...</h1> :  <h1>Hello {showName && name}</h1>}
-      
+          {/* <Navbar title='Github Finder' icon='fab fa-github'/> */}
+          <Navbar/> 
+          <div className="container">
+              <Users/>
+          </div>
+         {/* <UserItem/> */}
       </div>
     );
   }
