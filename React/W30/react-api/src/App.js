@@ -9,37 +9,35 @@ export default class App extends Component {
     super(props)
   
     this.state = {
-       root:'https://pixabay.com/api/',
-       key:'13971430-a6f36c6d5b1a37450e2985508',
-       query:'',
-       url:'',
-       letSearch:false,
-       loadedImage:null
+      root:'https://pixabay.com/api/',
+      key:'13971430-a6f36c6d5b1a37450e2985508',
+      query:'',
+      url:'',
+      letSearch:false,
+      loadedImage:null
     }
   }
   
   saveQuery=(e)=>{
-    this.setState(
-                  {query:e.target.value,
-                  letSearch:false}
-                  );
+    this.setState({
+      query:e.target.value,
+      letSearch:false
+    });
   }
 
   // https://pixabay.com/api/?key=13971430-a6f36c6d5b1a37450e2985508&q=yellow+flowers&image_type=photo
     searchImages=()=>{
       let words=this.state.query.split(' ');
-      let newURL=this.state.root+'?key='+this.state.key+'&per_page=50'+'&q=';
-
+      let newURL=this.state.root+'?key='+this.state.key+'&q='; 
+      //'&per_page=50'+'&q='
       words.forEach(word=>{
         newURL+=word+'+';
         console.log(newURL);
       });
-
       this.setState({url:newURL,letSearch:true,loadedImages:null})
     }
 
     loadImage=()=>{
-      console.log("asd")
       let newImages=<Images url={this.state.url}/>;
       this.setState({loadedImages:newImages,letSearch:false})
     }

@@ -56,9 +56,9 @@ export default class Images extends Component {
                 }
                 return (
                     <div key={index} style={style}>
-                        <a href={item.largeImageURL}target="_blank">
+                        {/* <a href={item.largeImageURL}target="_blank"> */}
                             <img src={item.previewURL} alt={item.tags} />
-                        </a>
+                        {/* </a> */}
                     </div>
                 )
             })

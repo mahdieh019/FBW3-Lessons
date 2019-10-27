@@ -35,10 +35,12 @@ export default class App extends Component {
         <h1>This is React Class Component</h1>
         <Person name="Lars" city="Hannover" job="Web Designer"/>
         <Person name={this.state.persons[0].name} city={this.state.persons[0].city} job={this.state.persons[0].job}/>
-        <Person name={this.state.persons[1].name} city={this.state.persons[1].city} job={this.state.persons[1].job}/>
+        <Person name={this.state.persons[1].name} city={this.state.persons[1].city} job={this.state.persons[1].job}/> 
+
         <Person name={this.state.persons[2].name} city={this.state.persons[2].city} job={this.state.persons[2].job}>
-          <button onClick={this.changeData}>change data</button>
+            <button onClick={this.changeData}>change data</button>
         </Person>
+        
       </div>
     )
   }

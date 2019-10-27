@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {
-  BrowserRouter as Router,
+ // BrowserRouter as Router,
   Switch,
   Route,
   Link,
@@ -18,7 +18,6 @@ export default function Topics() {
             <ul >
                 <li className="drop">
                     <Link to={`${url}/link1`}>Link1</Link>
-                   
                 </li>
 
                 <li className="drop">
