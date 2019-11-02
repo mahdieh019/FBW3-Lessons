@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 200px;
+}
+.header img{
+    width: 100%;
+    height: 120px;
+}
+h1{
+    font-size: 1.2em;
+    padding-left:10px;
+}
+.navbar{
+    text-align: center;
+    padding: 3px;
+    background-color:rgba(79, 130, 165, 0.774);
+}
+.navbar ul{
+    margin :10px auto;
+    padding-left: 10px;
+ 
+}
+.navbar ul li{
+    display: inline-block; 
+    border-right: 1px solid black;
+    padding-right: 20px;
+}
+.navbar ul  :last-child{
+    border-right: none;
+}
+.navbar ul li a{
+   padding-left: 10px;
+   text-decoration: none;
+}
+
+.me{
+    background: rgb(193, 211, 219);
+    height: 600px;
+}

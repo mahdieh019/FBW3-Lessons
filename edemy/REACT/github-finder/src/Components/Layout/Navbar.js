@@ -24,17 +24,28 @@ import PropTypes from 'prop-types' //impt
 // }
 
 
-const Navbar=(props)=> {
-        return (
-            <nav className="navbar bg-primary">
-               <h1>
-                    <i className={props.icon}/>{props.title}
-                </h1> 
-            </nav>
-        )
+// const Navbar=(props)=> {
+//         return (
+//             <nav className="navbar bg-primary">
+//                <h1>
+//                     <i className={props.icon}/>{props.title}
+//                 </h1> 
+//             </nav>
+//         )
     
-}
+// }
 
+
+const Navbar=({icon, title})=> {
+    return (
+        <nav className="navbar bg-primary">
+           <h1>
+                <i className={icon}/>{title}
+            </h1> 
+        </nav>
+    )
+
+}
 Navbar.defaultProps={
     title:'Github Finder',
     icon:'fab fa-github'

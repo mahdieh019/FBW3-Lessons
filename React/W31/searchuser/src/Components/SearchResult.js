@@ -57,11 +57,11 @@ class SearchResult extends Component {
 
  
     render() {
-        const body=this.state.users.map(item=>{
-            return(
-                <User id={item.id} name={item.name} age= {item.age} email={item.email}/>
-            )
-        })
+        // const body=this.state.users.map(item=>{
+        //     return(
+        //         <User id={item.id} name={item.name} age= {item.age} email={item.email}/>
+        //     )
+        // })
 
         const result= this.state.users.filter(user => 
             user.name.toLowerCase().includes(this.props.searchFor.toLowerCase()));
@@ -84,8 +84,16 @@ class SearchResult extends Component {
        
        
 
-                <table>
-                    <thead><tr><th>id</th><th>name</th><th>age</th><th>email</th></tr></thead>
+                <table className='table'>
+                    <thead >
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>age</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+
                     <tbody>
                         {/* <User users={this.state.users}/> */}
                         {/* {body} */}

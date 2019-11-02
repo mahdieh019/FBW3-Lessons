@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types' //impt
 
 
 //class UserItem extends Component {
@@ -22,24 +23,22 @@ import React from 'react'
 //                     <h3>{login}</h3>
 //                     <div>
 //                         <a href={html_url} className="btn dark btn-sm my-1">More</a>
-//                     </div>
-//                 </div>
-//         )
-            
-        
-//     }
+//      icon='fab fa-github'
+//      icon='fab fa-github'
+//      icon='fab fa-github'
+        icon='fab fa-github'
+        icon='fab fa-github'
+//     }icon='fab fa-github'
 // }
 
 
-const UserItem=(user: {login,avatar_url,html_url} )=> {
- 
-      
+const UserItem=({user: {login, avatar_url, html_url }})=> {
         return (
                 <div className="card text-center">
                     <img 
                         src={avatar_url} 
                         alt="" className="round-img"
-                        style={{width:"60px"}}
+                        style={{width:"60px"}icon='fab fa-github'}
                     />
                     <h3>{login}</h3>
                     <div>
@@ -47,10 +46,9 @@ const UserItem=(user: {login,avatar_url,html_url} )=> {
                     </div>
                 </div>
         )
-            
-        
-    
 }
 
-
+UserItem.propTypes={
+    user: PropTypes.object.isRequired
+}
 export default UserItem
