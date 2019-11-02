@@ -3,7 +3,8 @@ start to code
 setting- javascript- select babel and search for react /then reactdom
 it adds the react link and reactDomlink there.
 
-----------------------------------install react on vsc-------------------------------------
+------------------------install react on vsc-----------------
+
 https://github.com/facebook/create-react-app
 
 1.npx create-react-app my-app
@@ -17,19 +18,16 @@ npm install -g npx
 ----------------------extention---------------------------
 sublime babel  to show the code in colorfull
 
----------------------------install router---------------------------------
+---------------------------install router---------------------
 sudo npm install react-router-dom
 
 
-
-
-----------------------------bootstrap ------------------------------
+----------------------------bootstrap ------------------
 
 font auesome
 <script src="https://kit.fontawesome.com/8d9b86b358.js" crossorigin="anonymous"></script>
 
-
-------------------------to use grid in react-----------------------------------
+------------------------to use grid in react-------------
 npm i react-css-grid
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import UserItem from './UserItem';
-import Spinner from '../layout/Spinner';
+import Spinner from '../Layout/Spinner';
 import PropTypes from 'prop-types';
 
 const Users=({users ,loading})=>  {
@@ -26,7 +26,5 @@ const userStyle={
     gridTemplateColumns:'repeat(3, 1fr)',
     gridGap:'1rem'
 }
-
-
 
 export default Users
