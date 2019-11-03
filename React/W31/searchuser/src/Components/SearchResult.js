@@ -76,13 +76,19 @@ class SearchResult extends Component {
 
         return (
             <div>
-
-
-            <div><input onChange={this.props.change} type="text" className="input" placeholder="Enter Searchterm"/>
-       
-            <button onClick={this.props.click} className="btn" >Search</button></div>
-       
-       
+                <div>
+                    <input
+                        onChange={this.props.change}
+                        type="text" 
+                        className="input" 
+                        placeholder="Enter Searchterm"
+                        />
+        
+                    <button 
+                        onClick={this.props.click} 
+                        className="btn" >Search
+                    </button>
+                </div>
 
                 <table className='table'>
                     <thead >

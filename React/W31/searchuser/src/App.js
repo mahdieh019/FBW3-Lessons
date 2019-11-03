@@ -37,10 +37,13 @@ class App extends Component {
     if(this.state.currentPage==="about"){
       output=<About/>
     }else{
-      output=<SearchResult change={this.addUser} click={this.lastSearch} searchFor={this.state.lastSearchTerm}/>
+      output=<SearchResult 
+                change={this.addUser} 
+                click={this.lastSearch} 
+                searchFor={this.state.lastSearchTerm}
+              />
     }
-
-    console.log(this.state);
+ 
     return (
       <div className="App">
 
