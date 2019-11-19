@@ -28,10 +28,10 @@ export default class NestedRoutes extends Component {
 
                         <hr/>
                         <br/>
-                        
+
                         <Switch>
-                            <Route exact  path="/" component={Home}></Route>
-                            <Route  path="/topics"  component={Topics}></Route>
+                            <Route  exact  path="/" component={Home}></Route>
+                            <Route  path="/topics" component={Topics}></Route>
                         </Switch>
                     </div>
                </Router>
@@ -45,19 +45,19 @@ const Home = () => (
     </div>
 )
 // the same of Home function
-function Home2(){
-    return (
-        <div>
-          <h2> Home page</h2>
-        </div>
+// function Home2(){
+//     return (
+//         <div>
+//           <h2> Home page</h2>
+//         </div>
 
-    )
-}
+//     )
+// }
 function Topics(){
      let { path ,  url} = useRouteMatch();
      return (
          <div>
-             <h3> Topics</h3>
+            <h3> Topics</h3>
             <ul>
                 <li>
                     <Link to={`${url}/class-component`}> Class Component in React</Link>                    
