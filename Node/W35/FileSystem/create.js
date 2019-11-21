@@ -8,6 +8,12 @@ function Create(data){
 
     let [name,age,hobby] =  data;
 
+    // var info={
+    //     name: 'mahsa',
+    //     age: 28,
+    //     hobby: 'Sports'
+    // }
+
     var info={
         name: name,
         age: age,

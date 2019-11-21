@@ -12,10 +12,10 @@ function Update(data){
         base:filename
     });
     
-    let  key='job';
-    let value="developer";
+    // let  key='job';
+    // let value="developer";
     
-    let data = fs.readFileSync(filepath);
+     data = fs.readFileSync(filepath);
     let info=JSON.parse(data);
     info[key] = value;
     
