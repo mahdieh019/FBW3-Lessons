@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="public/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Note-List</title>
+</head>
+<body class="bg-warning text-center">
+    
+    <div class="container">
+        <h1> Notes List </h1>
+       <form method="post" action="/subscribe">
+            <div class="form-group ">
+                <label>your Note</label>
+                <input id="input-note" class="form-countrol" type="text" name="note" placeholder="Please enter your note">
+            </div>
+
+            <input id="button" type="submit" class="btn btn-info" value="Save"
+             onclick="press(document.getElementById('input-note').value)">
+            
+       </form>
+    </div>
+
+
+    <script src="public/bootstrap.js"></script>
+</body>
+</html>

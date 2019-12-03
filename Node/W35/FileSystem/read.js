@@ -2,10 +2,11 @@ const fs=require('fs');
 const path= require('path')
 
 //const filepath=path.join(folderName,'info.json');
-function Read(data){
+// function Read(data){
     //let directory = '/home/mahdieh/Desktop/FBW3-Lessons/FBW3-Lessons/Node/W35/FileSystem/mahsa'; 
-    let [name] =  data;
-    let directory =  path.dirname(__filename)+"/"+name;
+    let name='mahsa';
+    // let [name] =  data;
+     let directory =  path.dirname(__filename)+"/"+name;
     let filename = 'info.json';
    
     let filepath = path.format({
@@ -19,6 +20,6 @@ function Read(data){
          if(err)throw err;
          console.log(JSON.parse(data));
     })
-}
+// }
 
-module.exports = Read;
+// module.exports = Read;

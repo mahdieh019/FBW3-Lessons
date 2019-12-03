@@ -1,6 +1,6 @@
-const greet=function(msg){
-    console.log(msg);
-}
+// const greet=function(msg){
+//     console.log(msg);
+// }
 
 let person={
     name:'Peter',
@@ -13,3 +13,7 @@ greet('good morning');
 module.exports=greet;
 module.exports.peter=person; //named export
 module.exports.hello=message;
+
+
+
+

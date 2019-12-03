@@ -15,7 +15,7 @@ pathFunctions.getExtName(__filename);
 pathFunctions.getExtName('./home/user/index.png');
 
 
-let res
+let res;
 res=path.join('/home','user_folder','style.css');
 console.log('join: '+res);
 

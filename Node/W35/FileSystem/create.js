@@ -29,7 +29,7 @@ function Create(data){
     })
     
     const filepath=path.join(folderName,'info.json');
-    let content = JSON.stringify(info);
+    let content = JSON.stringify(info);  //converts a JavaScript object or value to a JSON string, 
     
     fs.writeFile(filepath,content,(err)=>{
         if(err)throw err;
@@ -37,6 +37,5 @@ function Create(data){
     });
     
 }
-
 
 module.exports=Create;
