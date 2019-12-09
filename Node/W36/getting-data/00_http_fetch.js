@@ -28,7 +28,7 @@ https.get(options,(resp)=>{
 const request=https.request(options,response=>{
     console.log(`statusCode:${response.statusCode}`);
 
-    response.on('data', d =>{
+    response.on('data', d =>{y
         console.log(JSON.parse(d));
     })
 })

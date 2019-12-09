@@ -11,5 +11,5 @@ const server= http.createServer(function(request,response){
 });
 
 server.listen(1230, function(){
-    console.log("listening on port 1234 ...");
+    console.log("listening on port 1230 ...");
 })

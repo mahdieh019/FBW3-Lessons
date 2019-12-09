@@ -5,15 +5,15 @@ exports.getConstants= function (){
     console.log("__dirname: "+__dirname);
 }
 
-// exports.getBaseName= function (){
-//     let BasePath=path.basename(__filename);
-//     console.log("basename: "+BasePath);
-// }
+exports.getBaseName= function (){
+    let BasePath=path.basename(__filename);
+    console.log("basename: "+BasePath);
+}
 
-// exports.getDirName=function(){
-//     let DirName=path.dirname(__filename);
-//     console.log("dirname: " +DirName);
-// }
+exports.getDirName=function(){
+    let DirName=path.dirname(__filename);
+    console.log("dirname: " +DirName);
+}
 
 
 exports.getBaseName= function (file){

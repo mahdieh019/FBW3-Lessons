@@ -6,7 +6,7 @@ const file=fs.createWriteStream('file.txt');
 // for(let i=0;i<100;i++){
 //     file.write("hello write"+ i + '\n')
 // }
-file.end('the end ...');
+file.end(' the end ...');
 
 
 const readable=fs.createReadStream(__dirname + '/file.txt',{encoding:'utf8',highWaterMark: 25*1024});

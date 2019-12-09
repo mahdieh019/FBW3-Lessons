@@ -21,18 +21,18 @@ const axios=require('axios');
 
 //------------------------------------
 
-// axios({
-//     method:'get',
-//     url:'https://jsonplaceholder.typicode.com/posts',
-//     // check in browser   https://jsonplaceholder.typicode.com/posts?_limit=8&id=5
-//     params:{
-//         _limit:5,
-//         _start:55
-//     }
-// })
-// .then(response=>{
-//     console.log(response.data)
-// })
-// .catch(err =>{console.log(err)});
+axios({
+    method:'get',
+    url:'https://jsonplaceholder.typicode.com/posts',
+    // check in browser   https://jsonplaceholder.typicode.com/posts?_limit=8&id=5
+    params:{
+        _limit:5,
+        _start:55
+    }
+})
+.then(response=>{
+    console.log(response.data)
+})
+.catch(err =>{console.log(err)});
 
 

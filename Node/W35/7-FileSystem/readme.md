@@ -38,14 +38,7 @@ The file will be called `create.js`. Now here are the steps and comments to crea
 
 5. Now with the folder name lets create it. The function to use is: 
 	
-		fs.mkdir(foldername,(err)=>{callback function})
-	
-	The folder function would normally has an if statement. in case of error show the error message. In the other case show a message saying `'Folder created'`
-6. Now lets create the file. First we need the file name. We can create it as in **4.** . The file name should be `info.json` . An alternative is using the function join function of the module path as follows: 
-
-		path.join(foldername,'info.json')
-
-8. Now we will create this new file inside the folder.  For this we use the function:  
+		fs.mkdir(foldername,(err)=>{callback  e folder.  For this we use the function:  
 
 		fs.writeFile(filepath,content,(err)=>{callback function})
 
@@ -59,15 +52,7 @@ Normally we will need to read a json file from our server. Then we will use func
  2. Then we need to specify the name of the folder from where we will read the file. for example: `let name = 'mark'`
  3. Now we can 	create the path for the filename. From previous function we know the file is called `info.json` then we can use `path.join` to create the path as `let filepath = path.join(__dirname,name,'info.json')`. Also we can use another function of the path module, `path.format`. This function take the parts of a path and put it together. For example
 
-	    let directory = __dirname + name
-	    let filename = 'info.json'
-	    let filepath = path.format({
-	    	dir: directory,
-	    	base: filename})
-	In format you put inside the parenthesis '( )' an object with some variables. This should be `dir` and should equal to the path of the directory where the file is saved and in `base` the name of the file with the extension. For more info on this you can visit [path.format](https://nodejs.org/api/path.html#path_path_format_pathobject)
-
- 4. Next step is to read the file. For this we use the function
-  
+	    let directory = __dirname + na 
 		 fs.readfile(filepath,(err,data)=> {callback function})
 		  
 	In this function we need to specify the path of the file. Then in the callback function we need an if statement. if there is error show the error, else show the data obtained from the file. The data will be obtained as json, then is needed to use: `JSON.parse(data)` to watch it correctly on the terminal.

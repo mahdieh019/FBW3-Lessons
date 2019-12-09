@@ -2,10 +2,10 @@ const fs=require('fs');
 const path= require('path')
 
 
-// function Update(data){
-    // let [name,key,value] =  data
-    // let directory = '/home/mahdieh/Desktop/FBW3-Lessons/FBW3-Lessons/Node/W35/FileSystem/mahsa';
-    let name='mahsa';
+ function Update(data){
+    let [name,key,value] =  data
+    let directory = '/home/mahdieh/Desktop/FBW3-Lessons/FBW3-Lessons/Node/W35/FileSystem/mahsa';
+    //let name='mahsa';
     let directory =  path.dirname(__filename)+"/"+name;
     let filename = 'info.json';
     let filepath = path.format({
@@ -25,6 +25,6 @@ const path= require('path')
         JSON.stringify(info),
         (err)=>{if(err)throw err;console.log('file was updated.');
     })
-// }
+ }
 
-// module.exports = Update;
+ module.exports = Update;

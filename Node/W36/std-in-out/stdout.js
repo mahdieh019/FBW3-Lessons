@@ -30,8 +30,6 @@ process.on('exit',function(){
     process.stdout.write('\n\n\n');
 })
 
-
-
 ask(0)
 // process.stdout.write('hello \t');
 // process.stdout.write(' word'+'\n');

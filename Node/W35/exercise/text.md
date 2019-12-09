@@ -1,2 +1,2 @@
 to run the code
-node inde.js 44 hallo
+node index.js 44 hallo

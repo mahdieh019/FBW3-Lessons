@@ -19,16 +19,16 @@ var missingFilePath='./404.html'
 
 
 //async
-fs.readFileSync(fileExistPath,'utf8',(err,data)=>{ 
-    if(err)throw err;
-    console.log(data);
-});
-console.log('this is after file read function');
-
-
-//error
-// fs.readFile(missingFilePath,'utf8',(err,data)=>{
+// fs.readFileSync(fileExistPath,'utf8',(err,data)=>{ 
 //     if(err)throw err;
 //     console.log(data);
 // });
+// console.log('this is after file read function');
+
+
+//error
+fs.readFile(missingFilePath,'utf8',(err,data)=>{
+    if(err)throw err;
+    console.log(data);
+});
 
