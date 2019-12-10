@@ -17,6 +17,12 @@ const members = [
         name:'Susane Jackson',
         email:'susi@gmail.com',
         status:'active'
+    },
+    {
+        id:333,
+        name:'Susane Jackson',
+        email:'susi@gmail.com',
+        status:'active'
     }
 ];
 module.exports=members;

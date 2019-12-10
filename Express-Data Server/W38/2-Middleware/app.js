@@ -14,6 +14,17 @@ const app=express();
 // }
 app.use(logger);
 
+
+//Body Parser middleware   (postman)
+app.use(express.json());   // it converts string to json
+app.use(express.urlencoded({extended:false}));    // it codee the url 
+
+
+
+
+
+
+
 //*************************************//cut and past to allMembers******************************************** */
 //get the selected member
 // app.get('/api/members/:id',(req,res)=>{
