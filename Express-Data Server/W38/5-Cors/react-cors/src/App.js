@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { log } from 'util';
 
 export default class App extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-      data : {}
+      data : {},
+      fetched:false
        
     }
   }
@@ -23,7 +23,8 @@ export default class App extends Component {
       console.log(data);
       
       this.setState({
-        data:data
+        data:data, 
+        fetched:true
       })
     })
 
@@ -31,10 +32,15 @@ export default class App extends Component {
   
   render() {
     console.log(this.state.data ," the data from state");
-    
+    let message="no CORS, no party!"
+    if(this.state.fetched){
+      message=this.state.data.msg;
+    }
+
     return (
       <div className="App">
         <h1> the fetched data is here : </h1>
+        <h2>{this.state.data.msg}</h2>
       </div>
     )
   }
