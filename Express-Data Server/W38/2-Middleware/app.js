@@ -4,6 +4,10 @@ const members=require('./members');
 //const moment=require('moment');
 const logger=require('./middleware/logger');
 const app=express();
+const cors=require('cors');
+
+
+
 
 //***************************************//cut and past to loggers******************************************* */
 
@@ -29,11 +33,15 @@ app.use(express.urlencoded({extended:false}));    // it codee the url
 //get the selected member
 // app.get('/api/members/:id',(req,res)=>{
    
-//     const found=members.some(member=>member.id===parseInt(req.params.id));
+//     const found=member
 
-//       if(found){
-//         res.json(members.filter(member=>member.id===parseInt(req.params.id)));
 
+// app.get('/about',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'public','about.html'));
+// })
+
+
+//--------------set stati
 //       }else{
 //           res.status(400).json({ message: `the ${req.params.id} is not found `});
 //       }
@@ -62,12 +70,14 @@ app.use(express.urlencoded({extended:false}));    // it codee the url
 //         email:'susi@gmail.com',
 //         status:'active'
 //     }
-// ];
 
 
+// app.get('/about',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'public','about.html'));
+// })
 
 
-//*****************************************************cut and past to allMembers*****************************//
+//--------------set stati*******************************cut and past to allMembers*****************************//
 // // get all the numbers                                 http://localhost:5000/api/members
 // app.get('/api/members', (req,res)=>{
 //     res.json(members);

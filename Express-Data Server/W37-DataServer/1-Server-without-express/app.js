@@ -4,6 +4,6 @@ const server=http.createServer((req, res)=>{
     res.statusCode=200;
     res.end('Hello World');
 });
-server.listen(5000,'localhost',()=>{ //(5000,()=>{})    or (5000,127,0,0,1,()=>{})
-    console.log('Listening to port 5000');
+server.listen(4000,'localhost',()=>{ //(5000,()=>{})    or (5000,127,0,0,1,()=>{})
+    console.log('Listening to port 4000');
 });
