@@ -1,4 +1,4 @@
-import Person from './main.js'
+import Person from './main.js.js'
 
 class DciStudent extends Person{
     constructor(name,job,age){
