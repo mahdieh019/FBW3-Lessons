@@ -1,4 +1,4 @@
-// const axios=require('axios');
+const axios=require('axios');
 
 // axios({
 //     url:'https://newsapi.org/v2/everything',
@@ -14,7 +14,7 @@
 
 //-------------------to use its library------------------------------
 //sudo npm install newsapi --save
-//https://newsapi.org/docs/client-libraries/node-js
+// https://newsapi.org/docs/client-libraries/node-js
 
 const NewsApi= require('newsapi');
 const newsapi= new NewsApi('877215793ce04ab0a02de226c2b3e466');

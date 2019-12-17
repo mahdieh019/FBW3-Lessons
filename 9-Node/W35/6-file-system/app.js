@@ -12,7 +12,7 @@ var missingFilePath='./404.html'
 // });
 // console.log('this is after file read function');
 
-//sync
+// sync
 // var data=fs.readFileSync(fileExistPath,'utf8');
 // console.log(data);
 // console.log('this is after file read function');

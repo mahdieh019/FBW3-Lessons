@@ -121,7 +121,8 @@
                                                 {
                                                     "entry_id": "happy",
                                                     "sense_id": "t_en_gb0006743.002"
-                                                }entries[0]
+                                                }
+                                                entries[0]
                                             "definitions": [
                                                 "used in greetings"
                                             ],

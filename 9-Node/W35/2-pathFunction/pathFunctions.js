@@ -14,7 +14,7 @@ exports.getDirName=function(){
     let DirName=path.dirname(__filename);
     console.log("dirname: " +DirName);
 }
-
+//--------------------------------------------------------------------------------------------------------------------------------------
 
 exports.getBaseName= function (file){
     let BasePath=path.basename(file);
@@ -26,6 +26,12 @@ exports.getDirName=function(file){
     console.log("dirname: " +DirName);
 }
 
+
+exports.getExtName=function(){
+    let ExtName=path.extname(__filename);
+    console.log("extname: " +ExtName);
+
+}
 exports.getExtName=function(file){
     let ExtName=path.extname(file);
     console.log("extname: " +ExtName);

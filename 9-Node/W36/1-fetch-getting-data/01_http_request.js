@@ -5,17 +5,17 @@
 
 //-------------------using request----------------
 
- const request=require('request');
+//  const request=require('request');
 
- let link='https://jsonplaceholder.typicode.com/todos/1';
+//  let link='https://jsonplaceholder.typicode.com/todos/1';
 
-request(link, {json:true},(err, res,data)=>{
-    if(err){
-        return console.log(err);
-    }
-    //console.log(res);
-    console.log(data);
-});
+// request(link,{json:true},(err,res,data)=>{
+//     if(err){
+//         return console.log(err);
+//     }
+//     //console.log(res);
+//     console.log(data);
+// });
 
 //--------------------axios-------------------------
 

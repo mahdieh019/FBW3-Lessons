@@ -52,7 +52,7 @@ const server=http.createServer((request,response)=>{
     //     response.writeHead(404);
     //     response.end();
     // }
-    console.log("you are in : ",request.url);
+   // console.log("you are in : ",request.url);
 });
 
 server.listen(1245,()=>{

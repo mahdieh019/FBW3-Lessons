@@ -39,7 +39,7 @@ console.log('name: '+ res.name);
 console.log('\nformat function');
 res=path.format({
     root:'/',
-    dir: '/book_store/kafka_on_the_beach/',
+    dir: '/book_store/kafka_on_the_beach',
     name: 'book',
     ext: '.pdf'
 });

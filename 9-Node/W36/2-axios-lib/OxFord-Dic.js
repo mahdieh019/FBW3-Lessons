@@ -10,7 +10,7 @@ axios({
     url:`https://od-api.oxforddictionaries.com:443/api/v2/entries/${language}/${word_id}`,
     headers:{
         app_Id:'65c56f6b',
-        app_Key:'3579689ae01e8c59e26c1aa5973611ae',
+        app_Key:'3579689ae01e8c59e26c1aa5973611ae'
     }
     
 })
@@ -27,7 +27,7 @@ axios({
        
         console.log(`${i++}. ${element.definitions}`);
     })
-
+    
     console.log(`Provided by: ${response.data.metadata.provider}`);
 
 })

@@ -1,10 +1,15 @@
 //npm init
 //npm install -g express
 //npm install express --save
-//nodemon app
-const express=require('express');
+//npm install nodemon
+//nodemon  or npm app
 
- const app=express();
+//to run: node app.js
+//********************************************************************************************************** */
+const express=require('express');
+const app=express();
+
+
 // app.get('/',(req,res)=>{
 //     res.send('Hello World');
 // })
@@ -22,8 +27,8 @@ const express=require('express');
 //     res.send('<h1>'+user+'</h1>');
 // })
 
-//----------------------------------------------my code
-// app.use(function (req, res, next) {
+//----------------------------------------------my code -------------------------------------------       
+// app.use(function (req, res, next) {                   // http://localhost:5000/          
 //     console.log('Time:', Date.now())
 //     next()
 //   })
@@ -52,12 +57,12 @@ const express=require('express');
 //     next()
 //   }, function (req, res, next) {
 //     res.send('User Info')
-//   })
+// })
   
-//   // handler for the /user/:id path, which prints the user ID
-//   app.get('/users/:id', function (req, res, next) {
-//     res.end(req.params.id)
-//   })
+// handler for the /user/:id path, which prints the user ID
+  app.get('/users/:id', function (req, res, next) {
+    res.send(req.params.id)
+  })
 
 
 
