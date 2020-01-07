@@ -29,8 +29,7 @@ class App extends Component {
       fontStyle:'italic'
     }
     return(
-      // React does not accept to seperate div, it is a part of jsx attribute
-      // <div></div>
+      // React does not accept two seperate div, it is a part of jsx attribute
       <div className="App" onMouseDown={this.changeContent}>
           <Persons name="Maria" job="jQuery" age={28} />
           <Persons name="Mina" job="Java developer" age={25} />
@@ -46,7 +45,7 @@ class App extends Component {
       </div>
     );
     // return React.createElement('div',null,React.createElement('h1',null,'This is React App'));
-   // return React.createElement('div',{className:'App'},React.createElement('h1',null,'This is React App'));
+   //return React.createElement('div',{className:'App'},React.createElement('h1',null,'This is React App'));
 
   }
 }

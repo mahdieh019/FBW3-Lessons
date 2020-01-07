@@ -13,19 +13,19 @@
 
 //------------------import everything from person.js-----------------
 
-// import * as p from './person.js';             
-// let person=new p.default("Ali",22);
-// console.log(person);
+import * as p from './person.js';             
+let person=new p.default("Ali",22);
+console.log(person);
 
-// p.printName(person);
-// p.printAge(person);
+p.printName(person);
+p.printAge(person);
 
 //-------------------------------without any class------------------------------
 
-import * as p from './person.js';   
-let  obj={
-    name:"Mahdieh",
-    age:20
-};
-p.printAge(obj);
+// import * as p from './person.js';   
+// let  obj={
+//     name:"Mahdieh",
+//     age:20
+// };
+// p.printAge(obj);
 

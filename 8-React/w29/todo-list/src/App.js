@@ -24,7 +24,6 @@ class TodoList extends Component{
     list.push(this.state.todoValue);
 
     this.setState({todoList: list, todoValue:'' })
-    console.log(this.state.todoList);
   }
 
   handleSubmit=(e)=>{
@@ -68,7 +67,6 @@ removeElement=(item)=>{
           <InputTodo todoValue={this.state.todoValue} changed={(e)=>this.changeTodoValue(e)}/>
           <button onClick={()=>this.addToList()} disabled={!this.isValid()}>add</button>
           <ListTodo list={this.state.todoList} remove={item=>this.removeElement(item)}/>
-         
       </div>
      
       )

@@ -6,7 +6,7 @@
 
 const express=require('express');
 const path=require('path');
-const bodyParser=require('body-parser'); //it is onde of express dependencies
+const bodyParser=require('body-parser'); //it is one of express dependencies
 const app=express();
 
 app.use(bodyParser.json());

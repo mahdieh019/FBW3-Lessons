@@ -8,7 +8,7 @@ import Todo from './todo/todo.js'
 var list=(
     <div>
         <Person name="AMIT" job="C++ Developer"></Person>
-        <Person name="AHMAD" job="C# Developer"/>
+        <Person Appname="AHMAD" job="C# Developer"/>
     </div>
 );
 

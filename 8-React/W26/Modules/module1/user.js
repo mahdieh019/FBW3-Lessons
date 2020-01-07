@@ -7,14 +7,14 @@
 // }
 
 
-export {greeting,hi,makeElement};
+export {greeting,hi};
 let greeting="welcome back";
 function hi(user){
     return `${greeting} ${user} in javascript`
     //return 'hello world' +user;
 }
 //--------------------------------------------------------------------------
-//export default function doubleNumber(num){
+// export default function doubleNumber(num){
 //     return num*2;
 // }
 export function doubleNumber(num){
@@ -23,7 +23,7 @@ export function doubleNumber(num){
 
 //----------------------------------------------------------------------------
 
-function makeElement(element,text,background){
+export function makeElement(element,text,background){
     let el=document.createElement(element);
     el.append(text);
     el.style.background=background;

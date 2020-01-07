@@ -3,7 +3,7 @@ import {Dropdown, Container, Row, Col} from 'react-bootstrap';
 import Columns from './Columns';
 import './App.css';
 
-class BootstrapAapp extends Component {
+class BootstrapApp extends Component {
     state={
         numCols: 1,
         themes:['primary','secondary','success','danger','warning','info','light','dark']
@@ -45,4 +45,4 @@ class BootstrapAapp extends Component {
         );
     }
 }
-export default BootstrapAapp;
+export default BootstrapApp;

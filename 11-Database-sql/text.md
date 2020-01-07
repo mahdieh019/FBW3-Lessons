@@ -56,3 +56,6 @@ UPDATE orders set product_id=1  WHERE order_id = 1
 
 select user_name, order_id,product_id from users, product 
 SELECT * from  products , mysqlDB.order where mysqlDB.order.product_id=products.product_id
+
+
+SELECT users.first_name , users.last_name, products.product_name ,products.products_desc , products.price , mysqlDB.order.order_date ,mysqlDB.order.order_status from mysqlDB.order, products,users where mysqlDB.order.product_id = products.product_id and  mysqlDB.order.user_id = users.id

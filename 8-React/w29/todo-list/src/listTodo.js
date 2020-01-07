@@ -1,7 +1,5 @@
 import React from'react'
 
-
-
 const ListTodo=props=>{
     let listOfItems;
     if(props.list.length>0){

@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
-
 const app = express();
+
 app.listen('3000',()=> {
     console.log('Server started on port 3000');
 
@@ -18,19 +18,17 @@ const db = mysql.createConnection({
     database:  'mysqlDB'
 });
 db.connect((err)=> {
-    if(err){
-        throw err;
-    }
+    if(err) throw err;
     console.log('Mysql connected');
-    
 
 })
+
 // Create DB
 app.get('/createdb' , (req,res)=>{
     let sql = 'create database mysqlDB';
     db.query(sql , (err , result )=> {
         if(err) throw err;
-       console.log(result);        
+        console.log(result);        
         res.send('Database created....');
     })
 })
@@ -53,7 +51,7 @@ app.get('/addpost1',(req,res)=>{
     db.query( sql ,(err , result) => {
         if(err) throw err
         console.log(result);
-        res.send('Post 8 added');        mysqlDB
+        res.send('Post 8 added');       
 
     })
 })
@@ -109,7 +107,6 @@ app.get('/deletepost/:id' ,(req,res)=> {
         if(err) throw err ;
         console.log(result);
         res.send('Post deleted....');    
-
-        
+   
     })
 })

@@ -11,15 +11,20 @@
       "price": 100
     },
     {
-      "id": 3,
-      "title": "Huawei Mate20 Smartphone (16,59 cm/6,5 Zoll, 128 GB Speicherplatz, 12 MP Kamera)",
-      "price": "379,99"
-    },
-    {
       "id": 4,
       "title": "samsung Phone Blue 12",
       "price": "379,99"
+    },
+    {
+      "id": 6,
+      "title": "samsung Phone blue",
+      "price": "100,00"
+    },
+    {
+      "id": 6,
+      "title": "samsung Phone green",
+      "price": "120,00"
     }
   ],
-  "count": 4
+  "count": 6
 }

@@ -7,7 +7,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-    res.render('person',{ ID :"Masha"});    //http://localhost:3000/person/romal
- });
+    res.render('person',{ ID :"Masha"});    //http://localhost:3000/person
+});
  
 module.exports = router;

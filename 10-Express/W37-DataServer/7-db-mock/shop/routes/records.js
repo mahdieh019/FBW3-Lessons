@@ -27,7 +27,7 @@ db.defaults({"records": [
  
 
 
-/* GET records listing. */
+/* GET records listing. */           //http://localhost:3000/records
 router.get('/', function(req, res, next) {
   //res.send('the dummy page for records');
   res.status(200).send(data);

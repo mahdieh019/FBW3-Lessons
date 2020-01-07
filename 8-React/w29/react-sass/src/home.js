@@ -6,9 +6,9 @@ export default function Home() {
     return (
        
             <ButtonToolbar>
-                <Button variant="danger">Red Burron</Button>
-                <Button variant="info">Red Burron</Button>
-                <Button variant="success">Red Burron</Button>
+                <Button variant="danger">Danger Burron</Button>
+                <Button variant="info">info Burron</Button>
+                <Button variant="success">success Burron</Button>
             </ButtonToolbar>
        
     )

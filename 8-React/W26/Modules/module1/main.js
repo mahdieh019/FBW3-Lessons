@@ -1,15 +1,16 @@
 
 // import{greeting} from './user.js';
 // import{hi} from './user.js';
-import{greeting,hi,makeElement} from './user.js';
+//import{greeting,hi} from './user.js';
+
 //--------------------------------------------------------
 
 
 //import doubleNumber from './user.js';     no need to add{} after import because doubleNumber is export default
 import {doubleNumber} from './user.js';
-//-----------------------------------------------------------
+// //-----------------------------------------------------------
 
-//alert (greeting);
+alert (greeting);
 alert (doubleNumber(250));
 
 console.log(hi(" Mahsa"));
@@ -24,6 +25,8 @@ console.log(hi(" Mahsa"));
 // document.body.append(div);
 
 //---------------------------------
+import{greeting,hi,makeElement} from './user.js';
+
 makeElement("div",hi("Mahsa"),"pink");
 makeElement("div",hi("Mari"),"lightgreen");
 makeElement("span",hi("Ali"),"red");
