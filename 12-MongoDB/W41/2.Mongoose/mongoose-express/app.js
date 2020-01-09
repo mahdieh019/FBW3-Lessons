@@ -17,7 +17,7 @@ mongoose.connect("mongodb://localhost:27017/shop", {
 
 mongoose.connection.on("error", console.error);
 mongoose.connection.on("open", function() {
-  console.log("Database connection established...");
+console.log("Database connection established...");
 });
 //-------------------
 var app = express();
