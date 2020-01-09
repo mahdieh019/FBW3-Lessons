@@ -25,7 +25,9 @@ db.connect((err)=> {
 
 // Create DB
 app.get('/createdb' , (req,res)=>{
-    let sql = 'create database mysqlDB';
+   let sql = 'create database mysqlDB';
+    
+
     db.query(sql , (err , result )=> {
         if(err) throw err;
         console.log(result);        
@@ -33,9 +35,9 @@ app.get('/createdb' , (req,res)=>{
     })
 })
 
-// create table 
-app.get('/createpoststable', (req,res)=>{
-    let sql = 'CREATE TABLE posts  (id int AUTO_INCREMENT, title VARCHAR(255), body VARCHAR(255),PRIMARY KEY(id))'
+// // create table 
+app.get('/createCustomer', (req,res)=>{
+    let sql = 'CREATE TABLE customer  (id int AUTO_INCREMENT, title VARCHAR(255), body VARCHAR(255),PRIMARY KEY(id))'
     db.query(sql , (err , result)=>{
         if(err) throw err;
         console.log(result);
@@ -45,22 +47,21 @@ app.get('/createpoststable', (req,res)=>{
 
 });
 
-// insert post 1 
-app.get('/addpost1',(req,res)=>{
-    let sql = "insert into posts (id , title , body) VALUES (NULL,'new title ', 'tuseday post') ";
+// // insert post 1 
+app.get('/addCustomer',(req,res)=>{
+    let sql = "insert into customer (id , title , body) VALUES (NULL,'new title ', 'tuseday post') ";
     db.query( sql ,(err , result) => {
-        if(err) throw err
+        if(err) throw err;
         console.log(result);
         res.send('Post 8 added');       
 
-    })
-})
+    }) customer
 
-// insert post 2
-app.get('/addpost2' ,(req,res)=>{
-    let post = { title : "the title two "  , body: "this is the body of the post 2 "  };
-    let sql = 'insert into posts set ?';
-    db.query(sql ,post ,(err , result)=>{
+// // insert post 2
+app.get('/addCustomer2' ,(req,res)=>{
+    let p = { title : "the title two "  , body: "this is the body of the post 2 "  };
+    let sql = 'insert into customer set ?';
+    db.query(sql ,p ,(err , result)=>{
         if (err) throw err;
         console.log(result);
         res.send('<h3>post 2 added </h3>');
@@ -68,7 +69,7 @@ app.get('/addpost2' ,(req,res)=>{
     })
 });
 
-// select posts 
+// // select posts 
 app.get('/getposts' , (req,res)=>{
     let sql = 'select * from posts ';
     db.query(sql , (err , result)=> {
@@ -79,34 +80,34 @@ app.get('/getposts' , (req,res)=>{
     })
 })
 
-// select single post 
-app.get('/getpost/:id' , (req,res)=>{
-    let sql = `select * from posts where id = ${req.params.id} `;
-    db.query(sql , (err , result)=> {
-        if (err) throw err;
-        console.log( result);
-        res.send('Post fetched')
+// // select single post 
+// app.get('/getpost/:id' , (req,res)=>{
+//     let sql = `select * from posts where id = ${req.params.id} `;
+//     db.query(sql , (err , result)=> {
+//         if (err) throw err;
+//         console.log( result);
+//         res.send('Post fetched')
         
-    })
-});
-// update post 
-app.get('/updatepost/:id' ,(req,res)=> {
-    let newTitle = 'how to learn hacking';
-    let sql = `update posts set title = '${newTitle}' ,body='forget about it you are a developer'  where id = ${req.params.id}`;
-    db.query(sql, (err , result)=>{
-        if (err) throw err;
-        console.log( result);
-        res.send('Post updated....')
+//     })
+// });
+// // update post 
+// app.get('/updatepost/:id' ,(req,res)=> {
+//     let newTitle = 'how to learn hacking';
+//     let sql = `update posts set title = '${newTitle}' ,body='forget about it you are a developer'  where id = ${req.params.id}`;
+//     db.query(sql, (err , result)=>{
+//         if (err) throw err;
+//         console.log( result);
+//         res.send('Post updated....')
 
-    })
-})
-// Delete Post
-app.get('/deletepost/:id' ,(req,res)=> {
-    let sql = `delete from posts where id = ${req.params.id} `;
-    db.query(sql , (err , result)=>{
-        if(err) throw err ;
-        console.log(result);
-        res.send('Post deleted....');    
+//     })
+// })
+// // Delete Post
+// app.get('/deletepost/:id' ,(req,res)=> {
+//     let sql = `delete from posts where id = ${req.params.id} `;
+//     db.query(sql , (err , result)=>{
+//         if(err) throw err ;
+//         console.log(result);
+//         res.send('Post deleted....');    
    
-    })
-})
+//     })
+// })

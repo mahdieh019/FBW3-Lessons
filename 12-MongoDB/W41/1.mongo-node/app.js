@@ -4,7 +4,7 @@ const MongoClient=mongo.MongoClient;
 const url="mongodb://localhost:27017";
 
 
-//Altlas url on the  cloud
+//Atlas url on the  cloud
 const clouduri = "mongodb+srv://rania:SO08j2sV7iDTzCSg@cluster0-nev60.mongodb.net/test?retryWrites=true&w=majority";
 const app=express();
 app.listen('3005',()=>{
@@ -14,18 +14,17 @@ app.listen('3005',()=>{
 app.get('/',(req,res)=>{
     res.send('<h2>Welcome to MongoDB project homepage</h2>')
 });
-// getting data in console
-// MongoClient.connect(url,(err,db)=>{
-//     if(err)throw err;
-//     let mydb=db.db('shop');
-//     // mydb.collection('articles').findOne({},(err,result)=>{
-//         mydb.collection('articles').findOne({},(err,result)=>{
-//         if(err)throw err;
-//         console.log(result);
-//         db.close();
-//     })
-// })
 
+// getting data in console
+MongoClient.connect(url,(err,db)=>{
+    if(err)throw err;
+    let mydb=db.db('shop');
+        mydb.collection('articles').findOne({},(err,result)=>{
+        if(err)throw err;
+        console.log(result);
+        db.close();
+    })
+})
 
 // getting data in browser
 app.get('/shop',(req,res)=> {
