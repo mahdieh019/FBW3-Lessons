@@ -51,7 +51,6 @@ export default class App extends Component {
       <div>
         <Inputfield change={this.saveQuery} click={this.searchImages}/>
         {this.state.loadedImages}
-    
 
       </div>
     )

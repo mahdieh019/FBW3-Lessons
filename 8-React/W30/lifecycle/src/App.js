@@ -14,9 +14,9 @@ export default class App extends Component {
        { id : 2 , title: 'second item' },
        { id : 3 , title: 'third item' }
      ]
-      
    }
  }
+
  changeTitle = (title) =>{
    this.setState({value : title});
  }
@@ -28,7 +28,7 @@ export default class App extends Component {
  
   render() {
     const list = this.state.data.map((item)=>{
-      return <li  key={item.id} onClick={()=>this.changeTitle(item.title)} >{item.title} </li>
+      return <li key={item.id} onClick={()=>this.changeTitle(item.title)} >{item.title} </li>
     })
     
     return (
@@ -39,6 +39,7 @@ export default class App extends Component {
         
             <ul className="list">
               {list}
+
             </ul>
 
             <button onClick={()=>this.showHandler()} className="btn"> Show and hide </button>

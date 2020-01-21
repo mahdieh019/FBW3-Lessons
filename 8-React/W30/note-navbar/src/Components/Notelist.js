@@ -18,6 +18,7 @@ export default function Notelist(props) {
             return(
                <Note key={item.id} name={item.name} text={item.text}/>
             )
+
         })
     )
 }

@@ -55,13 +55,13 @@ removeElement=(item)=>{
   })
 }
 
-
   render(){
     return(
       <div className='App'>
           {
             todoItems.map(item=>{
-              return <h1>{item.task}</h1>})
+              return <h1>{item.task}</h1>
+            })
           }
           {/*the input*/}
           <InputTodo todoValue={this.state.todoValue} changed={(e)=>this.changeTodoValue(e)}/>
@@ -69,7 +69,7 @@ removeElement=(item)=>{
           <ListTodo list={this.state.todoList} remove={item=>this.removeElement(item)}/>
       </div>
      
-      )
+    )
   }
 }
 

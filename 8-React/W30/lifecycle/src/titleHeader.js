@@ -9,10 +9,7 @@ export default class TitleHeader extends Component {
        }
    }
    static getDerivedStateFromProps(props, state){
-    //    console.log('sync props to state');
-    //    console.log('new props', props.newTitle);
-    //    console.log('old state ', state.title);
-    
+   
        if(state.title !== props.newTitle){
            return {
                title : props.newTitle
