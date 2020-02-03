@@ -13,7 +13,7 @@ class AppClass extends Component {
 
     handelInputChange=e=>{
         this.setState({
-            todo:e.target.value,
+            todo:e.target.value
         });
     }
 

@@ -5,8 +5,6 @@ import './App.css';
 const handleSubmit=e=>{
   e.preventDefault();
   alert('Submited');
-  console.log(e.target.value);
-
 }
 
 function App() {

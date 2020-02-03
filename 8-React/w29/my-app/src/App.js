@@ -5,8 +5,8 @@ function App(info) {
   return (
     <div className="App">
       <h1>Hi Mahdieh</h1>
-      <p>{info.name}</p>
-      <h2>{info.city}</h2>
+      <p> meeee {info.name}</p>
+      <h2>city  {info.city}</h2>
     </div>
   );
 }
@@ -34,4 +34,4 @@ function age(){
 
 
 export default App;
-export {Person , app} ;
+export {Person , app } ;

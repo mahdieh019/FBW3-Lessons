@@ -31,6 +31,7 @@ export default class TitleHeader extends Component {
        console.log('updating ... shouldComponentUpdate');
        return true;
    }
+   
    componentDidUpdate(){
        console.log("component did update " , this.state.title);
        let header = document.querySelector('h1');

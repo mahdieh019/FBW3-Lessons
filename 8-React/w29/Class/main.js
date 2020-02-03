@@ -9,7 +9,6 @@ class Person{
     }
 }
 let person1=new Person;
-console.log(person1);
 person1.name="Wisam";
 person1.job="Web dev";
 person1.calculate_age(1990);

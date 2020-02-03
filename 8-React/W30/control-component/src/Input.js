@@ -5,8 +5,11 @@ export default function Input(props) {
         <div>
             <div className="errorMessage">{props.errorMessage}</div>
             
-            <input onChange={props.onChange} id={props.id} type={props.type} 
-            placeholder={props.placeholder} value={props.value}/>
+            <input onChange={props.onChange}
+             id={props.id} 
+             type={props.type} 
+             placeholder={props.placeholder} 
+             value={props.value}/>
 
         </div>
     )

@@ -1,20 +1,20 @@
 
 
-// export let greeting="welcome";
-// export function hi(user){
-//     return `${greeting} ${user} in js`;
-// }
-//-------------------------------------
-export {hi, greeting, macker};
-
-let greeting=`welcome back`;
-
-function hi(user){
+export let greeting="welcome";
+export function hi(user){
     return `${greeting} ${user} in js`;
 }
-function macker(x, us){
-    return `${2*x } ${hi(us)}`;
-}
+//-------------------------------------
+// export {hi, greeting, macker};
+
+// let greeting=`welcome back`;
+
+// function hi(user){
+//     return `${greeting} ${user} in js`;
+// }
+// function macker(x, us){
+//     return `${2*x } ${hi(us)}`;
+// }
 //------------------------------------------
 function createDiv(element,text,background){
     let div=document.createElement(element);

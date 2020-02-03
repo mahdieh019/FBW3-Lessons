@@ -5,14 +5,14 @@ const url="mongodb://localhost:27017";
 
 
 //Atlas url on the  cloud
-const clouduri = "mongodb+srv://rania:SO08j2sV7iDTzCSg@cluster0-nev60.mongodb.net/test?retryWrites=true&w=majority";
+const clouduri = "mongodb+srv://rania:8a1fTjw67IgAdgoM@cluster0-nev60.mongodb.net/test?retryWrites=true&w=majority";
 const app=express();
 app.listen('3005',()=>{
     console.log('Server started on port 3005');
 });
 
 app.get('/',(req,res)=>{
-    res.send('<h2>Welcome to MongoDB project homepage</h2>')
+    res.send('<h2>Welcome to MongoDB "1.mongo-node"project homepage</h2>')
 });
 
 // getting data in console
