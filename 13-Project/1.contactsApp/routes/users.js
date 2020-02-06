@@ -3,6 +3,7 @@ const router=express.Router();
 const User=require('../models/User')
 const {check, validationResult}=require('express-validator')
 const bcrypt=require('bcryptjs');
+const jwt=require('jsonwebtoken')
 
 //@route  Post api/user
 //@desc   Register a user
@@ -31,7 +32,17 @@ router.post('/',[
         const salt=await bcrypt.genSalt(10);
         user.password=await bcrypt.hash(password,salt);
         await user.save();
-        res.send('User saved');
+        const payload={
+            user:{
+                id: user.id
+            }
+        }
+        jwt.sign(payload,process.env.JWT_SECRET,{
+            expiresIn:3600
+        },(err,token)=>{
+            if (err)throw err;
+            res.json({token})
+        });
 
     }catch(error){
         console.log(error);
