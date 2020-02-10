@@ -5,7 +5,7 @@ const url="mongodb://localhost:27017";
 
 
 //Atlas url on the  cloud
-const clouduri = "mongodb+srv://rania:8a1fTjw67IgAdgoM@cluster0-nev60.mongodb.net/test?retryWrites=true&w=majority";
+const clouduri = "mongodb+srv://rania:PngpvwYB1zuIBIsb@cluster0-nev60.mongodb.net/test?retryWrites=true&w=majority";
 const app=express();
 app.listen('3005',()=>{
     console.log('Server started on port 3005');
@@ -146,7 +146,6 @@ const client = new MongoClient(clouduri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("shopDB").collection("articles");
   collection.find({}).toArray((err,result)=>{
-
     if(err)throw err;
     console.log(collection);
     res.send(result);

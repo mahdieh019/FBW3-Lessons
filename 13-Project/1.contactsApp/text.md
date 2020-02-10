@@ -9,3 +9,10 @@ client
 ---------------
 npx create-react-app .
 rm -rf .git
+git status
+npm i axios react-router-dom uuid react-transition-group
+
+
+to run the project
+-----------------------------
+npm run dev

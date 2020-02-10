@@ -1,10 +1,19 @@
-inside the client folder
-
+client 
+----------------
 npm install
 npm install bootstrap axios react-router-dom --save
 
-Then inside the folder server run the folowing commands
-
+server
+----------------
 npm install
-
 npm install cors mongoose dotenv
+
+
+
+to run thr project (main folder---fullzip)
+------------------------
+npm i concurrently   to run both side
+ add to json in outside   "start": "concurrently \"cd server && npm start\" \"cd client && npm start \" "
+
+
+npm start

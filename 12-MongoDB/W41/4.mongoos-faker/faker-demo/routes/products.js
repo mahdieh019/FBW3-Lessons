@@ -22,7 +22,18 @@ router.get('/', async(req, res, next)=>{       //http://localhost:3000/products
     //<td><a href='http://localhost:3000/products/delete?id=${item.id}'>delete</a></td> 
 
 
-    let addDiv = `<div> <button style='padding:5px;background:limegreen; border-radius:15px; color:white;font-weight:bold' onclick='window.location ="http://localhost:3000/products/add"'> Add one product </button> </div>`;
+    let addDiv = `<div> <button 
+                                style='padding:5px;
+                                background:limegreen; 
+                                border-radius:15px; 
+                                color:white;
+                                font-weight:bold' 
+
+                                onclick='window.location ="http://localhost:3000/products/add"'> 
+                             Add one product 
+                        </button>
+                    </div>`;
+
     let thead='<thead><th>Name </th><th>Price </th><th>Description </th><th>Color </th><th>Delete </th></thead>'
     let dataTable = addDiv+'<table>'+thead+ rows + '</table>'        
     //res.send(allProducts);
@@ -41,7 +52,8 @@ router.get('/add',(req, res, next)=>{   //http://localhost:3000/products/add
         price:faker.commerce.price(),
         color: faker.commerce.color(),
         description: faker.commerce.productAdjective()
-})
+    })
+
     newProduct.save(function(err, result){
         if (err) return console.error(err);
 
@@ -51,15 +63,11 @@ router.get('/add',(req, res, next)=>{   //http://localhost:3000/products/add
 
 
 
-
-
-
 router.get('/delete', function(req,res,next){
     var productId=req.query.id;
     Product.deleteOne({_id:productId}, function(err,res){
         if(err) throw err;
-    }
-    )
+    })
     res.redirect("http://localhost:3000/products/");
 })
 

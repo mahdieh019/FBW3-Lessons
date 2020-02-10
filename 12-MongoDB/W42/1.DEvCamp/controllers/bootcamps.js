@@ -3,7 +3,7 @@ const Bootcamp=require('../models/Bootcamp');
     
 // get all the bootcamps without id
 exports.getBootcamps = async (req ,res , next) => {
-    //res.status(200).json({ success : true , msg : ' Show all bootcamps' , hello:req.hello , host:req.info});
+
     try {
         const bootcamp = await Bootcamp.find();
         res.status(200).json({success : true , data:bootcamp});
@@ -12,9 +12,11 @@ exports.getBootcamps = async (req ,res , next) => {
         res.status(400).json({ success : false })
     }
 }
+
+
 // get  the bootcamp with id
 exports.getBootcamp=async(req,res,next)=>{
-    //res.status(200).json({success: true, msg: `Show the bootcapm ${req.params.id}`})
+
     try{
         const bootcamp = await Bootcamp.findById(req.params.id);
         if(!bootcamp){
@@ -27,7 +29,8 @@ exports.getBootcamp=async(req,res,next)=>{
     }
 }
 
-exports.createBootcamp=async(req,res,next)=>{    //post
+//post
+exports.createBootcamp=async(req,res,next)=>{    
     try{
         const bootcamp=await Bootcamp.create(req.body);
 
@@ -36,13 +39,12 @@ exports.createBootcamp=async(req,res,next)=>{    //post
     catch(err){
         res.status(201).json({success:false , msg:err})
     }
-    //console.log(req.body);
-  
-    
+       
 }
 
-exports.updateBootcamp=async(req,res,next)=>{  //put
-   // res.status(200).json({success: true, msg: `Update bootcamps  ${req.params.id}`});
+//put
+exports.updateBootcamp=async(req,res,next)=>{  
+
     try{
         const bootcamp=await Bootcamp.findByIdAndUpdate(req.params.id,req.body, {
           new:true,
@@ -59,8 +61,8 @@ exports.updateBootcamp=async(req,res,next)=>{  //put
     }
 }
 
+//delete
 exports.deleteBootcamp=async(req,res,next)=>{
-        //res.status(200).json({success: true, msg: `delete bootcamps  ${req.params.id}`})
 
     try{
         const bootcamp=await Bootcamp.findByIdAndDelete(req.params.id);

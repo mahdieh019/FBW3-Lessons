@@ -14,8 +14,6 @@ router.get('/',async function(req, res, next) {
 });
 
 
-
-
 router.get('/:productId',async function(req, res, next) {
   // res.send(req.params.productId);           http://localhost:3000/products/5e15bf77bc11795a6aead52f
   let productId=req.params.productId;

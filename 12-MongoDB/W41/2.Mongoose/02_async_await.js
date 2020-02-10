@@ -58,8 +58,6 @@ db.once('open', async function(){
         const remove_products = await Product.remove();
         await console.log(JSON.stringify(remove_products, null, 4));
         console.log('Products removed');
-
-
     }
     catch(e){
         console.error(e);

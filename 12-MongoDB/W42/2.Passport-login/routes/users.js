@@ -23,7 +23,7 @@ const verifyPasswordMatch=(req,res,next)=>{
    const {password2}=req.body 
    return check('password')
       .islength({min:6})
-      .withMessage('password must be at least 4 characters')
+      .withMessage('password must be at least 6 characters')
       .equqls(password2)
 }
 router.post('/register', [
