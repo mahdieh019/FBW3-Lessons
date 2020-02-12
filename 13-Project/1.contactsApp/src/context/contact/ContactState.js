@@ -12,7 +12,6 @@ import {
     SET_CURRENT,
     CLEAR_CURRENT,
     CLEAR_FILTER
-
 } from "../types";
 
 const ContactState = (props) => {
@@ -27,17 +26,15 @@ const ContactState = (props) => {
             },
             {
                 id: 2,
+                name: 'John Smith',              
+
+            },
+            {
+                id: 3,              
                 name: 'John Smith',
                 email: 'john@gmail.com',
                 phone: '015-222-222',
                 type: 'business'
-            },
-            {
-                id: 3,
-                name: 'Ali',
-                email: 'ali@gmail.com',
-                phone: '015-333-333',
-                type: 'personal'
             },
             {
                 id: 4,
@@ -47,8 +44,8 @@ const ContactState = (props) => {
                 type: 'business'
             }
         ],
-        current:null,
-        filtered : null
+        current:null ,
+        filtered:null
     };
     const [state, dispatch] = useReducer(contactReducer, initialState);
     // ADD_CONTACT
@@ -56,64 +53,42 @@ const ContactState = (props) => {
         contact.id = uuid.v4();
         dispatch({ type: ADD_CONTACT, payload: contact })
 
-    };
-    // Update
+    }
+    // Update 
     const updateContact = (contact) => {
-        
         dispatch({ type: UPDATE_CONTACT, payload: contact })
-
-    }; 
-
-
+    }
     // DELETE CONTACTS 
     const deleteContact = (id) => {
-       
         dispatch({ type: DELETE_CONTACT, payload: id })
-
     }
-
     // Set Current Contact
     const setCurrent = (contact) => {
-       
         dispatch({ type: SET_CURRENT, payload: contact })
-
     }
-    // Clear Current Contact
+    // Clear Current Contact  
     const clearCurrent = (contact) => {
-       
         dispatch({ type: CLEAR_CURRENT })
-
-    }    
+    }
+   
 
     // Filter Contacts
-    const filterContacts = text =>{
-        dispatch({type:FILTER_CONTACT , payload : text})
+    const filterContacts=text=>{
+        dispatch({type:FILTER_CONTACT , payload:text })
     }
-
-    // Clear Filter 
-    const clearFilter = () =>{
+    //Clear Filter
+    const clearFilter=()=>{
         dispatch({type:CLEAR_FILTER })
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
     return (
         <contactContext.Provider
-
             value={{
                 contacts: state.contacts,
-                current: state.current,
-                filtered :state.filtered,
+                current:state.current,
+                filtered:state.filtered,
                 addContact,
                 deleteContact,
                 setCurrent,
@@ -121,16 +96,12 @@ const ContactState = (props) => {
                 updateContact,
                 filterContacts,
                 clearFilter
-                
-
 
             }}
         >
             {props.children}
         </contactContext.Provider>
     )
-
-
 }
 
 export default ContactState;

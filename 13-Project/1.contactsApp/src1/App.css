@@ -315,6 +315,7 @@ input[type='text'],
 input[type='email'],
 input[type='password'],
 input[type='date'],
+input[type='radio']
 select,
 textarea {
   display: block;
@@ -397,14 +398,14 @@ table th {
 }
 .item-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in;
 }
 .item-exit {
   opacity: 1;
 }
 .item-exit-active {
   opacity: 0;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in;
 }
 
 /* Mobile Styles */

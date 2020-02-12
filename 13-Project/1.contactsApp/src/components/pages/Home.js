@@ -12,7 +12,7 @@ import ContactFilter from '../contacts/ContactFilter';
             </div>
 
             <div>
-                <ContactFilter />
+                <ContactFilter/>
               <Contacts />
             </div>
         </div>

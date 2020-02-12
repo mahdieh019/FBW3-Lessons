@@ -1,19 +1,19 @@
-import React ,{ useContext} from 'react'
+import React ,{useContext} from 'react'
 import PropTypes from 'prop-types';
 import ContactContext from "../../context/contact/contactContext";
-    const ContactItem = ({ contact }) => {
-    const contactContext = useContext(ContactContext);
-    const  deleteContact = contactContext.deleteContact;
-    const setCurrent = contactContext.setCurrent;
-    const clearCurrent = contactContext.clearCurrent;
-   // const { setCurrent, deleteContact ,  clearCurrent   } = contactContext
+
+ const ContactItem = ({ contact }) => {
+    const contactContext=useContext(ContactContext);
+    const {deleteContact}=contactContext;//const deleteContact=contactContext.deleteContact; are same
+    const setCurrent=contactContext.setCurrent;
+    const clearCurrent=contactContext.clearCurrent;
+
+   // const {setCurrent , contactContext,clearCurrent  }=contactContext;
 
     const  { id , name , email, phone , type } = contact;
-
-    const onDelete = ()=>{
-        deleteContact(id)
-        clearCurrent();
-
+    const onDelete=()=>{
+        deleteContact(id);
+        clearCurrent()
     }
     return (
         <div className = 'card bg-light'>
@@ -40,7 +40,7 @@ import ContactContext from "../../context/contact/contactContext";
 
             </ul>
             <p>
-                <button className="btn btn-dark btn-sm-radius" onClick={()=> setCurrent(contact)} >Edit </button>
+                <button className="btn btn-dark btn-sm-radius" onClick={()=>setCurrent(contact)}>Edit </button>
                 <button className="btn btn-danger btn-sm-radius" onClick={onDelete}>Delete </button>
             </p>
             
