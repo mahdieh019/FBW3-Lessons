@@ -172,26 +172,13 @@ router.post('/resetPassword',[
                    await user.save();                    
                       req.flash('success_msg', 'your Password is changed and you can Login')
                       res.redirect('/users/login');                    
-                  
-
               } )
-
-
           })
-
-
     }
     catch{
         return next(new Error(' there was an error by saving the new password'))
-
     }
-
-
-
   }
-  
-   
-
  })
 
 
@@ -200,11 +187,6 @@ router.post('/resetPassword',[
 
 // app.get('/user/:id/editProfile', function(req, res){
 // 	res.render('editProfile', {user: req.userId});
-
-
-
-
-
 
 
 
@@ -315,11 +297,6 @@ router.post(
 
 
 
-
-
-
-
-
 router.post(
   "/register",
   [
@@ -407,6 +384,7 @@ router.post(
   }
 );
 
+
 // login Handle
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", {
@@ -424,6 +402,7 @@ router.get("/callback", (req, res, next) => {
     .cookie("jwt", token, { httpOnly: true })
     .redirect("/dashboard");
 });
+
 
 
 // logout Handle
